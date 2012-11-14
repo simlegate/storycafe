@@ -7,8 +7,7 @@ div.navbar.navbar-fixed-top
         ul.nav 
           li.active 
             a 首页 
-      input( type="text" class="span6" placeholder="请输入文字...") 
-      a.btn(data-toggle="modal" href="#mymodal") 新建
+      = render "form"
 div.container-fluid 
   div.row-fluid 
     div.span2.well 
@@ -32,12 +31,4 @@ div.container-fluid
           td 2010sdf 
 
     div.span4.well 
-    p asdf
-    
-
-    = link_to "Add new item",
-                     :controller => "home",
-                     :action => "get",
-                     :confirm => "Are you sure?",
-                     :remote  => true
 
