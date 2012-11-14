@@ -1,7 +1,7 @@
 StorycafeSimple::Application.routes.draw do
   get "home/index"
   get "/home/get"
-  resources :story
+  resources :stories
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

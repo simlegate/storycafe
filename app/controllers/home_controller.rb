@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-
+  @story = Story.new
   end
 
   def get
