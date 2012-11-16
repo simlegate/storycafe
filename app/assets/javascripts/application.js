@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap 
+//= require bootstrap
 //= require home
-//= require_tree .
+//= require stories
+
+// require_tree .

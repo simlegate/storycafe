@@ -1,0 +1,24 @@
+doctype 5
+html
+ head
+  meta charset="UTF-8"
+  meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+  title = t('title')
+  link rel="author" href="#{root_url.html_safe}readme.txt"
+  meta name="author" content="Byronlee and simlegate"
+  = stylesheet_link_tag  :application , :recursive => true
+  = javascript_include_tag :application , :recursive => true
+  = csrf_meta_tags
+body
+  div.navbar.navbar-fixed-top
+    div.navbar-inner
+      div.container-fluid
+        a.brand StoryCaf
+        div.nav-collapse
+          ul.nav
+            li.active
+              a = t('home')
+      = render "stories/form_new_story"
+  div.container-fluid
+    div.row-fluid
+      = yield

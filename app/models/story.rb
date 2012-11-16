@@ -1,4 +1,8 @@
 class Story
   include Mongoid::Document
-  field :name
+  include Mongoid::Timestamps::Created
+  field :user
+  field :title
+  field :description
+
 end

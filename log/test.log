@@ -1,0 +1,45 @@
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8533ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (34.4810ms)
+  Rendered stories/index.html.slim within layouts/application (66.0ms)
+Completed 200 OK in 306ms (Views: 114.1ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7441ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2851ms)
+  Rendered stories/index.html.slim within layouts/application (10.8ms)
+Completed 200 OK in 93ms (Views: 81.3ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (16.0170ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (12.8257ms)
+  Rendered stories/index.html.slim within layouts/application (11.1ms)
+Completed 200 OK in 189ms (Views: 88.1ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6495ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4056ms)
+  Rendered stories/index.html.slim within layouts/application (11.7ms)
+Completed 200 OK in 102ms (Views: 84.9ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6776ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2620ms)
+  Rendered stories/index.html.slim within layouts/application (11.3ms)
+Completed 200 OK in 92ms (Views: 81.3ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8130ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3452ms)
+  Rendered stories/index.html.slim within layouts/application (11.3ms)
+Completed 200 OK in 97ms (Views: 82.1ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9177ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3393ms)
+  Rendered stories/index.html.slim within layouts/application (11.1ms)
+Completed 200 OK in 93ms (Views: 81.0ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7336ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2553ms)
+  Rendered stories/index.html.slim within layouts/application (10.6ms)
+Completed 200 OK in 89ms (Views: 77.6ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9739ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3171ms)
+  Rendered stories/index.html.slim within layouts/application (10.8ms)
+Completed 200 OK in 128ms (Views: 80.8ms)

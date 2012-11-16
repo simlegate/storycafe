@@ -2,8 +2,10 @@ source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.8'
 
-gem 'rspec-rails'
-
+group :development,:test do
+  gem "rspec"
+  gem "rspec-rails", "2.9.0"
+end
 
 gem 'mongoid'
 gem 'bson_ext'
