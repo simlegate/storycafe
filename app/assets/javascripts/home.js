@@ -5,7 +5,7 @@
 
 $(document).ready(function() {
     $("#new_story").bind('ajax:beforeSend', function(event,data,status, xhr){
-                     alert("sdfg")
+                     alert("ajax异步添加story, 点击确认")
                   }).bind('ajax:success',function(event,data){
                       alert(data);
                       $(".table-condensed").append('<tr><td>'+data['user']+'</td><td>'+data['title']+'</td></tr>')
@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 
     $("#description-areatext").bind("blur",function(){
-        alert("sdfgsdfg");
+        alert("autosave ???");
         $("#description_content").submit();
     })
 
