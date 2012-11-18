@@ -1,7 +1,0 @@
-div.span6.well
-  - if  @stories
-    table.table.table-condensed
-      = @stories.each do |s|
-       tr
-         td =s.user
-         td.title = link_to s.title ,edit_story_path(s),:method => :get
