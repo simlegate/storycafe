@@ -1,7 +1,0 @@
-div.span6.well
-  - if  resource
-    table.table.table-condensed
-      = resource.each do |s|
-       tr
-         td = get_user_name_by_user_id(s.user_id)
-         td.title = link_to s.title ,edit_story_path(s),:method => :get
