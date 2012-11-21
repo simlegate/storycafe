@@ -1,0 +1,1016 @@
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8533ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (34.4810ms)
+  Rendered stories/index.html.slim within layouts/application (66.0ms)
+Completed 200 OK in 306ms (Views: 114.1ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7441ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2851ms)
+  Rendered stories/index.html.slim within layouts/application (10.8ms)
+Completed 200 OK in 93ms (Views: 81.3ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (16.0170ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (12.8257ms)
+  Rendered stories/index.html.slim within layouts/application (11.1ms)
+Completed 200 OK in 189ms (Views: 88.1ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6495ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4056ms)
+  Rendered stories/index.html.slim within layouts/application (11.7ms)
+Completed 200 OK in 102ms (Views: 84.9ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6776ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2620ms)
+  Rendered stories/index.html.slim within layouts/application (11.3ms)
+Completed 200 OK in 92ms (Views: 81.3ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8130ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3452ms)
+  Rendered stories/index.html.slim within layouts/application (11.3ms)
+Completed 200 OK in 97ms (Views: 82.1ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9177ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3393ms)
+  Rendered stories/index.html.slim within layouts/application (11.1ms)
+Completed 200 OK in 93ms (Views: 81.0ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7336ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2553ms)
+  Rendered stories/index.html.slim within layouts/application (10.6ms)
+Completed 200 OK in 89ms (Views: 77.6ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9739ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3171ms)
+  Rendered stories/index.html.slim within layouts/application (10.8ms)
+Completed 200 OK in 128ms (Views: 80.8ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5853ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.1879ms)
+  Rendered stories/index.html.slim within layouts/application (57.3ms)
+Completed 200 OK in 154ms (Views: 102.8ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (28.0426ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4928ms)
+  Rendered stories/index.html.slim within layouts/application (40.3ms)
+Completed 200 OK in 90ms (Views: 49.5ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7167ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2449ms)
+  Rendered stories/index.html.slim within layouts/application (40.4ms)
+Completed 200 OK in 87ms (Views: 49.1ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (122.1607ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (19.7904ms)
+  Rendered stories/index.html.slim within layouts/application (67.9ms)
+Completed 200 OK in 436ms (Views: 148.4ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (25.9721ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (7.9026ms)
+  Rendered stories/index.html.slim within layouts/application (39.3ms)
+Completed 200 OK in 137ms (Views: 52.0ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8521ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3209ms)
+  Rendered stories/index.html.slim within layouts/application (36.4ms)
+Completed 200 OK in 87ms (Views: 74.9ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6528ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2446ms)
+  Rendered stories/index.html.slim within layouts/application (10.4ms)
+Completed 200 OK in 59ms (Views: 48.1ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8585ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3548ms)
+  Rendered stories/index.html.slim within layouts/application (10.3ms)
+Completed 200 OK in 78ms (Views: 56.1ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8855ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3598ms)
+  Rendered stories/index.html.slim within layouts/application (36.7ms)
+Completed 200 OK in 90ms (Views: 74.7ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (25.9852ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2809ms)
+  Rendered stories/index.html.slim within layouts/application (41.8ms)
+Completed 200 OK in 95ms (Views: 50.3ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (190.9306ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (18.1112ms)
+  Rendered stories/index.html.slim within layouts/application (57.4ms)
+Completed 200 OK in 475ms (Views: 113.2ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (49.3050ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (17.1010ms)
+  Rendered stories/index.html.slim within layouts/application (44.2ms)
+Completed 200 OK in 183ms (Views: 71.9ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (37.5135ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (16.9694ms)
+  Rendered stories/index.html.slim within layouts/application (47.8ms)
+Completed 200 OK in 257ms (Views: 126.7ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (25.9440ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3395ms)
+  Rendered stories/index.html.slim within layouts/application (39.9ms)
+Completed 200 OK in 85ms (Views: 48.6ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6430ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2134ms)
+  Rendered stories/index.html.slim within layouts/application (42.4ms)
+Completed 200 OK in 92ms (Views: 51.1ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5040ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2058ms)
+  Rendered stories/index.html.slim within layouts/application (43.4ms)
+Completed 200 OK in 96ms (Views: 53.0ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8833ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2842ms)
+  Rendered stories/index.html.slim within layouts/application (46.4ms)
+Completed 200 OK in 96ms (Views: 56.0ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7260ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3879ms)
+  Rendered stories/index.html.slim within layouts/application (43.1ms)
+Completed 200 OK in 103ms (Views: 51.7ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"id"=>"11"}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"11"} flags=[] limit=0 skip=0 fields=nil (0.3796ms)
+Completed 500 Internal Server Error in 2ms
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0366ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2520ms)
+  Rendered stories/index.html.slim within layouts/application (44.0ms)
+Completed 200 OK in 98ms (Views: 52.7ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9761ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4978ms)
+  Rendered stories/index.html.slim within layouts/application (41.4ms)
+Completed 200 OK in 103ms (Views: 50.3ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6526ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2742ms)
+  Rendered stories/index.html.slim within layouts/application (39.7ms)
+Completed 200 OK in 92ms (Views: 48.2ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8075ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2837ms)
+  Rendered stories/index.html.slim within layouts/application (46.7ms)
+Completed 200 OK in 107ms (Views: 55.5ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8037ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4153ms)
+  Rendered stories/index.html.slim within layouts/application (44.4ms)
+Completed 200 OK in 98ms (Views: 53.4ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6375ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2663ms)
+  Rendered stories/index.html.slim within layouts/application (46.6ms)
+Completed 200 OK in 100ms (Views: 56.1ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7169ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2728ms)
+  Rendered stories/index.html.slim within layouts/application (45.0ms)
+Completed 200 OK in 102ms (Views: 53.7ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (62.9141ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (7.4432ms)
+  Rendered stories/index.html.slim within layouts/application (67.0ms)
+Completed 200 OK in 308ms (Views: 122.6ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (41.4433ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (70.8904ms)
+  Rendered stories/index.html.slim within layouts/application (65.8ms)
+Completed 200 OK in 349ms (Views: 113.9ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9775ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2744ms)
+  Rendered stories/index.html.slim within layouts/application (39.6ms)
+Completed 200 OK in 96ms (Views: 79.4ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5452ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3045ms)
+  Rendered stories/index.html.slim within layouts/application (43.7ms)
+Completed 200 OK in 98ms (Views: 53.2ms)
+Processing by StoriesController#create as HTML
+Completed 500 Internal Server Error in 0ms
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9291ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2789ms)
+  Rendered stories/index.html.slim within layouts/application (40.4ms)
+Completed 200 OK in 94ms (Views: 49.2ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"title"=>"hello"}
+Completed 500 Internal Server Error in 0ms
+Processing by StoriesController#create as HTML
+  Parameters: {"title"=>"hello"}
+Completed 500 Internal Server Error in 1ms
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (26.1409ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2811ms)
+Completed 200 OK in 92ms (Views: 49.3ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6800ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.1676ms)
+  Rendered stories/index.html.slim within layouts/application (45.3ms)
+Completed 200 OK in 98ms (Views: 55.3ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7784ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2573ms)
+  Rendered stories/index.html.slim within layouts/application (38.9ms)
+Completed 200 OK in 85ms (Views: 47.8ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8762ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2577ms)
+  Rendered stories/index.html.slim within layouts/application (46.4ms)
+Completed 200 OK in 106ms (Views: 57.0ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8237ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3076ms)
+  Rendered stories/index.html.slim within layouts/application (40.8ms)
+Completed 200 OK in 94ms (Views: 49.9ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7203ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.1941ms)
+  Rendered stories/index.html.slim within layouts/application (13.3ms)
+Completed 200 OK in 81ms (Views: 62.0ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "title"=>{"story"=>{"title"=>"hello,world!"}}}
+Completed 500 Internal Server Error in 0ms
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (28.2326ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2573ms)
+  Rendered stories/index.html.slim within layouts/application (43.8ms)
+Completed 200 OK in 92ms (Views: 53.0ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "title"=>{"story"=>{"title"=>"hello,world!"}}}
+Completed 500 Internal Server Error in 26ms
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9019ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4101ms)
+  Rendered stories/index.html.slim within layouts/application (10.7ms)
+Completed 200 OK in 72ms (Views: 54.5ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "title"=>"hello,world!"}
+Completed 500 Internal Server Error in 0ms
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5307ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2847ms)
+  Rendered stories/index.html.slim within layouts/application (10.7ms)
+Completed 200 OK in 62ms (Views: 51.4ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "title"=>"hello,world!"}
+Completed 500 Internal Server Error in 0ms
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (140.6448ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (34.4629ms)
+  Rendered stories/index.html.slim within layouts/application (35.6ms)
+Completed 200 OK in 451ms (Views: 124.9ms)
+Processing by StoriesController#create as HTML
+Completed 500 Internal Server Error in 1ms
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (30.2615ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4134ms)
+  Rendered stories/index.html.slim within layouts/application (55.1ms)
+Completed 200 OK in 113ms (Views: 65.4ms)
+Processing by StoriesController#create as HTML
+Completed 500 Internal Server Error in 0ms
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (27.9639ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3374ms)
+  Rendered stories/index.html.slim within layouts/application (42.7ms)
+Completed 200 OK in 92ms (Views: 53.2ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8080ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2010ms)
+Completed 200 OK in 108ms (Views: 73.0ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (35.7380ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4313ms)
+  Rendered stories/index.html.slim within layouts/application (46.9ms)
+Completed 200 OK in 103ms (Views: 55.6ms)
+Processing by StoriesController#create as HTML
+Completed 500 Internal Server Error in 0ms
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9062ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.5007ms)
+  Rendered stories/index.html.slim within layouts/application (11.5ms)
+Completed 200 OK in 69ms (Views: 53.4ms)
+Processing by StoriesController#create as HTML
+Completed 500 Internal Server Error in 0ms
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7031ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2031ms)
+  Rendered stories/index.html.slim within layouts/application (10.6ms)
+Completed 200 OK in 60ms (Views: 48.6ms)
+Processing by StoriesController#create as HTML
+Completed 500 Internal Server Error in 66ms
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (13.4175ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4253ms)
+Completed 200 OK in 48ms (Views: 15.3ms)
+Processing by StoriesController#create as HTML
+Completed 500 Internal Server Error in 0ms
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (28.7986ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2332ms)
+Completed 200 OK in 89ms (Views: 49.4ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9580ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3624ms)
+  Rendered stories/index.html.slim within layouts/application (44.5ms)
+Completed 200 OK in 99ms (Views: 53.2ms)
+Processing by StoriesController#create as HTML
+Completed 500 Internal Server Error in 0ms
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (32.3234ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2489ms)
+  Rendered stories/index.html.slim within layouts/application (43.8ms)
+Completed 200 OK in 101ms (Views: 53.8ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"asdfasdfasdf"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8612a1229bc5c4b000001", "user"=>"Byronlee", "description"=>"", "title"=>"asdfasdfasdf", "created_at"=>2012-11-18 04:16:42 UTC}] flags=[] (0.4497ms)
+Completed 500 Internal Server Error in 7ms
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7064ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4129ms)
+  Rendered stories/index.html.slim within layouts/application (44.0ms)
+Completed 200 OK in 98ms (Views: 53.3ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"asdfasdfasdf"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a861471229bc523b000001", "user"=>"Byronlee", "description"=>"", "title"=>"asdfasdfasdf", "created_at"=>2012-11-18 04:17:11 UTC}] flags=[] (0.2100ms)
+Completed 200 OK in 44ms (Views: 41.0ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"asdfasdfasdf"}}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (27.7915ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8619d1229bc78cf000001", "user"=>"Byronlee", "description"=>"", "title"=>"asdfasdfasdf", "created_at"=>2012-11-18 04:18:37 UTC}] flags=[] (0.2630ms)
+Completed 200 OK in 37ms (Views: 3.3ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.6015ms)
+Completed 200 OK in 63ms (Views: 55.0ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7880ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3836ms)
+  Rendered stories/index.html.slim within layouts/application (11.2ms)
+Completed 200 OK in 70ms (Views: 58.9ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a865851229bcf0b1000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 04:35:17 UTC}] flags=[] (0.1836ms)
+Completed 200 OK in 4ms (Views: 1.6ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8342ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4969ms)
+  Rendered stories/index.html.slim within layouts/application (11.1ms)
+Completed 200 OK in 73ms (Views: 53.9ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a865b81229bc4c39000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 04:36:08 UTC}] flags=[] (0.1922ms)
+Completed 200 OK in 4ms (Views: 1.8ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (28.4159ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4032ms)
+  Rendered stories/index.html.slim within layouts/application (46.5ms)
+Completed 200 OK in 95ms (Views: 55.7ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a865e81229bcb4d1000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 04:36:56 UTC}] flags=[] (0.1838ms)
+Completed 200 OK in 4ms (Views: 1.6ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (28.1448ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3815ms)
+  Rendered stories/index.html.slim within layouts/application (45.3ms)
+Completed 200 OK in 93ms (Views: 54.4ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a866051229bc954e000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 04:37:25 UTC}] flags=[] (0.1748ms)
+Completed 200 OK in 4ms (Views: 1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5834ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (28.2469ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.5004ms)
+  Rendered stories/index.html.slim within layouts/application (46.8ms)
+Completed 200 OK in 95ms (Views: 55.7ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a866271229bcf171000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 04:37:59 UTC}] flags=[] (0.1712ms)
+Completed 200 OK in 4ms (Views: 1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5753ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5672ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4396ms)
+  Rendered stories/index.html.slim within layouts/application (45.4ms)
+Completed 200 OK in 102ms (Views: 90.1ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a866651229bcbe43000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 04:39:01 UTC}] flags=[] (0.1714ms)
+Completed 200 OK in 4ms (Views: 2.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.6115ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6711ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3791ms)
+  Rendered stories/index.html.slim within layouts/application (41.4ms)
+Completed 200 OK in 96ms (Views: 84.9ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a866761229bca888000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 04:39:18 UTC}] flags=[] (0.1736ms)
+Completed 200 OK in 4ms (Views: 1.7ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5305ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (28.7611ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3939ms)
+  Rendered stories/index.html.slim within layouts/application (47.0ms)
+Completed 200 OK in 96ms (Views: 55.9ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8681b1229bcb651000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 04:46:19 UTC}] flags=[] (0.1729ms)
+Completed 200 OK in 4ms (Views: 1.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5488ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7291ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4344ms)
+  Rendered stories/index.html.slim within layouts/application (40.3ms)
+Completed 200 OK in 105ms (Views: 83.9ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8683f1229bcafce000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 04:46:55 UTC}] flags=[] (0.1717ms)
+Completed 200 OK in 4ms (Views: 1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5794ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (31.8992ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a868e91229bccc72000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 04:49:45 UTC}] flags=[] (0.1466ms)
+Completed 200 OK in 39ms (Views: 1.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4814ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a868e91229bccc72000001"} flags=[] limit=0 skip=0 fields=nil (0.4642ms)
+  Rendered stories/index.html.slim within layouts/application (40.2ms)
+Completed 200 OK in 51ms (Views: 48.8ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a868e91229bccc72000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 04:49:45 UTC}] flags=[] (0.2139ms)
+Completed 200 OK in 2ms (Views: 0.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.3488ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.5047ms)
+Completed 200 OK in 10ms (Views: 2.9ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5927ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3874ms)
+  Rendered stories/index.html.slim within layouts/application (10.8ms)
+Completed 200 OK in 65ms (Views: 53.3ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8693c1229bcadf3000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 04:51:08 UTC}] flags=[] (0.1781ms)
+Completed 200 OK in 4ms (Views: 1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5946ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8693c1229bcadf3000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 04:51:08 UTC}] flags=[] (0.1621ms)
+Completed 200 OK in 2ms (Views: 0.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.3996ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a8693c1229bcadf3000002"} flags=[] limit=0 skip=0 fields=nil (0.3183ms)
+Completed 200 OK in 6ms (Views: 4.4ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9866ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4971ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a86ad51229bc350c000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 04:57:57 UTC}] flags=[] (0.1848ms)
+Completed 200 OK in 4ms (Views: 1.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5877ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a86ad51229bc350c000001"} flags=[] limit=0 skip=0 fields=nil (0.4497ms)
+Completed 200 OK in 52ms (Views: 49.3ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.6852ms)
+Completed 200 OK in 16ms (Views: 5.0ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a86ad51229bc350c000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 04:57:57 UTC}] flags=[] (0.1709ms)
+Completed 200 OK in 2ms (Views: 0.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.3483ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (121.4461ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (80.2736ms)
+  Rendered stories/index.html.slim within layouts/application (32.3ms)
+Completed 200 OK in 393ms (Views: 126.9ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a873cd1229bce31f000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:36:13 UTC}] flags=[] (0.1895ms)
+Completed 200 OK in 40ms (Views: 21.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.6673ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a873cd1229bce31f000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:36:13 UTC}] flags=[] (0.2851ms)
+Completed 200 OK in 3ms (Views: 1.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4480ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a873cd1229bce31f000002"} flags=[] limit=0 skip=0 fields=nil (0.4170ms)
+Completed 200 OK in 54ms (Views: 3.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5491ms)
+Processing by StoriesController#update as HTML
+  Parameters: {"content"=>"thess is test update story's description information!", "id"=>"50a873cd1229bce31f000002"}
+  MOPED: 127.0.0.1:27017 UPDATE       database=storycafe_simple_test collection=stories selector={"_id"=>"50a873cd1229bce31f000002"} update={"$set"=>{"description"=>"thess is test update story's description information!"}} flags=[] (0.1235ms)
+Completed 500 Internal Server Error in 36ms
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1530ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.5422ms)
+  Rendered stories/index.html.slim within layouts/application (54.3ms)
+Completed 200 OK in 170ms (Views: 99.3ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a876461229bcee81000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:46:46 UTC}] flags=[] (0.1729ms)
+Completed 200 OK in 19ms (Views: 16.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.6099ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a876461229bcee81000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:46:46 UTC}] flags=[] (0.3166ms)
+Completed 200 OK in 4ms (Views: 1.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5212ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a876461229bcee81000002"} flags=[] limit=0 skip=0 fields=nil (0.4599ms)
+Completed 200 OK in 9ms (Views: 6.5ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6416ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3817ms)
+  Rendered stories/index.html.slim within layouts/application (10.6ms)
+Completed 200 OK in 53ms (Views: 47.7ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8765d1229bc7b7e000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:47:09 UTC}] flags=[] (0.1707ms)
+Completed 200 OK in 4ms (Views: 1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5958ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8765d1229bc7b7e000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:47:09 UTC}] flags=[] (0.3104ms)
+Completed 200 OK in 4ms (Views: 1.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5233ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a8765d1229bc7b7e000002"} flags=[] limit=0 skip=0 fields=nil (0.4032ms)
+Completed 200 OK in 8ms (Views: 6.1ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8111ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.5493ms)
+  Rendered stories/index.html.slim within layouts/application (39.7ms)
+Completed 200 OK in 83ms (Views: 77.4ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a876ac1229bc7129000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:48:28 UTC}] flags=[] (0.1719ms)
+Completed 200 OK in 4ms (Views: 1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5195ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a876ac1229bc7129000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:48:28 UTC}] flags=[] (0.1581ms)
+Completed 200 OK in 2ms (Views: 0.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4036ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a876ac1229bc7129000002"} flags=[] limit=0 skip=0 fields=nil (0.2964ms)
+Completed 200 OK in 4ms (Views: 2.8ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (28.5480ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4475ms)
+  Rendered stories/index.html.slim within layouts/application (45.9ms)
+Completed 200 OK in 96ms (Views: 62.5ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a876be1229bcf481000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:48:46 UTC}] flags=[] (0.1800ms)
+Completed 200 OK in 4ms (Views: 1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (19.1691ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a876be1229bcf481000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:48:46 UTC}] flags=[] (0.1636ms)
+Completed 200 OK in 2ms (Views: 0.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4597ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a876be1229bcf481000002"} flags=[] limit=0 skip=0 fields=nil (0.4122ms)
+Completed 200 OK in 4ms (Views: 2.9ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7236ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4420ms)
+  Rendered stories/index.html.slim within layouts/application (10.5ms)
+Completed 200 OK in 60ms (Views: 53.6ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a876db1229bc49fa000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:49:15 UTC}] flags=[] (0.1788ms)
+Completed 200 OK in 4ms (Views: 1.7ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4005ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a876db1229bc49fa000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:49:15 UTC}] flags=[] (0.1452ms)
+Completed 200 OK in 2ms (Views: 0.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4542ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a876db1229bc49fa000002"} flags=[] limit=0 skip=0 fields=nil (0.4010ms)
+Completed 200 OK in 4ms (Views: 2.8ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (28.6322ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a877211229bc20ae000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:50:25 UTC}] flags=[] (0.1521ms)
+Completed 200 OK in 36ms (Views: 1.7ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4163ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a877211229bc20ae000001"} flags=[] limit=0 skip=0 fields=nil (0.3963ms)
+Completed 200 OK in 49ms (Views: 47.5ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4208ms)
+Completed 200 OK in 4ms (Views: 2.7ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a877211229bc20ae000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:50:25 UTC}] flags=[] (0.1724ms)
+Completed 200 OK in 2ms (Views: 0.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.3891ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6347ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4599ms)
+  Rendered stories/index.html.slim within layouts/application (39.7ms)
+Completed 200 OK in 82ms (Views: 76.3ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a877341229bcbeda000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:50:44 UTC}] flags=[] (0.1824ms)
+Completed 200 OK in 4ms (Views: 2.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.6518ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a877341229bcbeda000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:50:44 UTC}] flags=[] (0.2346ms)
+Completed 200 OK in 2ms (Views: 0.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4637ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a877341229bcbeda000002"} flags=[] limit=0 skip=0 fields=nil (0.3743ms)
+Completed 200 OK in 4ms (Views: 2.8ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (115.8929ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (138.6640ms)
+  Rendered stories/index.html.slim within layouts/application (35.4ms)
+Completed 200 OK in 465ms (Views: 163.3ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a879121229bc1db0000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:58:42 UTC}] flags=[] (0.1767ms)
+Completed 200 OK in 53ms (Views: 51.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (36.6385ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a879121229bc1db0000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:58:42 UTC}] flags=[] (0.3147ms)
+Completed 200 OK in 3ms (Views: 0.9ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5286ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a879121229bc1db0000002"} flags=[] limit=0 skip=0 fields=nil (0.5760ms)
+Completed 200 OK in 9ms (Views: 6.5ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6645ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a879461229bc1ece000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:59:34 UTC}] flags=[] (0.1314ms)
+Completed 200 OK in 8ms (Views: 1.7ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4649ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a879461229bc1ece000001"} flags=[] limit=0 skip=0 fields=nil (0.5260ms)
+Completed 200 OK in 56ms (Views: 53.0ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.5820ms)
+Completed 200 OK in 4ms (Views: 2.7ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a879461229bc1ece000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 05:59:34 UTC}] flags=[] (0.1850ms)
+Completed 200 OK in 2ms (Views: 0.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.3991ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (29.1874ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4339ms)
+  Rendered stories/index.html.slim within layouts/application (39.8ms)
+Completed 200 OK in 83ms (Views: 48.9ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8796c1229bc642a000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 06:00:12 UTC}] flags=[] (0.1693ms)
+Completed 200 OK in 3ms (Views: 1.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5581ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8796c1229bc642a000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 06:00:12 UTC}] flags=[] (0.4382ms)
+Completed 200 OK in 4ms (Views: 1.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5553ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a8796c1229bc642a000002"} flags=[] limit=0 skip=0 fields=nil (0.4547ms)
+Completed 200 OK in 6ms (Views: 3.6ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8347ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.5829ms)
+  Rendered stories/index.html.slim within layouts/application (11.1ms)
+Completed 200 OK in 59ms (Views: 52.1ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a879851229bcd1ce000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 06:00:37 UTC}] flags=[] (0.2999ms)
+Completed 200 OK in 4ms (Views: 1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5827ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a879851229bcd1ce000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 06:00:37 UTC}] flags=[] (0.1972ms)
+Completed 200 OK in 3ms (Views: 1.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5102ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a879851229bcd1ce000002"} flags=[] limit=0 skip=0 fields=nil (0.4697ms)
+Completed 200 OK in 5ms (Views: 2.9ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (36.9828ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a879a01229bca4ca000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 06:01:04 UTC}] flags=[] (0.2789ms)
+Completed 200 OK in 46ms (Views: 2.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5889ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a879a01229bca4ca000001"} flags=[] limit=0 skip=0 fields=nil (0.4802ms)
+Completed 200 OK in 52ms (Views: 50.4ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.6046ms)
+Completed 200 OK in 5ms (Views: 3.0ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a879a01229bca4ca000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 06:01:04 UTC}] flags=[] (0.1819ms)
+Completed 200 OK in 2ms (Views: 0.9ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5336ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (28.7020ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a879fe1229bca04a000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 06:02:38 UTC}] flags=[] (0.1466ms)
+Completed 200 OK in 36ms (Views: 2.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.6409ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.6166ms)
+Completed 200 OK in 53ms (Views: 50.5ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a879fe1229bca04a000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 06:02:38 UTC}] flags=[] (0.1740ms)
+Completed 200 OK in 2ms (Views: 0.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4122ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a879fe1229bca04a000002"} flags=[] limit=0 skip=0 fields=nil (0.3870ms)
+Completed 200 OK in 8ms (Views: 6.1ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6613ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4453ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4827ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5395ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.3019ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5361ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2112ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3485ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (29.0749ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2784ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4331ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3039ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3587ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2836ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3802ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6265ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4343ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4038ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4780ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3349ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3652ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4510ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4722ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4341ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3883ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4834ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3223ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3506ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4045ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4517ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4415ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3845ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6108ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3862ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5409ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5886ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5290ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4703ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4644ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7416ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6513ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8835ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4875ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8644ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5392ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7526ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5171ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6773ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5166ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (33.8941ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8798ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5616ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5783ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5726ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7557ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7731ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5919ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8008ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7343ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1501ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8488ms)
+Completed 500 Internal Server Error in 30173ms
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5664ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7440ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0746ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7591ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1752ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8277ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9441ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (15.8556ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a87e6d1229bcc7cf000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 06:21:33 UTC}] flags=[] (0.3881ms)
+Completed 200 OK in 181ms (Views: 71.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (359.6244ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a87e6d1229bcc7cf000001"} flags=[] limit=0 skip=0 fields=nil (0.6046ms)
+Completed 200 OK in 150ms (Views: 133.5ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.6256ms)
+Completed 200 OK in 4ms (Views: 2.7ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a87e6e1229bcc7cf000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 06:21:34 UTC}] flags=[] (0.1674ms)
+Completed 200 OK in 2ms (Views: 0.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4830ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0347ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.5970ms)
+  Rendered stories/index.html.slim within layouts/application (10.5ms)
+Completed 200 OK in 56ms (Views: 49.8ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a87ee91229bc938f000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 06:23:37 UTC}] flags=[] (0.1748ms)
+Completed 200 OK in 4ms (Views: 1.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5715ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a87ee91229bc938f000001"} flags=[] limit=0 skip=0 fields=nil (0.3843ms)
+Completed 200 OK in 4ms (Views: 3.0ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a87ee91229bc938f000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 06:23:37 UTC}] flags=[] (0.1743ms)
+Completed 200 OK in 2ms (Views: 0.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5035ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.2887ms)
+Completed 200 OK in 4ms (Views: 2.7ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8116ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.3600ms)
+  Rendered stories/index.html.slim within layouts/application (10.3ms)
+Completed 200 OK in 52ms (Views: 46.2ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a87f261229bcc796000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 06:24:38 UTC}] flags=[] (0.1760ms)
+Completed 200 OK in 4ms (Views: 1.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5810ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a87f261229bcc796000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 06:24:38 UTC}] flags=[] (0.4113ms)
+Completed 200 OK in 4ms (Views: 1.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5569ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a87f261229bcc796000002"} flags=[] limit=0 skip=0 fields=nil (0.4179ms)
+Completed 200 OK in 4ms (Views: 2.7ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (35.5108ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8c26c1229bcd011000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 11:11:40 UTC}] flags=[] (0.1466ms)
+Completed 200 OK in 43ms (Views: 1.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.6058ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a8c26c1229bcd011000001"} flags=[] limit=0 skip=0 fields=nil (0.4151ms)
+Completed 200 OK in 48ms (Views: 46.8ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.4270ms)
+Completed 200 OK in 4ms (Views: 2.7ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8c26c1229bcd011000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 11:11:40 UTC}] flags=[] (0.1535ms)
+Completed 200 OK in 2ms (Views: 0.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.3908ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (27.7915ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4256ms)
+Processing by StoriesController#update as HTML
+  Parameters: {"content"=>"thess is test update story's description information!", "id"=>"50a8c26c1229bcd011000002"}
+  MOPED: 127.0.0.1:27017 UPDATE       database=storycafe_simple_test collection=stories selector={"_id"=>"50a8c26c1229bcd011000002"} update={"$set"=>{"description"=>"thess is test update story's description information!"}} flags=[] (0.1521ms)
+Completed 200 OK in 1ms (Views: 0.2ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4327ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (80.2510ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8c8da1229bc5e07000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 11:39:06 UTC}] flags=[] (0.2177ms)
+Completed 200 OK in 218ms (Views: 50.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (53.5693ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.6177ms)
+Completed 200 OK in 161ms (Views: 158.9ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8c8da1229bc5e07000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 11:39:06 UTC}] flags=[] (0.1774ms)
+Completed 200 OK in 2ms (Views: 0.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4838ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a8c8da1229bc5e07000002"} flags=[] limit=0 skip=0 fields=nil (0.4303ms)
+Completed 200 OK in 5ms (Views: 2.9ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5176ms)
+Processing by StoriesController#update as HTML
+  Parameters: {"content"=>"thess is test update story's description information!", "id"=>"50a8c8da1229bc5e07000002"}
+  MOPED: 127.0.0.1:27017 UPDATE       database=storycafe_simple_test collection=stories selector={"_id"=>"50a8c8da1229bc5e07000002"} update={"$set"=>{"description"=>"thess is test update story's description information!"}} flags=[] (0.1204ms)
+Completed 200 OK in 1ms (Views: 0.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4470ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8717ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5288ms)
+Processing by StoriesController#update as HTML
+  Parameters: {"content"=>"thess is test update story's description information!", "id"=>"50a8c8da1229bc5e07000002"}
+  MOPED: 127.0.0.1:27017 UPDATE       database=storycafe_simple_test collection=stories selector={"_id"=>"50a8c8da1229bc5e07000002"} update={"$set"=>{"description"=>"thess is test update story's description information!"}} flags=[] (0.1552ms)
+Completed 200 OK in 1ms (Views: 0.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5410ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8c9011229bc789f000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 11:39:45 UTC}] flags=[] (0.1645ms)
+Completed 200 OK in 3ms (Views: 1.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5374ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a8c9011229bc789f000001"} flags=[] limit=0 skip=0 fields=nil (0.4323ms)
+Completed 200 OK in 48ms (Views: 46.6ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.5863ms)
+Completed 200 OK in 4ms (Views: 2.6ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8c9021229bc789f000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 11:39:46 UTC}] flags=[] (0.1476ms)
+Completed 200 OK in 2ms (Views: 0.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5634ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7381ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5543ms)
+Processing by StoriesController#update as HTML
+  Parameters: {"content"=>"thess is test update story's description information!", "id"=>"50a8c9021229bc789f000002"}
+  MOPED: 127.0.0.1:27017 UPDATE       database=storycafe_simple_test collection=stories selector={"_id"=>"50a8c9021229bc789f000002"} update={"$set"=>{"description"=>"thess is test update story's description information!"}} flags=[] (0.1535ms)
+Completed 200 OK in 1ms (Views: 0.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5028ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8c91a1229bc0dc3000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 11:40:10 UTC}] flags=[] (0.1538ms)
+Completed 200 OK in 3ms (Views: 1.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.5229ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a8c91a1229bc0dc3000001"} flags=[] limit=0 skip=0 fields=nil (0.4084ms)
+Completed 200 OK in 49ms (Views: 47.4ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.5763ms)
+Completed 200 OK in 4ms (Views: 2.7ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8c91a1229bc0dc3000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 11:40:10 UTC}] flags=[] (0.1500ms)
+Completed 200 OK in 2ms (Views: 0.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4165ms)
+Processing by StoriesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7179ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 fields=nil (0.5271ms)
+  Rendered stories/index.html.slim within layouts/application (10.3ms)
+Completed 200 OK in 58ms (Views: 52.7ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8c9261229bcb95d000001", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 11:40:22 UTC}] flags=[] (0.1774ms)
+Completed 200 OK in 4ms (Views: 1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.3777ms)
+Processing by StoriesController#create as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=stories documents=[{"_id"=>"50a8c9261229bcb95d000002", "user"=>"Byronlee", "description"=>"", "title"=>"hello,world!", "created_at"=>2012-11-18 11:40:22 UTC}] flags=[] (0.1421ms)
+Completed 200 OK in 2ms (Views: 0.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4299ms)
+Processing by StoriesController#edit as HTML
+  Parameters: {"user"=>"byronlee", "story"=>{"title"=>"hello,world!"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"_id"=>"50a8c9261229bcb95d000002"} flags=[] limit=0 skip=0 fields=nil (0.2072ms)
+Completed 200 OK in 4ms (Views: 2.7ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.4983ms)
+Processing by StoriesController#update as HTML
+  Parameters: {"content"=>"thess is test update story's description information!", "id"=>"50a8c9261229bcb95d000002"}
+  MOPED: 127.0.0.1:27017 UPDATE       database=storycafe_simple_test collection=stories selector={"_id"=>"50a8c9261229bcb95d000002"} update={"$set"=>{"description"=>"thess is test update story's description information!"}} flags=[] (0.0999ms)
+Completed 200 OK in 1ms (Views: 0.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=storycafe_simple_test collection=stories selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[] limit=-1 skip=0 fields=nil (0.2718ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (28.3947ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=storycafe_simple_test collection=groups documents=[{"_id"=>"50a8d3201229bc087b000001", "user"=>"byronlee", "title"=>"public", "description"=>"this is a public group", "created_at"=>2012-11-18 12:22:56 UTC}] flags=[] (0.1433ms)

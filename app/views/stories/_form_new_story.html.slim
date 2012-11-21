@@ -1,0 +1,6 @@
+= form_for( Story.new ,:remote => true , :style => "margin-bottom:0px;" ) do |f|
+  = f.text_field :title, :class => "span6",:placeholder => "请输入文字"
+  = f.hidden_field :user_id , :value => "#{current_member}"
+  = f.hidden_field :description , :value => ""
+  = f.hidden_field :group_id , :value => "#{current_group.id}"
+  = f.submit "submit",:disable_with => "submiting",:confirm => "Are you?"
