@@ -28,4 +28,4 @@ gem 'slim-rails'
 
 gem 'jquery-rails'
 
-
+gem "devise"
