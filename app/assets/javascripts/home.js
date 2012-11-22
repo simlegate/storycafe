@@ -28,9 +28,9 @@ $(document).ready(function() {
                       if(!FormContent) return;
                                 }).bind(
        'ajax:success',
-              function(event,data){
-                  alert(data)
-                    // alert("autosave success!");
+              function(event,data,status,xhr){
+                  //alert(data)
+                    alert("autosave success!");
               });
 
      // 给story 的description 的编辑框绑定一个异步自动保存
@@ -49,8 +49,6 @@ $(document).ready(function() {
                       $('#myModal').modal('hide')
                       $("#group_list").append('<tr><td>'+data['title']+'</td></tr>')
                   })
-
-
 
 
 
