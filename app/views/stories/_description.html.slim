@@ -8,9 +8,9 @@ div.span4.well
              .span12
                .row-fluid
                  .span12
-                   = form_for Group.new ,:method =>"put",:remote => true,:html => {:id => "description_content"} do |f|
+                   = form_for current_group ,:method =>"put",:remote => true,:html => {:id => "description_content"} do |f|
                      textarea( placeholder="#{t('story.description')}" id="description-areatext" name="description" )
-                       = resource[:description]
+                       = current_group.description
 
 
   - else
