@@ -26,7 +26,7 @@ class Story
   end
 
   def self.get_story_by_story_id id
-    where(_id: id)
+    find(id)
   end
 
 

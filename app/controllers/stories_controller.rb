@@ -16,7 +16,8 @@ class StoriesController < ApplicationController
 
   # GET /stories/1/edit
   def edit
-    render "index" , :locals => {   :resources => init_resources(params[:id]) }
+    session[:current_story] = Story.get_story_by_story_id(params[:id]) if params[:id] != session[:current_story].id
+    render "index" , :locals => {  :resources => init_resources(params[:id]) }
   end
 
 
