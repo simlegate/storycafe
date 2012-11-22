@@ -5,6 +5,6 @@ module UsersHelper
   end
 
   def get_user_name_by_user_id id
-    id ? User.find(id).name : "No user"
+    id ? User.find(id).email : "No user"
   end
 end

@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
      session[:current_story] = Story.get_story_default   if session[:current_story].nil?
   end
 
+
   def get_stories *id
       id[0] ? ( Story.get_stories_by_group_id(id[0]).exists? ? Story.get_stories_by_group_id(id[0]) : Story.get_stories_by_story_id(id[0]) ) :  Story.get_stories_public
   end
@@ -16,5 +17,7 @@ class ApplicationController < ActionController::Base
   def init_resources *id
      result = {   :group => {:data => Group.all } ,
                   :stories => {:data =>  get_stories(id[0]) } }
+     p "-------------------------------------"
+     p result
      end
 end

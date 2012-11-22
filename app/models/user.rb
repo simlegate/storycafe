@@ -46,11 +46,5 @@ class User
   field :sex, type: String
 
 
-  def add_story_by_members
-    p "==========================================="
-  end
-
-
-
 
 end

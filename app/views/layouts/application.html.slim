@@ -13,15 +13,22 @@ body
   div.navbar.navbar-fixed-top
     div.navbar-inner
       div.container-fluid
-        .span3  项目名称
-        a.brand.active = t('title')
-        div.nav-collapse
-          ul.nav
-            li.active
-              a = t('home')
-        - if current_user
-          = link_to '退出登录', destroy_user_session_path, :method => :delete
-          = render "stories/form_new_story"
+        .row-fluid
+          .span2  项目名称
+          .span6
+            - if current_user
+              = render "stories/form_new_story"
+          .span4
+            a.brand.active = t('title')
+            div.nav-collapse
+              ul.nav
+                li.divider-vertical
+                li.active
+                  a.branch = t('title')
+                li
+                  - if current_user
+                    = link_to '退出登录', destroy_user_session_path, :method => :delete
+
   div.container-fluid
     p.notice = notice
     p.alert = alert

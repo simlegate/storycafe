@@ -1,5 +1,5 @@
 module StoriesHelper
-  def current_group
+  def current_story
     session[:current_story]
   end
 end

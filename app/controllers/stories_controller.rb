@@ -4,7 +4,7 @@ class StoriesController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    render "index" , :locals => {   :resources => init_resources }
+    render "index" , :locals => { :resources => init_resources }
   end
 
   # POST /stories
@@ -23,7 +23,7 @@ class StoriesController < ApplicationController
 
  # put/:id
    def update
-       Story.where(_id: params[:id]).update(description: params[:content])
+       Story.find(_id: params[:id]).update(description: params[:content])
        render :json => "autosave success!"
    end
 end

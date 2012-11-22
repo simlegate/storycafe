@@ -14,6 +14,6 @@ div.span2.well
         = f.submit  :class => "btn btn-primary"
   - if resource
    table.table.table-condensed#group_list
-     =  resource.each do |s|
+     -  resource.each do |s|
       tr
         td.group_title = link_to s.title ,edit_group_path(s) , :method => :get

@@ -1,9 +1,8 @@
 div.span4.well
-  - if meta[:type] =="group"
+  - if meta[:type]=="group"
    section
      section
-       - if resource
-         h3(data-attribute="title") = resource[:title]
+         h3(data-attribute="title") = current_group.title
          .row-fluid
              .span12
                .row-fluid
@@ -11,21 +10,19 @@ div.span4.well
                    = form_for current_group ,:method =>"put",:remote => true,:html => {:id => "description_content"} do |f|
                      textarea( placeholder="#{t('story.description')}" id="description-areatext" name="description" )
                        = current_group.description
-
-
   - else
    section
      section
-       - if resource
          h3(data-attribute="title") = current_story.title
          .row-fluid
             .span12
               .row-fluid
                 .span12
-                  = form_for current_story , :method =>"put",:remote => true,:html => {:id => "description_content"} do |f|
+                  = form_for current_story , :method =>"put", :remote => true ,:html => {:id => "description_content"} do |f|
                     textarea( placeholder="#{t('story.description')}" id="description-areatext" name="description" )
-                       =  current_story.description
+                      =  current_story.description
                 .span6
-                  div.ticketLabel.icon.assignee = current_story.user
+                  ticketLabel.icon.assignee
+                    = get_user_name_by_user_id(current_story.user_id)
                 .span6
-                  .ticketLabel.icon.calendar = current_user.created_at
+                  .ticketLabel.icon.calendar = current_story.created_at
