@@ -14,7 +14,8 @@ body
     div.navbar-inner
       div.container-fluid
         .row-fluid
-          .span2  项目名称
+          .span2
+            a.brand(style="float:left") 项目名称
           .span6
             - if current_user
               ul.nav
@@ -33,7 +34,9 @@ body
                         = link_to '退出登录', destroy_user_session_path, :method => :delete
 
   div.container-fluid
-    p.notice = notice
-    p.alert = alert
+    - if notice
+      p.notice = notice
+    - if alert
+      p.alert = alert
     div.row-fluid
       = yield
