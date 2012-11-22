@@ -20,6 +20,7 @@ body
             li.active
               a = t('home')
         - if current_user
+          = link_to '退出登录', destroy_user_session_path, :method => :delete
           = render "stories/form_new_story"
   div.container-fluid
     p.notice = notice
