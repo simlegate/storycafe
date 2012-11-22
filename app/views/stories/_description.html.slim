@@ -18,7 +18,7 @@ div.span4.well
             .span12
               .row-fluid
                 .span12
-                  = form_for current_story , :method =>"put", :remote => true ,:html => {:id => "description_content"} do |f|
+                  = form_for current_story , :method =>"put", :remote => true ,:html => {:id => "description_content",:'data-type' => "json"} do |f|
                     textarea( placeholder="#{t('story.description')}" id="description-areatext" name="description" )
                       =  current_story.description
                 .span6
