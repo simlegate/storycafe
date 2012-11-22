@@ -3,7 +3,7 @@ class StoriesController < ApplicationController
 
   before_filter :authenticate_user!
 
-  def index
+  d
     render "index" , :locals => { :resources => init_resources }
   end
 
@@ -23,7 +23,9 @@ class StoriesController < ApplicationController
 
  # put/:id
    def update
-       Story.find(_id: params[:id]).update(description: params[:content])
-       render :json => "autosave success!"
+     # 注意update_attribute 没有s
+     Story.find(params[:id]).update_attribute(:description,params[:description])
+     # to_json 不知道何时不加
+     renderjson => "autosave success!".to_json
    end
 end
