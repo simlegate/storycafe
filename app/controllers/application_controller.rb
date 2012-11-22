@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   include GroupsHelper
 
   protect_from_forgery
-
   before_filter :init
 
   def init
@@ -18,7 +17,6 @@ class ApplicationController < ActionController::Base
   def get_stories *id
       id[0] ? ( Story.get_stories_by_group_id(id[0]).exists? ? Story.get_stories_by_group_id(id[0]) : Story.get_stories_by_story_id(id[0]) ) :  Story.get_stories_public
   end
-
 
 
   def init_resources *id
