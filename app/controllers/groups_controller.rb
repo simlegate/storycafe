@@ -9,6 +9,11 @@ class GroupsController < ApplicationController
     render "index" , :locals => {   :resources => init_resources(params[:id]) }
   end
 
+  def create
+     render :json =>  Group.create(params[:group])
+  end
+
+
   # put update/:id
   def update
     result = Group.find(params[:id]).update_attributes(params[:group])

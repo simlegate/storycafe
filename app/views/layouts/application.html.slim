@@ -17,17 +17,20 @@ body
           .span2  项目名称
           .span6
             - if current_user
+              ul.nav
+                li.divider-vertical
               = render "stories/form_new_story"
           .span4
             a.brand.active = t('title')
             div.nav-collapse
               ul.nav
                 li.divider-vertical
-                li.active
-                  a.branch = t('title')
                 li
                   - if current_user
-                    = link_to '退出登录', destroy_user_session_path, :method => :delete
+                      li.active
+                        a = current_user.email
+                      li
+                        = link_to '退出登录', destroy_user_session_path, :method => :delete
 
   div.container-fluid
     p.notice = notice
