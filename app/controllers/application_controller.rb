@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 class ApplicationController < ActionController::Base
+  include GroupsHelper
+
   protect_from_forgery
 
   before_filter :init
@@ -25,5 +27,4 @@ class ApplicationController < ActionController::Base
                   :description =>{:data =>  get_description(id[0])}  }
 
   end
-
 end

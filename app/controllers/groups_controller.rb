@@ -8,6 +8,7 @@ class GroupsController < ApplicationController
 
 
   def edit
+    current_group params[:id]
     render "index" , :locals => {   :resources => init_resources(params[:id]) }
   end
 end
