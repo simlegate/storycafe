@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 class GroupsController < ApplicationController
+  def
      render :json =>  Group.create(params[:group])
   end
 
