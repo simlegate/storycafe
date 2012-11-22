@@ -19,10 +19,11 @@ body
           ul.nav
             li.active
               a = t('home')
-        = render "stories/form_new_story"
-
+        - if current_user
+          = render "stories/form_new_story"
+>>>>>>> abda0bace3771d8a0a9f81d705c057ebc8289cc9
   div.container-fluid
-    p.notice = notice 
+    p.notice = notice
     p.alert = alert
     div.row-fluid
       = yield
