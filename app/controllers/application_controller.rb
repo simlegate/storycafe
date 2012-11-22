@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 class ApplicationController < ActionController::Base
-  include GroupsHelper
-
   protect_from_forgery
   before_filter :init
 

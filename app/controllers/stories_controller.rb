@@ -16,7 +16,6 @@ class StoriesController < ApplicationController
 
   # GET /stories/1/edit
   def edit
-
     render "index" , :locals => {   :resources => init_resources(params[:id]) }
   end
 
