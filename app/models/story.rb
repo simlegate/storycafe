@@ -21,7 +21,8 @@ class Story
   end
 
   def self.get_stories_public
-    Group.find_by(title: "public").stories
+    result =  Group.where(title: "public")
+    result.exists?  ?  result.stories : nil
   end
 
   def self.get_story_description_by_story_id id
@@ -29,6 +30,7 @@ class Story
   end
 
   def self.get_story_description_default
-    Group.find_by(title: "public").stories.first
-  end
+    result = Group.where(title: "public")
+    result.exists? ?  result.stories.first : nil
+   end
 end
