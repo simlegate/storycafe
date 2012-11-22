@@ -8,4 +8,11 @@ class GroupsController < ApplicationController
     session[:current_group] = Group.get_group_by_group_id(params[:id]) if params[:id] != session[:current_group].id
     render "index" , :locals => {   :resources => init_resources(params[:id]) }
   end
+
+  # put update/:id
+  def update
+    result = Group.find(params[:id]).update_attributes(params[:group])
+#    result ? (render :json => "success") : (render :json => "error")
+    render :json => "success".to_json
+  end
 end
