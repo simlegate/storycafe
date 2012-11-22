@@ -2,10 +2,14 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  before_filter :init
 
+  def init
+     session[:current_group] = Group.get_group_default   if session[:current_group].nil?
+  end
 
   def get_description *id
-    id[0] ? ( Story.get_story_description_by_story_id(id[0]).exists? ? Story.get_story_description_by_story_id(id[0]) :Group.get_group_description_by_group_id(id[0])  ) :  Story.get_story_description_default
+    id[0] ? ( Story.get_story_by_story_id(id[0]).exists? ? Story.get_story_by_story_id(id[0]) : Group.get_group_by_group_id(id[0])  ) :  Story.get_story_default
   end
 
 

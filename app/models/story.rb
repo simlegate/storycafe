@@ -22,15 +22,17 @@ class Story
 
   def self.get_stories_public
     result =  Group.find_by(title: "public")
-    result.nil?  ?  result.stories : nil
+    result.nil?  ?  nil : result.stories
   end
 
-  def self.get_story_description_by_story_id id
+  def self.get_story_by_story_id id
     where(_id: id)
   end
 
-  def self.get_story_description_default
+
+
+  def self.get_story_default
     result = Group.find_by(title: "public")
-    result.nil?  ?  result.stories.first : nil
+    result.nil?  ?  nil :  result.stories.first
    end
 end
