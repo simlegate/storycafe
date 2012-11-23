@@ -2,6 +2,7 @@ div.span4.well
   - if meta[:type]=="group"
    section
      section
+       - if current_group
          h3(data-attribute="title") = current_group.title
          .row-fluid
              .span12
@@ -13,6 +14,7 @@ div.span4.well
   - else
    section
      section
+       - if current_story
          h3(data-attribute="title") = current_story.title
          .row-fluid
             .span12

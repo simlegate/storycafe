@@ -2,6 +2,11 @@ div.span6.well
   - if resource
     table.table.table-condensed.table-condensed_story
       - resource.each do |s|
-        tr
-          td.span2 = get_user_name_by_user_id(s.user_id)
-          td.title = link_to s.title ,edit_story_path(s) , :method => :get
+        - if current_story.title =="#{s.title}"
+          tr.resource_active
+            td.span2 = get_user_name_by_user_id(s.user_id)
+            td.title = link_to s.title ,edit_story_path(s) , :method => :get
+        -else
+          tr
+            td.span2 = get_user_name_by_user_id(s.user_id)
+            td.title = link_to s.title ,edit_story_path(s) , :method => :get

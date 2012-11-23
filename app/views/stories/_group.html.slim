@@ -1,5 +1,5 @@
 div.span2.well
-  span 故事分类 
+  span 故事分类
   a.btn.btn-primary href="#myModal" role="button" class="btn" data-toggle="modal" new group
   i.icon-share
   div( id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
@@ -15,5 +15,9 @@ div.span2.well
   - if resource
    table.table.table-condensed#group_list
      -  resource.each do |s|
-      tr
-        td.group_title = link_to s.title ,edit_group_path(s) , :method => :get
+       - if current_group.title =="#{s.title}"
+         tr.resource_active
+           td.group_title = link_to s.title ,edit_group_path(s) , :method => :get
+       -else
+         tr
+           td.group_title = link_to s.title ,edit_group_path(s) , :method => :get
