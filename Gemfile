@@ -16,11 +16,8 @@ group :test do
   gem 'capybara'
 end
 
-
-
 gem 'mongoid'
 gem 'bson_ext'
-gem 'mongoid_auto_inc'
 gem 'mongoid_rails_migrations'
 
 

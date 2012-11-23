@@ -7,7 +7,6 @@ class Story
   field :description
   belongs_to :group
   belongs_to :user
-  auto_increment :list
   field :status, type: String, default: "new"
 
   def self.add_story params_story
