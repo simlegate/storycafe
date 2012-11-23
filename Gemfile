@@ -20,7 +20,7 @@ end
 
 gem 'mongoid'
 gem 'bson_ext'
-gem 'mongoid_auto_inc'
+gem 'mongoid_auto_inc',:path => "lib/mongoid_auto_inc"
 gem 'mongoid_rails_migrations'
 
 
