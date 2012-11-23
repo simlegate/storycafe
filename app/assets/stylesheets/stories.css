@@ -13,3 +13,7 @@
  margin-bottom: 0px !important;
  margin-top: 8px;
  }
+
+.table-condensed_story tr:hover ,#group_list tr:hover , .resource_active  {
+  background-color: #e6e6e6
+}

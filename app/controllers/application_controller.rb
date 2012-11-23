@@ -17,7 +17,5 @@ class ApplicationController < ActionController::Base
   def init_resources *id
      result = {   :group => {:data => Group.all } ,
                   :stories => {:data =>  get_stories(id[0]) } }
-     p "-------------------------------------"
-     p result
      end
 end
