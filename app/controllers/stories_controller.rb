@@ -11,6 +11,8 @@ class StoriesController < ApplicationController
   # POST /stories.json
   def create
      render :json => Story.add_story(params[:story])
+     
+    #render :json => Story.create(status: "22")
   end
 
 
