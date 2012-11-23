@@ -7,7 +7,7 @@ class Story
   field :description
   belongs_to :group
   belongs_to :user
-  auto_increment :list,:seed => 1 
+  auto_increment :list_id,:seed => 0, :collection => "story_list_ids" 
   field :status, type: String, default: "new"
 
   def self.add_story params_story
