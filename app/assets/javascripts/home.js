@@ -33,6 +33,16 @@ $(document).ready(function() {
                     alert("autosave success!");
               });
 
+    $(".change_status_icon").bind(
+        'ajax:beforeSend',
+              function(event,data,status, xhr){
+                      alert("change");
+                                }).bind(
+       'ajax:success',
+              function(event,data,status,xhr){
+                 alert(data)
+              });
+
      // 给story 的description 的编辑框绑定一个异步自动保存
     $("#description-areatext").bind("blur",function(){
         alert("autosave ???");

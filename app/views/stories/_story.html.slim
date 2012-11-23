@@ -1,12 +1,6 @@
 div.span6.well
   - if resource
-    table.table.table-condensed.table-condensed_story
-      - resource.each do |s|
-        - if current_story.id ==="#{s.id}"
-          tr.resource_active
-            td.span2 = get_user_name_by_user_id(s.user_id)
-            td.title = link_to s.title ,edit_story_path(s) , :method => :get
-        -else
-          tr
-            td.span2 = get_user_name_by_user_id(s.user_id)
-            td.title = link_to s.title ,edit_story_path(s) , :method => :get
+    = render "stories/stories_in_status", :resource => resource[:new],:type=> "New" if resource[:new].any?
+    = render "stories/stories_in_status", :resource => resource[:started],:type=> "Started" if resource[:started].any?
+    = render "stories/stories_in_status", :resource => resource[:review],:type=> "Wait participant for review" if resource[:review].any?
+    = render "stories/stories_in_status", :resource => resource[:finished],:type=> "Finished" if resource[:finished].any?

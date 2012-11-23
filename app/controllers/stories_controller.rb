@@ -22,12 +22,18 @@ class StoriesController < ApplicationController
     render "index" , :locals => {  :resources => init_resources(params[:id]) }
   end
 
-
- # put/:id
-   def update
+  # put/:id def update
+  def update
      # 注意update_attribute 没有s
      Story.find(params[:id]).update_attribute(:description,params[:description])
      # to_json 不知道何时不加
      render :json => "autosave success!".to_json
    end
+ 
+   # change status of story
+   def change_status 
+     result = Story.set_story_status params[:story_id],params[:status]
+     result ? (render :json => "success".to_json) : (render :json => "false".to_json)
+   end
+
 end

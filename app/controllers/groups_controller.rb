@@ -6,13 +6,12 @@ class GroupsController < ApplicationController
 
   def edit
     session[:current_group] = Group.get_group_by_group_id(params[:id]) if params[:id] != session[:current_group].id
-    render "index" , :locals => {   :resources => init_resources(params[:id]) }
+    render "index" , :locals => { :resources => init_resources(params[:id]) }
   end
 
   def create
      render :json =>  Group.create(params[:group])
   end
-
 
   # put update/:id
   def update

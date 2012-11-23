@@ -10,12 +10,15 @@ class ApplicationController < ActionController::Base
 
 
   def get_stories *id
-      id[0] ? ( Story.get_stories_by_group_id(id[0]).exists? ? Story.get_stories_by_group_id(id[0]) : Story.get_stories_by_story_id(id[0]) ) :  Story.get_stories_public
+    p Story.get_stories_by_group_id(id[0])
+      #id[0] ? ( Story.get_stories_by_group_id(id[0]).exists? ? Story.get_stories_by_group_id(id[0]) : Story.get_stories_by_story_id(id[0]) ) :  Story.get_stories_public
+      id[0] ? ( Story.get_stories_by_group_id(id[0]) ? Story.get_stories_by_group_id(id[0]) : Story.get_stories_by_story_id(id[0]) ) :  Story.get_stories_public
   end
 
 
   def init_resources *id
-     result = {   :group => {:data => Group.all } ,
-                  :stories => {:data =>  get_stories(id[0]) } }
-     end
+     result = {   :group   => {:data => Group.all } ,
+                  :stories => {:data =>  get_stories(id[0]) } 
+              }
+  end
 end
