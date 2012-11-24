@@ -11,8 +11,6 @@ class StoriesController < ApplicationController
   # POST /stories.json
   def create
      render :json => Story.add_story(params[:story])
-     
-    #render :json => Story.create(status: "22")
   end
 
 
@@ -24,16 +22,16 @@ class StoriesController < ApplicationController
 
   # put/:id def update
   def update
-     # 注意update_attribute 没有s
-     Story.find(params[:id]).update_attribute(:description,params[:description])
-     # to_json 不知道何时不加
-     render :json => "autosave success!".to_json
-   end
- 
-   # change status of story
-   def change_status 
-     result = Story.set_story_status params[:story_id],params[:status]
-     result ? (render :json => "success".to_json) : (render :json => "false".to_json)
-   end
+    # 注意update_attribute 没有s
+    Story.find(params[:id]).update_attribute(:description,params[:description])
+    # to_json 不知道何时不加
+    render :json => "autosave success!".to_json
+  end
 
+  # change status of story
+  def change_status
+    result = Story.set_story_status params[:story_id],params[:status]
+    render :json =>(result ? Story.get_story_by_story_id(params[:story_id]) : "error").to_json
+  end
 end
+0

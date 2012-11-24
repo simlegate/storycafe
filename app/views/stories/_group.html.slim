@@ -15,7 +15,7 @@ div.span2.well
   - if resource
    table.table.table-condensed#group_list
      -  resource.each do |s|
-       - if current_group.id ==="#{s.id}"
+       - if current_group && current_group.id ==="#{s.id}"
          tr.resource_active
            td.group_title = link_to s.title ,edit_group_path(s) , :method => :get
        -else

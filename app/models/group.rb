@@ -7,7 +7,7 @@ class Group
   has_many :stories
 
   def self.get_group_by_group_id id
-    find(id)
+    where(_id: id).first
   end
 
   def self.get_group_default

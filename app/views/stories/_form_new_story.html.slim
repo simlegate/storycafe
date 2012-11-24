@@ -3,5 +3,5 @@
   = f.text_field :title, :class => "span6 new_story_input",:placeholder => "快速添加故事"
   = f.hidden_field :user_id , :value => "#{current_member}"
   = f.hidden_field :description , :value => ""
-  = f.hidden_field :group_id , :value => "#{current_group.id}"
+  = f.hidden_field :group_id , :value =>  "#{current_group.id}"
   = f.submit  "新建故事",:disable_with => "请稍等..",:confirm => "Are you?" , :class => "btn btn-inverse "
