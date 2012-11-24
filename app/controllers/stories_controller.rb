@@ -10,6 +10,7 @@ class StoriesController < ApplicationController
   # POST /stories
   # POST /stories.json
   def create
+     PrivatePub.publish_to("/messages/new", message: "success")
      render :json => Story.add_story(params[:story])
      
     #render :json => Story.create(status: "22")
