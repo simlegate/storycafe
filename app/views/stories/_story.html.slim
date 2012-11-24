@@ -1,6 +1,6 @@
 div.span6.well
   - if resource
-    = render "stories/stories_in_status", :resource => resource[:new],:type=> "New" if resource[:new].any?
-    = render "stories/stories_in_status", :resource => resource[:started],:type=> "Started" if resource[:started].any?
-    = render "stories/stories_in_status", :resource => resource[:review],:type=> "Wait participant for review" if resource[:review].any?
-    = render "stories/stories_in_status", :resource => resource[:finished],:type=> "Finished" if resource[:finished].any?
+    = render "stories/stories_in_status", :resource => resource[:new],:type=> "New" if resource[:new] && !resource[:new].empty?
+    = render "stories/stories_in_status", :resource => resource[:started],:type=> "Started" if resource[:started] && !resource[:started].empty?
+    = render "stories/stories_in_status", :resource => resource[:review],:type=> "Wait participant for review" if resource[:review] && !resource[:review].empty?
+    = render "stories/stories_in_status", :resource => resource[:finished],:type=> "Finished" if resource[:finished] && !resource[:finished].empty?

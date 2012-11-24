@@ -1,6 +1,6 @@
 
 = render "stories/group"   , :resource => resources[:group][:data]
-= render "stories/story"   , :resource => resources[:stories][:data]
+= render "stories/story"   , :resource => resources[:stories]
 = render "stories/description" ,  :meta => {}
 
 = link_to "change","/stories/change_status?status=new" ,:class => "change_status",:remote => true,:'data-type' => :json
