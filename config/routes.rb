@@ -3,11 +3,10 @@ StorycafeSimple::Application.routes.draw do
   get "stories/check" 
   devise_for :users
   resources :stories , :groups , :projects
+  # set log have read
+  get "logs/mark_read"
   root :to => 'stories#index'
   # The priority is based upon order of creation:
-  # first created -> highest priority.
-
-  # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
