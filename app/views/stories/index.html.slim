@@ -4,10 +4,10 @@
     p.notice = notice
   - if alert
     p.alert = alert
-  = render "stories/stories_in_status", :resource => resources[:stories][:new],:type=> "stories_new" if resources[:stories][:new] && !resources[:stories][:new].empty?
-  = render "stories/stories_in_status", :resource => resources[:stories][:started],:type=> "stories_started" if resources[:stories][:started] && !resources[:stories][:started].empty?
-  = render "stories/stories_in_status", :resource => resources[:stories][:review],:type=> "stories_review" if resources[:stories][:review] && !resources[:stories][:review].empty?
-  = render "stories/stories_in_status", :resource => resources[:stories][:finished],:type=> "stories_finished" if resources[:stories][:finished] && !resources[:stories][:finished].empty?
+  = render "stories/stories_in_status", :resource => resources[:new],:type=> "stories_new" if resources[:new] && !resources[:new].empty?
+  = render "stories/stories_in_status", :resource => resources[:started],:type=> "stories_started" if resources[:started] && !resources[:started].empty?
+  = render "stories/stories_in_status", :resource => resources[:review],:type=> "stories_review" if resources[:review] && !resources[:review].empty?
+  = render "stories/stories_in_status", :resource => resources[:finished],:type=> "stories_finished" if resources[:finished] && !resources[:finished].empty?
 
 
   = render "stories/description" ,  :meta => {}
