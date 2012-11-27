@@ -9,8 +9,15 @@ $(document).ready(function() {
     $("#new_story").bind('ajax:beforeSend', function(event,data,status, xhr){
                      alert("ajax异步添加story, 点击确认")
                   }).bind('ajax:success',function(event,data){
-                      alert(data);
-                      $(".table-condensed_story").append('<tr><td>'+data['email']+'</td><td>'+data['title']+'</td></tr>')
+                      alert(data["title"]);
+                      $(".table-condensed_story").append('<tr><td>'+data['title']+'</td></tr>')
+                  })
+
+    $("#new_project").bind('ajax:beforeSend', function(event,data,status, xhr){
+                     alert("new project")
+                  }).bind('ajax:success',function(event,data){
+                      alert("create project successlly");
+                      //$(".table-condensed_story").append('<tr><td>'+data['email']+'</td><td>'+data['title']+'</td></tr>')
                   })
 
     // 给每一个story title 添加一个hover 样式
@@ -60,6 +67,12 @@ $(document).ready(function() {
                       $("#group_list").append('<tr><td><a href="/groups/'+data['_id']+'/edit">'+data['title']+'</a></td></tr>')
                   })
 
+
+    $("#push").bind('ajax:beforeSend', function(event,data,status, xhr){
+                     alert("push")
+                  }).bind('ajax:success',function(event,data){
+                      alert(data);
+                  })
 
 
 })
