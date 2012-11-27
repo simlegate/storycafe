@@ -1,6 +1,15 @@
 
-= render "stories/group"   , :resource => resources[:group][:data]
-= render "stories/story"   , :resource => resources[:stories]
-= render "stories/description" ,  :meta => {}
+= render "stories/group"   , :resource => resources[:group]
+.span10
+  - if notice
+    p.notice = notice
+  - if alert
+    p.alert = alert
+  = render "stories/stories_in_status", :resource => resources[:stories][:new],:type=> "stories_new" if resources[:stories][:new] && !resources[:stories][:new].empty?
+  = render "stories/stories_in_status", :resource => resources[:stories][:started],:type=> "stories_started" if resources[:stories][:started] && !resources[:stories][:started].empty?
+  = render "stories/stories_in_status", :resource => resources[:stories][:review],:type=> "stories_review" if resources[:stories][:review] && !resources[:stories][:review].empty?
+  = render "stories/stories_in_status", :resource => resources[:stories][:finished],:type=> "stories_finished" if resources[:stories][:finished] && !resources[:stories][:finished].empty?
 
-= link_to "change","/stories/change_status?status=new" ,:class => "change_status",:remote => true,:'data-type' => :json
+
+  = render "stories/description" ,  :meta => {}
+  = render "stories/todo"

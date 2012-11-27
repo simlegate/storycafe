@@ -10,33 +10,45 @@ html
   = javascript_include_tag :application , :recursive => true
   = csrf_meta_tags
 body
-  div.navbar.navbar-fixed-top
-    div.navbar-inner
-      div.container-fluid
-        .row-fluid
-          .span2
+  .container-fluid.content
+    .row-fluid
+      .span2
+        .navbar
+          .navbar-inner
             a.brand(style="float:left") 项目名称
-          .span6
-            - if current_user
-              ul.nav
-                li.divider-vertical
-              = render "stories/form_new_story"
-          .span4
-            a.brand.active = t('title')
-            div.nav-collapse
-              ul.nav
-                li.divider-vertical
-                li
+            a.close_nav Xnav
+            a.close_group  Xgroup
+      .span10.no_margin
+        .navbar
+          .navbar-inner
+            .container-fluid
+              .row-fluid( style="margin-left: -40px;")
+                .span7
                   - if current_user
-                      li.active
-                        a = current_user.email
+                    ul.nav
+                      li.divider-vertical
                       li
-                        = link_to '退出登录', destroy_user_session_path, :method => :delete
-
-  div.container-fluid
-    - if notice
-      p.notice = notice
-    - if alert
-      p.alert = alert
-    div.row-fluid
-      = yield
+                        img.open src="/assets/open.png"
+                    = render "stories/form_new_story"
+                a.brand.active = t('title')
+                .nav-collapse
+                  ul.nav
+                    li.divider-vertical
+                    li
+                      - if current_user
+                        li.active
+                          a = current_user.email
+                        li
+                          = link_to '退出登录', destroy_user_session_path, :method => :delete
+      - if current_user
+        = yield
+      -else
+        .container-fluid
+          .row-fluid
+            .message
+              - if notice
+                p.notice = notice
+              - if alert
+                p.alert = alert
+            .login
+              = yield

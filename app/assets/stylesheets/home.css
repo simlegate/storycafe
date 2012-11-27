@@ -2,3 +2,22 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+
+.float_right{
+   float:right;
+   margin-right:15px;
+   margin-top:5px;
+}
+#stories_started .float_content , #stories_review .float_content , #story_description .float_content , #todo .float_content {
+  border-left: 1px solid #C01;
+}
+
+
+#stories_new .float_content , #stories_started .float_content , #stories_review .float_content {
+  border-bottom: 1px solid #C01;
+}
+
+h4 .span11{
+ color :red;
+}

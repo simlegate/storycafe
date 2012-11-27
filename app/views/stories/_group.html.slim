@@ -1,7 +1,8 @@
-div.span2.well
-  span 故事分类
-  a.btn.btn-primary href="#myModal" role="button" class="btn" data-toggle="modal" new group
-  i.icon-share
+div.span2.slideleft.no_margin
+ .left_nav
+   span Iterations
+   a.icon-share.float_right href="#myModal"  data-toggle="modal"
+ .group
   div( id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
     .modal-header
       button( type="button" class="close" data-dismiss="modal" aria-hidden="true")×
@@ -21,3 +22,7 @@ div.span2.well
        -else
          tr
            td.group_title = link_to s.title ,edit_group_path(s) , :method => :get
+ .left_nav
+   span Participants
+   a.icon-share.float_right href="#myModal"  data-toggle="modal"
+ .participant

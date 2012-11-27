@@ -1900,7 +1900,7 @@ table {
   line-height: 20px;
   text-align: left;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #bbb;
 }
 
 .table th {
@@ -2151,7 +2151,7 @@ table th[class*="span"],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("images/glyphicons-halflings.png");
+  background-image: url("/assets/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }
@@ -2171,7 +2171,7 @@ table th[class*="span"],
 .dropdown-menu > .active > a > [class*=" icon-"],
 .dropdown-submenu:hover > a > [class^="icon-"],
 .dropdown-submenu:hover > a > [class*=" icon-"] {
-  background-image: url("images/glyphicons-halflings-white.png");
+  background-image: url("/assets/glyphicons-halflings-white.png");
 }
 
 .icon-glass {
@@ -4168,7 +4168,7 @@ input[type="submit"].btn.btn-mini {
 .navbar {
   *position: relative;
   *z-index: 2;
-  margin-bottom: 20px;
+ /* margin-bottom: 20px;*/
   overflow: visible;
   color: #777777;
 }
@@ -4185,9 +4185,13 @@ background-image: -o-linear-gradient(top, #333, #222);
 background-image: linear-gradient(top, #333, #222);
 background-repeat: repeat-x;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
+
+/*
 -webkit-border-radius: 4px;
 -moz-border-radius: 4px;
 border-radius: 4px;
+*/
+
 -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
@@ -4247,7 +4251,7 @@ width: 1px;
 margin: 0 9px;
 overflow: hidden;
 background-color: #222;
-border-right: 1px solid #333; 	
+border-right: 1px solid #333;
 }
 
 .navbar .btn,

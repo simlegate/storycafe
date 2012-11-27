@@ -1,18 +1,23 @@
-p.stories_total.span1 = resource.length
-p.status_title.span6 = type 
-table.table.table-condensed.table-condensed_story
-  - resource.each do |s|
-    - if current_story.id ==="#{s.id}"
-      tr.resource_active
-        td.span1 = s.list_id
-        td.span2 = get_user_name_by_user_id(s.user_id)
-        td.title = link_to s.title ,edit_story_path(s) , :method => :get
-        td.span1
-          = link_to_if((s.status < 4),"[#{s.status}]","/stories/change_status?story_id=#{s.id}&status=#{s.status+1}",:class =>"change_status_icon",:remote => true) 
-    -else
-      tr
-        td.span1 = s.list_id
-        td.span2 = get_user_name_by_user_id(s.user_id)
-        td.title = link_to s.title ,edit_story_path(s) , :method => :get
-        td.span1
-          = link_to_if((s.status < 4),"[#{s.status}]","/stories/change_status?story_id=#{s.id}&status=#{s.status+1}",:class =>"change_status_icon",:remote => true) 
+div.span4.float_content.no_margin
+  .span12.float_content_title
+    h4
+      span.span1 = resource.length
+      span.span11 = get_story_status_title(type)
+  table.table.table-condensed.table-condensed_story.span12
+      - resource.each do |s|
+        - if current_story.id ==="#{s.id}"
+          tr.resource_active
+            td.span1.test_id
+              = s.list_id
+            td.span2 = get_user_name_by_user_id(s.user_id)
+            td.title = link_to s.title ,edit_story_path(s) , :method => :get
+            td.span1
+              = link_to_if((s.status < 4),"[#{s.status}]","/stories/change_status?story_id=#{s.id}&status=#{s.status+1}",:class =>"change_status_icon",:remote => true , :attr_next_status => get_story_next_status(s.status+1))
+        -else
+          tr
+            td.span1.test_id
+              = s.list_id
+            td.span2 = get_user_name_by_user_id(s.user_id)
+            td.title = link_to s.title ,edit_story_path(s) , :method => :get
+            td.span1
+              = link_to_if((s.status < 4),"[#{s.status}]","/stories/change_status?story_id=#{s.id}&status=#{s.status+1}",:class =>"change_status_icon",:remote => true , :attr_next_status => get_story_next_status(s.status+1))

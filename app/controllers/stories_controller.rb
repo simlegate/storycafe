@@ -30,8 +30,15 @@ class StoriesController < ApplicationController
 
   # change status of story
   def change_status
-    result = Story.set_story_status params[:story_id],params[:status]
-    render :json =>(result ? Story.get_story_by_story_id(params[:story_id]) : "error").to_json
+   #  result = Story.set_story_status params[:story_id],params[:status]
+   # render :json =>(result ? Story.get_story_by_story_id(params[:story_id]) : "error").to_json
+
+
+    result = Story.get_story_by_story_id(params[:story_id]);
+    result[:user_name] = User.find(result[:user_id]).email
+    result[:next_status] = "stories_started"
+    # zui hou yao cheng he zai na ge han shu li mian qu
+   render :json => result ;
   end
 end
 0

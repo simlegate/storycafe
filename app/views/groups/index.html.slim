@@ -1,5 +1,18 @@
-
-
-= render "stories/group"   , :resource => resources[:group][:data]
-= render "stories/story"   , :resource => resources[:stories][:data]
-= render "stories/description" ,  :meta => { :type => "group"}
+= render "stories/group"   , :resource => resources[:group]
+.span10.all_content.no_margin
+  - if notice
+    p.notice = notice
+  - if alert
+    p.alert = alert
+  #stories_new.block
+    = render "stories/stories_in_status", :resource => resources[:stories][:new],:type=> "stories_new" if resources[:stories][:new] && !resources[:stories][:new].empty?
+  #stories_started
+    = render "stories/stories_in_status", :resource => resources[:stories][:started],:type=> "stories_started" if resources[:stories][:started] && !resources[:stories][:started].empty?
+  #stories_review
+    = render "stories/stories_in_status", :resource => resources[:stories][:review],:type=> "stories_review" if resources[:stories][:review] && !resources[:stories][:review].empty?
+  #stories_finished
+    = render "stories/stories_in_status", :resource => resources[:stories][:finished],:type=> "stories_finished" if resources[:stories][:finished] && !resources[:stories][:finished].empty?
+  #story_description
+    = render "stories/description" ,  :meta => { :type => "group"}
+  #todo
+    = render "stories/todo"
