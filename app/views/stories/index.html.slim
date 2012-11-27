@@ -1,5 +1,8 @@
-
+//<a href="/stories/check" id="push" data-remote="true">push</a>
+//<a href="#" id="push_1" data-remote="true">push_1</a>
+//<input type="text" value="hi" id="input_1" />
+//<img src="/assets/coffe.jpg"/>
 = render "stories/group"   , :resource => resources[:group][:data]
 = render "stories/story"   , :resource => resources[:stories]
 = render "stories/description" ,  :meta => {}
-= subscribe_to "/messages/new"
+
