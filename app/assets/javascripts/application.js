@@ -15,5 +15,6 @@
 //= require bootstrap
 //= require home
 //= require stories
-
-// require_tree .
+//= require private_pub
+//= require push
+//= require_tree .

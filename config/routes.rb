@@ -1,7 +1,8 @@
 StorycafeSimple::Application.routes.draw do
   get "stories/change_status" 
+  get "stories/check" 
   devise_for :users
-  resources :stories , :groups
+  resources :stories , :groups , :projects
   root :to => 'stories#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.

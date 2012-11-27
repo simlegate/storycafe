@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
 
   def get_stories *id
-    p Story.get_stories_by_group_id(id[0])
+    #p Story.get_stories_by_group_id(id[0])
       #id[0] ? ( Story.get_stories_by_group_id(id[0]).exists? ? Story.get_stories_by_group_id(id[0]) : Story.get_stories_by_story_id(id[0]) ) :  Story.get_stories_public
       id[0] ? ( Story.get_stories_by_group_id(id[0]) ? Story.get_stories_by_group_id(id[0]) : Story.get_stories_by_story_id(id[0]) ) :  Story.get_stories_public
   end
@@ -21,4 +21,15 @@ class ApplicationController < ActionController::Base
                   :stories =>  get_stories(id[0])
               }
   end
+  
+  # get next status by current status
+  def get_next_status current_status
+    status = %w[new started review finished]
+    tmp = nil
+    status.each_with_index do |s,i|
+      tmp = i+1  if s == current_status 
+    end
+    status[tmp] ? status[tmp] : "new"
+  end
+
 end

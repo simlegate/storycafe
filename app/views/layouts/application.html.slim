@@ -9,6 +9,7 @@ html
   = stylesheet_link_tag  :application , :recursive => true
   = javascript_include_tag :application , :recursive => true
   = csrf_meta_tags
+  = subscribe_to "/messages/new"
 body
   .container-fluid.content
     .row-fluid
@@ -38,6 +39,11 @@ body
                       - if current_user
                         li.active
                           a = current_user.email
+                        li
+                          a class="dropdown-toggle" data-toggle="dropdown" href="#menutest1"
+                            | message
+                            b class="caret"
+                          = render "public/message_show"
                         li
                           = link_to '退出登录', destroy_user_session_path, :method => :delete
       - if current_user

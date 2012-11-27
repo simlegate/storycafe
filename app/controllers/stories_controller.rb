@@ -10,6 +10,9 @@ class StoriesController < ApplicationController
   # POST /stories
   # POST /stories.json
   def create
+     log = Log.new_message "simlegate create a story of '#{params[:story][:title]}'"
+    #publish_message("messages/new",log)
+     PrivatePub.publish_to("/messages/new", message: log)
      render :json => Story.add_story(params[:story])
   end
 
@@ -28,17 +31,19 @@ class StoriesController < ApplicationController
     render :json => "autosave success!".to_json
   end
 
-  # change status of story
-  def change_status
-   #  result = Story.set_story_status params[:story_id],params[:status]
-   # render :json =>(result ? Story.get_story_by_story_id(params[:story_id]) : "error").to_json
+   # change status of story
+   # params[:status] stand for next status
+   def change_status
+     story = Story.get_story_by_story_id(params[:story_id])
+     next_status = get_next_status(params[:status])
+     log = Log.new_message "#{story.title} be to #{params[:status]} by #{current_user.email}"
+     PrivatePub.publish_to("/messages/new", message: log)
+     result = Story.set_story_status params[:story_id],params[:status],next_status
+     result ? (render :json => "success".to_json) : (render :json => "false".to_json)
+   end
 
-
-    result = Story.get_story_by_story_id(params[:story_id]);
-    result[:user_name] = User.find(result[:user_id]).email
-    result[:next_status] = "stories_started"
-    # zui hou yao cheng he zai na ge han shu li mian qu
-   render :json => result ;
-  end
+   def check
+     PrivatePub.publish_to("/messages/new", message: "success")
+     render :json => "22".to_json
+   end
 end
-0

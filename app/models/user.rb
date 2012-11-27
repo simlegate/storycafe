@@ -7,6 +7,7 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :stories
+  has_many :projects
   ## Database authenticatable
   field :email,              :type => String, :default => ""
   field :encrypted_password, :type => String, :default => ""

@@ -27,4 +27,7 @@ gem 'slim-rails'
 
 gem 'jquery-rails'
 
+# message push
+gem "private_pub"
 
+gem "thin"
