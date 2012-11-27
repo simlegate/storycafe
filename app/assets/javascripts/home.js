@@ -25,7 +25,6 @@ $(document).ready(function() {
         $(this).addClass("classname").siblings().removeClass("classname")
     })
 
-
     //异步更新每一个story 的description
     $("#description_content").bind(
         'ajax:beforeSend',

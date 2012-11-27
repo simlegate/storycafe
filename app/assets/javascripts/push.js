@@ -2,8 +2,16 @@ PrivatePub.subscribe("/messages/new", function(data, channel) {
   // $(".brand").append(data.message);
 //  alert($("#input_1").val())
     //alert(data.message.content)
-    $("#message_list").append("<li>"+data.message.content+"</li>")
-//notify();
+    _message_list = $("#message_list") 
+    _message_list.append("<li>"+data.message.content+"&nbsp;&nbsp;<i class='icon-ok'></i></li>")
+         .children(".icon-ok").bind("click",function(event){
+           event.stopPropagation(); 
+           alert(222)
+          //$(this).parent("li").remove()
+          })
+         .parents(".message_table").bind("click",function(){
+           $(this).css("display","block");
+          })
             
 });
 
