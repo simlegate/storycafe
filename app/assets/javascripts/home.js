@@ -17,7 +17,8 @@ $(document).ready(function() {
                      alert("new project")
                   }).bind('ajax:success',function(event,data){
                       alert("create project successlly");
-                      //$(".table-condensed_story").append('<tr><td>'+data['email']+'</td><td>'+data['title']+'</td></tr>')
+                  }).bind('ajax:error',function(event,data,status, xhr){
+                       alert("error")
                   })
 
     // 给每一个story title 添加一个hover 样式
