@@ -4,13 +4,9 @@
 */
 body{
 padding-top:0px;
-
 }
 
 
-.project_name{
-
-}
 
 .navbar-inner img {
  max-width:29px;
@@ -18,8 +14,8 @@ padding-top:0px;
  cursor: pointer;
 }
 
-.navbar-inner img.open{
- border: 2px solid #334;
+.navbar-inner img.open:hover{
+ background-color: #222;
 }
 .navbar-inner .publish{
   Background : url('/assets/publish.png');
@@ -49,8 +45,13 @@ padding-top:0px;
   height:100%
 }
 
+.color{
+ background-color: #000;
+}
 .float_content .float_content_title{
- background: #EAEAEA;
+/* background: #EAEAEA;
+    background-color: @color ; */
+    .color;
  padding-left:15px;
 }
 
@@ -104,9 +105,7 @@ background: #AAA;
 
 
 .close_nav{
-  margin-right:-15px;
 }
 
 .close_group{
-  margin-top:20px;
 }

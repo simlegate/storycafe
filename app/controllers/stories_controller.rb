@@ -7,17 +7,15 @@ class StoriesController < ApplicationController
     render "index" , :locals => { :resources => init_resources }
   end
 
-  # POST /stories
-  # POST /stories.json
+
   def create
      log = Log.new_message "simlegate create a story of '#{params[:story][:title]}'"
-    #publish_message("messages/new",log)
      PrivatePub.publish_to("/messages/new", message: log)
      render :json => Story.add_story(params[:story])
   end
 
 
-  # GET /stories/1/edit
+
   def edit
     session[:current_story] = Story.get_story_by_story_id(params[:id]) if params[:id] != session[:current_story].id
     render "index" , :locals => {  :resources => init_resources(params[:id]) }
