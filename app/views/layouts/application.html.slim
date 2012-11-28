@@ -15,11 +15,14 @@ body
     .row-fluid
       .span2
         .navbar
-          .navbar-inner
-            a.brand(style="float:left") = current_project.name 
-            a.close_nav Xnav
-            a.close_group  Xgroup
+          .navbar-inner.align-right
+            a.brand(style="float:left" class="dropdown-toggle" data-toggle="dropdown" href="#project_list")
+              | "#{current_project.name}" 
+              b class="caret"
             = render "projects/form_new_project"
+            a.close_nav.icon-arrow-right
+            a.close_group.icon-arrow-down
+
       .span10.no_margin
         .navbar
           .navbar-inner
