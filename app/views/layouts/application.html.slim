@@ -16,7 +16,7 @@ body
       .span2
         .navbar
           .navbar-inner
-            a.brand(style="float:left") 项目名称
+            a.brand(style="float:left") = current_project.name 
             a.close_nav Xnav
             a.close_group  Xgroup
             = render "projects/form_new_project"

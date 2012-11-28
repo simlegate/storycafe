@@ -30,17 +30,17 @@ $(document).ready(function() {
         'ajax:beforeSend',
               function(event,data,status, xhr){
                    var FormContent= $("#description-areatext").val();
-                      alert(FormContent);
+              //     alert(FormContent);
                       if(!FormContent) return;
                                 }).bind(
        'ajax:success',
               function(event,data,status,xhr){
                   //alert(data)
-                    alert("autosave success!");
+               //    alert("autosave success!");
               });
      // 给story 的description 的编辑框绑定一个异步自动保存
     $("#description-areatext").bind("blur",function(){
-        alert("autosave ???");
+      //  alert("autosave ???");
         $("#description_content").submit();
     })
 
