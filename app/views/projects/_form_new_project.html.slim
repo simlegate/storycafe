@@ -1,6 +1,17 @@
-a.btn.btn-primary href="#project_modal" role="button" class="btn" data-toggle="modal" new project
-div( id="project_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="project_ModalLabel" aria-hidden="true")
-  .modal-header
+a class="dropdown-toggle" data-toggle="dropdown" href="#menutest1"
+  |下拉项
+  b class="caret"
+ul class="dropdown-menu"
+  li
+    a href="#" 动作1
+  li
+    a href="#" 动作2
+  li
+    a href="#" 动作3
+  li class="divider"
+  li
+    a href="#project_modal" data-toggle="modal" new project
+div( id="project_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="project_ModalLabel" aria-hidden="true") .modal-header
     button( type="button" class="close" data-dismiss="modal" aria-hidden="true")×
     h3#project_ModalLabel New project 
   = form_for( Project.new ,:remote => true ) do |f|
