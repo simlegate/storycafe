@@ -4,20 +4,22 @@ html
   meta charset="UTF-8"
   meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
   title = t('title')
+  javascript:
+    var channel_path = "#{get_channel_path}"
   link rel="author" href="#{root_url.html_safe}readme.txt"
   meta name="author" content="Byronlee and simlegate"
   = stylesheet_link_tag  :application , :recursive => true
   = javascript_include_tag :application , :recursive => true
   = csrf_meta_tags
-  = subscribe_to "/messages/new"
-body
+  = subscribe_to get_channel_path 
+ body
   .container-fluid.content
     .row-fluid
       .span2
         .navbar
           .navbar-inner.align-right
             a.brand(style="float:left" class="dropdown-toggle" data-toggle="dropdown" href="#project_list")
-              | "#{current_project.name}" 
+              = current_project.name
               b class="caret"
             = render "projects/form_new_project"
             a.close_nav.icon-arrow-right

@@ -12,7 +12,7 @@ div( id="project_modal" class="modal hide fade" tabindex="-1" role="dialog" aria
   .modal-header
     button( type="button" class="close" data-dismiss="modal" aria-hidden="true")×
     h3#project_ModalLabel New project
-  = form_for( Project.new ,:remote => true ) do |f|
+  = form_for( Project.new ,:remote => true,:html => {:'data-type' => "json"} ) do |f|
     .modal-body
       = f.text_field :name ,  :class => "span6" , :placeholder => "please write group's name..."
     .modal-footer
