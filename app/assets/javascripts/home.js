@@ -17,7 +17,8 @@ $(document).ready(function() {
                      alert("new project")
                   }).bind('ajax:success',function(event,data){
                       alert("create project successlly");
-                      //$(".table-condensed_story").append('<tr><td>'+data['email']+'</td><td>'+data['title']+'</td></tr>')
+                  }).bind('ajax:error',function(event,data,status, xhr){
+                       alert("error")
                   })
 
     // 给每一个story title 添加一个hover 样式
@@ -30,17 +31,17 @@ $(document).ready(function() {
         'ajax:beforeSend',
               function(event,data,status, xhr){
                    var FormContent= $("#description-areatext").val();
-                      alert(FormContent);
+              //     alert(FormContent);
                       if(!FormContent) return;
                                 }).bind(
        'ajax:success',
               function(event,data,status,xhr){
                   //alert(data)
-                    alert("autosave success!");
+               //    alert("autosave success!");
               });
      // 给story 的description 的编辑框绑定一个异步自动保存
     $("#description-areatext").bind("blur",function(){
-        alert("autosave ???");
+      //  alert("autosave ???");
         $("#description_content").submit();
     })
 

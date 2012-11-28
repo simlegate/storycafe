@@ -9,8 +9,10 @@ class StoriesController < ApplicationController
 
 
   def create
-     log = Log.new_message "simlegate create a story of '#{params[:story][:title]}'"
-     PrivatePub.publish_to("/messages/new", message: log)
+     log = Log.new_message "#{current_user.email} create a story of '#{params[:story][:title]}'"
+     #用调用方法的形式不可用
+     #publish_message("messages/new",log)
+     PrivatePub.publish_to("/channels/#{session[:current_project].id}", message: log)
      render :json => Story.add_story(params[:story])
   end
 
@@ -35,7 +37,7 @@ class StoriesController < ApplicationController
      story = Story.get_story_by_story_id(params[:story_id])
      next_status = get_next_status(params[:status])
      log = Log.new_message "#{story.title} be to #{params[:status]} by #{current_user.email}"
-     PrivatePub.publish_to("/messages/new", message: log)
+     PrivatePub.publish_to(get_channel_path, message: log)
      result = Story.set_story_status params[:story_id],params[:status],next_status
      result ? (render :json => "success".to_json) : (render :json => "false".to_json)
    end

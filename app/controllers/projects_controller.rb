@@ -1,5 +1,10 @@
 class ProjectsController < ApplicationController
+
   def create
-    render :json => Project.create(params[:project])
+    project = Project.new_project(current_user,params[:project])
+    session[:current_project] = project 
+    render :json => project 
   end
+   
+   
 end

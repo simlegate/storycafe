@@ -1,5 +1,7 @@
 module ApplicationHelper
-  def current_project
-    "sorycafe"
+
+  def get_channel_path
+    "/channels/#{current_project.id}"
   end
+
 end

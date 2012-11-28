@@ -1,4 +1,4 @@
-PrivatePub.subscribe("/messages/new", function(data, channel) {
+PrivatePub.subscribe(channel_path, function(data, channel) {
   // $(".brand").append(data.message);
 //  alert($("#input_1").val())
     //alert(data.message.content)

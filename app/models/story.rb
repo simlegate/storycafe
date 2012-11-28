@@ -12,7 +12,7 @@ class Story
   field :next_status, type: String , default: "started" 
 
   def self.add_story params_story
-    Story.create(params_story)
+    create(params_story)
   end
 
   def self.get_stories_by_group_id id
