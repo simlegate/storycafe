@@ -101,3 +101,12 @@ background: #AAA;
  padding: 10px;
  background-color:#f1f1f2;
 }
+
+
+.close_nav{
+  margin-right:-15px;
+}
+
+.close_group{
+  margin-top:20px;
+}
