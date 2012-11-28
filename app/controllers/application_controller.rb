@@ -32,4 +32,12 @@ class ApplicationController < ActionController::Base
     status[tmp] ? status[tmp] : "new"
   end
 
+  def current_project
+    session[:current_project] ? session[:current_project] : session[:current_project] = Project.get_default_project
+  end
+
+  def get_channel_path
+    "/channels/#{current_project.id}"
+  end
+  
 end
