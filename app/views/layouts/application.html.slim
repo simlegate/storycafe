@@ -42,14 +42,15 @@ html
               li.active
                 a.brand#margin-left = t('title')
     - if current_user
-        = yield
-    -else
-        .container-fluid
-          .row-fluid
+      .container-fluid
+        .row-fluid
+          - if current_user
+            = yield
+          - else
             .message
               - if notice
                 p.notice = notice
               - if alert
                 p.alert = alert
-            .login
-              = yield
+              .login
+                = yield
