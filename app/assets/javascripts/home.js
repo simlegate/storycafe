@@ -7,10 +7,10 @@ $(document).ready(function() {
 
     // 异步添加story
     $("#new_story").bind('ajax:beforeSend', function(event,data,status, xhr){
-                     alert("ajax异步添加story, 点击确认")
+      //  var story_title = $("form[class=new_story] input[type=text]").val();
+      //                 story_title == "" ? alert("不能为空！") ：  confirm("你确定添加此story？")
                   }).bind('ajax:success',function(event,data){
-                      alert(data["title"]);
-                      $(".table-condensed_story").append('<tr><td>'+data['title']+'</td></tr>')
+                      $(".block-stories-new table").append(data)
                   })
 
     $("#new_project").bind('ajax:beforeSend', function(event,data,status, xhr){
