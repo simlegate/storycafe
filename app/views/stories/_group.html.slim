@@ -1,28 +1,21 @@
-div.span2.slideleft.no_margin
- .left_nav
-   span Iterations
-   a.icon-share.float_right href="#myModal"  data-toggle="modal"
- .group
-  div( id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
-    .modal-header
-      button( type="button" class="close" data-dismiss="modal" aria-hidden="true")×
-      h3#myModalLabel New group
-    = form_for( Group.new ,:remote => true ) do |f|
-      .modal-body
-        = f.text_field :title ,  :class => "span6" , :placeholder => "please write group's name..."
-        = f.text_field :description , :class =>"span6", :placeholder => "please description you'r group"
-      .modal-footer
-        = f.submit  :class => "btn btn-primary"
-  - if resource
-   table.table.table-condensed#group_list
-     -  resource.each do |s|
-       - if current_group && current_group.id ==="#{s.id}"
-         tr.resource_active
-           td.group_title = link_to s.title ,edit_group_path(s) , :method => :get
-       -else
-         tr
-           td.group_title = link_to s.title ,edit_group_path(s) , :method => :get
- .left_nav
-   span Participants
-   a.icon-share.float_right href="#myModal"  data-toggle="modal"
- .participant
+div.span2.slide-left
+  .side-iterations
+    .nav-iterations
+      span Iterations
+      a.icon-share href="#myModal"  data-toggle="modal"
+      = render "new_group_modal"
+    .all-iterations
+      - if resource
+        table.span12
+          -  resource.each do |s|
+            - if current_group && current_group.id ==="#{s.id}"
+              tr.active
+                td = link_to s.title ,edit_group_path(s) , :method => :get
+            -else
+              tr
+                td = link_to s.title ,edit_group_path(s) , :method => :get
+  .side-participants
+    .nav-participants
+      span Participants
+      a.icon-share href="#myModal"  data-toggle="modal"
+    .all-participants

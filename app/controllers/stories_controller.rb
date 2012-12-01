@@ -4,16 +4,22 @@ class StoriesController < ApplicationController
   before_filter :authenticate_user!
 
   def index
+
+    result = "hello"
     render "index" , :locals => { :resources => init_resources }
+
   end
 
 
   def create
-     log = Log.new_message "#{current_user.email} create a story of '#{params[:story][:title]}'"
+   #  log = Log.new_message "#{current_user.email} create a story of '#{params[:story][:title]}'"
      #用调用方法的形式不可用
      #publish_message("messages/new",log)
-     PrivatePub.publish_to("/channels/#{session[:current_project].id}", message: log)
-     render :json => Story.add_story(params[:story])
+  #   PrivatePub.publish_to("/channels/#{session[:current_project].id}", message: log)
+      result = Story.add_story(params[:story])
+      respond_to do |format|
+         format.html { render  :_every_story_in_table , locals: {  story:  result } ,:layout => false }
+      end
   end
 
 

@@ -1,0 +1,178 @@
+
+@import "public.css.less" ;
+
+
+
+
+// all this is navbar css
+// ===============================
+
+
+
+div[class~=navbar] {
+   .margin-bottom();
+   div[class=navbar-inner]{
+      .border-radius();
+      .padding-right();
+
+       div[class=btn-group-vertical]{
+           span{
+              width:10px;
+              height: 18px;
+              background: #222;
+              float:right;
+            }
+           span[class~=icon-arrow-left]{
+              margin: 18px -10px 0px 0px;
+           }
+        }
+
+        img[class=open]{
+            max-width:29px;
+            margin-top: 6px;
+            cursor: pointer;
+            .float-left;
+            }
+        form{
+           .float-left;
+           .margin-left(15px);
+           .margin-bottom();
+
+           input[type=text]{
+              background-color: #bbb !important;
+               border:0px ;
+              .margin-bottom();
+               margin-top: 8px;
+
+           }
+
+           input[type=submit]{
+              background : url('/assets/publish.png');
+           }
+         }
+         a[class=brand]{
+            .margin-left(10px);
+         }
+
+     }
+}
+
+
+
+
+
+
+
+
+
+
+// all this is slide-left bar left  css
+// ===============================
+
+
+div[class~=slide-left] {
+  background:@side-left-middle-color ;
+
+  div[class|=side]{
+     div[class|=nav]{
+        background-color: @side-left-full-color;
+        line-height:30px;
+        font-weight:bold;
+        .padding-left(20px);
+
+        a[class|=icon]{
+            float: right;
+            margin-right: 15px;
+         }
+      }
+      div[class|=all]{
+        min-height :350px;
+        max-height : 50%;
+
+        table{
+           tr[class=active] , tr:hover{
+              background-color:@block-table-tr-active-color;
+           }
+        }
+      }
+  }
+}
+
+
+
+
+// all this is slide-right bar right  css
+// ===============================
+
+div[class~=slide-right]{
+  width: 100%-14.52991452991453% !important;
+  .margin-left();
+
+  div[class^=block]{
+
+     div[class~=content]{
+
+         div[class~=nav]{
+
+             background: @block-nav-background-color;
+             .padding-left(12px);
+            .margin-bottom();
+
+         }
+         table{
+             .margin-left();
+             background-color:@block-table-background-color;
+
+             tr{
+                border-bottom: 1px solid @block-table-tr-active-color;
+                line-height:25px;
+               a{
+                  text-decoration: none;
+                  button[type=button]{
+                      border:0px;
+                      background:@block-table-background-color;
+                   }
+
+                }
+             }
+             tr[class=active] , tr:hover{
+
+                 background-color:@block-table-tr-active-color;
+                  button[type=button]{
+                    color: #08C;
+                    background:@block-table-tr-active-color;
+                  }
+           }
+         }
+
+
+         // here is story or group or todo  css
+
+         div[class=span12]{
+             .margin-left();
+             form{
+                  textarea{
+                  .border-radius();
+                   height:160px;
+                   width:97.3%;
+                   resize: none;
+                   }
+             }
+            span{
+                  line-height:30px;
+                  border-bottom: 1px solid @block-table-tr-active-color;
+                  color: #08C;
+              }
+          }
+
+
+
+
+     }
+
+
+
+
+  }
+
+}
