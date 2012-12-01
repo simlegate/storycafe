@@ -1,23 +1,23 @@
-div.span4.float_content.no_margin
-  .span12.float_content_title
+.span4.content
+  .span12.nav
     h4
       span.span1 = resource.length
       span.span11 = get_story_status_title(type)
-  table.table.table-condensed.table-condensed_story.span12
+  table.span12
       - resource.each do |s|
         - if current_story.id ==="#{s.id}"
-          tr.resource_active
-            td.span1.test_id
-              = s.list_id
+          tr.active
+            td.span1.story-id
+              span.badge.badge-inverse = s.list_id
             td.span2 = get_user_name_by_user_id(s.user_id)
-            td.title = link_to s.title ,edit_story_path(s) , :method => :get
+            td.span8 = link_to s.title ,edit_story_path(s) , :method => :get
             td.span1
-              = link_to_if((s.current_status != "finished"),"[#{s.current_status}]","/stories/change_status?story_id=#{s.id}&status=#{s.next_status}",:class =>"change_status_icon",:remote => true , :attr_next_status => s.next_status )
+              = link_to_if((s.current_status != "finished") , button_tag("", :type => 'button',  :class =>"icon-fast-forward"),"/stories/change_status?story_id=#{s.id}&status=#{s.next_status}",:class =>"change_status_icon",:title =>"标记进入#{s.next_status}状态", :remote => true , :attr_next_status => s.next_status )
         -else
           tr
             td.span1.test_id
-              = s.list_id
+              span.badge = s.list_id
             td.span2 = get_user_name_by_user_id(s.user_id)
-            td.title = link_to s.title ,edit_story_path(s) , :method => :get
+            td.span8 = link_to s.title ,edit_story_path(s) , :method => :get , :title => s.title
             td.span1
-              = link_to_if((s.current_status != "finished"),"[#{s.current_status}]","/stories/change_status?story_id=#{s.id}&status=#{s.next_status}",:class =>"change_status_icon",:remote => true,:attr_next_status => s.next_status)
+              = link_to_if((s.current_status != "finished"), button_tag("" ,:type => 'button',  :class =>"icon-forward") , "/stories/change_status?story_id=#{s.id}&status=#{s.next_status}",:class =>"change_status_icon",:title =>"标记进入#{s.next_status}状态",:remote => true,:attr_next_status => s.next_status)

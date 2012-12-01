@@ -1,30 +1,34 @@
-div.span4.float_content.no_margin
+.span4.content
   - if meta[:type]=="group"
-   section
-     section
-       - if current_group
-         h3(data-attribute="title") = current_group.title
-         .row-fluid
-             .span12
-               .row-fluid
-                 .span12
-                   = form_for current_group ,:method =>"put",:remote => true,:html => {:id => "description_content","data-type" => "json"} do |f|
-                     textarea( placeholder="#{t('story.description')}" id="description-areatext" name="group[description]")
-                       = current_group.description
+    - if current_group
+      .span12.nav
+        h4
+          span.icon-th.span1
+          span.span10 = current_group.title
+          span.span1.icon-cog
+      .span12
+        = form_for current_group ,:method =>"put",:remote => true,:html => {:id => "description_content","data-type" => "json"} do |f|
+          textarea( placeholder="#{t('story.description')}" id="description-areatext" name="group[description]")
+            = current_group.description
+        .span12
+          span.span7 Created： "#{current_group.created_at}"
+          span.span5 User： Byronlee
   - else
-   section
-     section
-       - if current_story
-         h3(data-attribute="title") = current_story.title
+   - if current_story
+     .span12.nav
+       h4
+         span.span11 = current_story.title
+         span.span1 = link_to_if((current_story.current_status != "finished") , button_tag("", :type => 'button',  :class =>"icon-fast-forward"),"/stories/change_status?story_id=#{current_story.id}&status=#{current_story.next_status}",:class =>"change_status_icon",:title =>"标记进入#{current_story.next_status}状态", :remote => true , :attr_next_status => current_story.next_status )
+
+     .row-fluid
+       .span12
          .row-fluid
-            .span12
-              .row-fluid
-                .span12
-                  = form_for current_story , :method =>"put", :remote => true ,:html => {:id => "description_content",:'data-type' => "json"} do |f|
-                    textarea( placeholder="#{t('story.description')}" id="description-areatext" name="description" )
-                      =  current_story.description
-                .span6
-                  ticketLabel.icon.assignee
-                    = get_user_name_by_user_id(current_story.user_id)
-                .span6
-                  .ticketLabel.icon.calendar = current_story.created_at
+           .span12
+             = form_for current_story , :method =>"put", :remote => true ,:html => {:id => "description_content",:'data-type' => "json"} do |f|
+               textarea( placeholder="#{t('story.description')}" id="description-areatext" name="description" )
+                 =  current_story.description
+           .span6
+             ticketLabel.icon.assignee
+               = get_user_name_by_user_id(current_story.user_id)
+           .span6
+             .ticketLabel.icon.calendar = current_story.created_at

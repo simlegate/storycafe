@@ -4,22 +4,33 @@
 /**=============================================
  *
  *        All css var in this project
-* ========================================
+ * ========================================
  */
 
 
 
+ // slide-left var
 
+ @side-left-full-color:          #666 ;
+ @side-left-middle-color:       @side-left-full-color*2;
+
+
+ // slide-right var
+
+
+ @block-nav-background-color:   @side-left-middle-color;
+ @block-table-background-color: #fff;
+ @block-table-tr-active-color:   #e6e6e6;
 
 
 /**=============================================
  *
  *        All public function in  this project
-* ============================================
+ * ============================================
  */
 
 
-.border-radius (@radius: 0px) {
+.border-radius(@radius: 0px) {
     -webkit-border-radius: @radius;
     -moz-border-radius: @radius;
     border-radius: @radius;
@@ -28,92 +39,66 @@
     border-radius: @radius;
 }
 
-
-.navbar{
-    margin-bottom:0px;
-}
-
-.float-left{
-    float:left;
-}
 
 .margin-bottom(@var: 0px){
    margin-bottom:@var;
 }
 
-#margin-left(@left: 0px){
-  margin-left:@left;
+.padding-left(@var: 0px){
+  padding-left:@var;
 }
 
-
-#margin-left{
-  margin-left:0px;
+.padding-right(@var: 0px){
+  padding-right:@var;
 }
 
-
-
-
-
-.navbar-inner{
-  .border-radius();
-  padding-right:0px;
+.margin-left(@left: 0px){
+  margin-left:@left !important;
 }
 
-
-
-
-.nav form , .nav .open{
- .float-left;
-}
-
-.nav form{
-
- margin-left:15px;
-}
-
-
-.float_right{
-   float:right;
-   margin-right:15px;
-   margin-top:5px;
-}
-#stories_started .float_content , #stories_review .float_content , #story_description .float_content , #todo .float_content {
-  border-left: 1px solid #C01;
-}
-
-
-#stories_new .float_content , #stories_started .float_content , #stories_review .float_content {
-  border-bottom: 1px solid #C01;
-}
-
-h4 .span11{
- color :red;
+.float-left{
+  float: left;
 }
 
 
 
-.align-right{
- text-align:right;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// this glob css
+//======================================
+
+div[class=container-fluid]{
+  .padding-left();
+  .padding-right();
+
 }
 
 
-.btn-group-vertical{
-  .mini_btn{
-     width:10px;
-     height: 18px;
-     background: #222;
-     float:right;
-  }
-  .close_group{
-   margin: 18px -10px 0px 0px;
-  }
+div[class=login]{
+    margin: 0 auto;
+    margin-top:50px;
+    text-align:center;
+    width: 400px;
+    border:10px solid #ddd
 }
-
-
-
-div[class = navbar] {
-  .marign-bottom;
-}
-.navbar{
-        margin-bottom:0px;
+.table-condensed_story tr:hover ,#group_list tr:hover , .resource_active  {
+  background-color: #e6e6e6
 }

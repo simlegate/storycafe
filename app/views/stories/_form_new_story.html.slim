@@ -1,6 +1,6 @@
 
-= form_for( Story.new , :remote => true , :html => {:class => "new_story"} ) do |f|
-  = f.text_field :title, :class => "span4 new_story_input",:placeholder => "快速添加故事"
+= form_for( Story.new , :remote => true ) do |f|
+  = f.text_field :title, :class => "span4",:placeholder => "快速添加故事"
   = f.hidden_field :user_id , :value => "#{current_member}"
   = f.hidden_field :description , :value => ""
   = f.hidden_field :group_id , :value =>  "#{current_group.id}"

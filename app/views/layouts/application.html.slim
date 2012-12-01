@@ -15,7 +15,7 @@ html
   body
     .navbar-inverse.navbar
       .navbar-inner
-          a.brand.span2(style="float:left" class="dropdown-toggle" data-toggle="dropdown" href="#project_list")
+          a.brand.span2(class="dropdown-toggle" data-toggle="dropdown" href="#project_list")
             = current_project.name
             b class="caret"
           = render "projects/form_new_project"
@@ -24,7 +24,7 @@ html
               li
                 = render "public/close_nav"
               li.divider-vertical
-              li#margin-left
+              li
                  img.open src="/assets/open.png"
                  = render "stories/form_new_story"
             ul.nav.pull-right
@@ -41,16 +41,15 @@ html
                 = render "public/message_show"
               li.active
                 a.brand#margin-left = t('title')
-    - if current_user
-      .container-fluid
-        .row-fluid
-          - if current_user
-            = yield
-          - else
-            .message
-              - if notice
-                p.notice = notice
-              - if alert
-                p.alert = alert
-              .login
-                = yield
+    .container-fluid
+      .row-fluid
+        - if current_user
+          = yield
+        - else
+          .message
+            - if notice
+              p.notice = notice
+            - if alert
+              p.alert = alert
+            .login
+              = yield
