@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 module UsersHelper
   def current_member
-    current_user.id
+    current_user.id if(current_user)
   end
 
   def get_user_name_by_user_id id
