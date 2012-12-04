@@ -3,9 +3,9 @@ require 'spec_helper'
 describe StoriesController do
     context 'create a new story' do
      it "has all  stories"    do
-        get :index
-   #     assigns(:stories).should == Story.all
-        assigns("result").should == "hello"
+       get :index
+        assigns(:stories).should == Story.all
+       assigns("result").should == "hello"
       end
       # it "adds story via html" do
       #   post :create , :user => "byronlee",

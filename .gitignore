@@ -2,4 +2,4 @@ tmp
 log
 Gemfile.lock
 *.swp
-coverage
+*coverage
