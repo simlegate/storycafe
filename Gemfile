@@ -19,8 +19,11 @@ gem 'devise'
 
 
 group :development,:test do
+  gem "rails_best_practices"
+  gem 'simplecov',:require => false
   gem "rspec"
-  gem "rspec-rails", "2.9.0"
+  gem "rspec-rails"
+  gem "mongoid-rspec"
 end
 
 
@@ -44,3 +47,4 @@ gem 'jquery-rails'
 gem "private_pub"
 
 gem "thin"
+

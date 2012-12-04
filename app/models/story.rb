@@ -2,17 +2,17 @@
 class Story
   include Mongoid::Document
   include Mongoid::Timestamps::Created
-  field :user
-  field :title
-  field :description
+  field :user, type: String
+  field :title, type: String
+  field :description, type: String
   belongs_to :group
   belongs_to :user
-  auto_increment :list_id,:seed => 0, :collection => "story_list_ids" 
-  field :current_status, type: String , default: "new" 
-  field :next_status, type: String , default: "started" 
+  auto_increment :list_id,:seed => 0, :collection => "story_list_ids"
+  field :current_status, type: String , default: "new"
+  field :next_status, type: String , default: "started"
 
   def self.add_story params_story
-    create(params_story)
+    create!(params_story)
   end
 
   def self.get_stories_by_group_id id
@@ -30,8 +30,7 @@ class Story
   end
 
   def self.get_stories_public
-    result =  Group.find_by(title: "public")
-    result.nil?  ?  nil : result.stories
+    Group.get_default_group.stories
   end
 
   def self.get_story_by_story_id id
@@ -42,11 +41,11 @@ class Story
     result = Group.find_by(title: "public")
     result.nil?  ?  nil :  result.stories.first
   end
-  
+
   # id : story_id
   # status : current_status
   def self.set_story_status id,current_status,next_status
-    find(id).update_attributes(current_status:current_status,next_status:next_status)
+    find(id).update_attributes!(current_status:current_status,next_status:next_status)
   end
 
 end
