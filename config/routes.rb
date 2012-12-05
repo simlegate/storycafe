@@ -1,6 +1,5 @@
 StorycafeSimple::Application.routes.draw do
   get "stories/change_status" 
-  get "stories/check" 
   devise_for :users
   resources :stories , :groups , :projects
   # set log have read

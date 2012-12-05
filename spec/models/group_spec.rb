@@ -2,9 +2,6 @@ require 'spec_helper'
 
 describe Group do
 
-  before(:each) do 
-    Group.destroy_all
-  end
 
   let :attrs do
      {
@@ -48,7 +45,9 @@ describe Group do
     end
      
     describe "get default group" do 
+    
       before(:each) do
+        Group.destroy_all
         Group.create!(attrs)
         @group = Group.find_by(title: "public")
       end

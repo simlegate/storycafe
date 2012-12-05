@@ -59,6 +59,11 @@ module StorycafeSimple
     # in your app. As such, your models will need to explicitly whitelist or blacklist accessible
     # parameters by using an attr_accessible or attr_protected declaration.
     # config.active_record.whitelist_attributes = true
+
+    # 'private_pub' message push ,it must hava a channel push different messages
     config.channel_prefix = "/channels"
+
+    # story have for status including new,started review finished
+    config.status = %w[new started review finished]
   end
 end
