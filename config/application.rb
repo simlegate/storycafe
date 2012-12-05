@@ -65,5 +65,6 @@ module StorycafeSimple
 
     # story have for status including new,started review finished
     config.status = %w[new started review finished]
+
   end
 end

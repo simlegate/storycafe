@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def init
      session[:current_group] = Group.get_default_group   if session[:current_group].nil?
-     session[:current_story] = Story.get_default_stories   if session[:current_story].nil?
+     session[:current_story] = Story.get_default_story   if session[:current_story].nil?
   end
 
 

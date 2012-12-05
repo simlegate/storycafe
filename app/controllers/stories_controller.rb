@@ -8,7 +8,6 @@ class StoriesController < ApplicationController
     render "index" , :locals => { :resources => init_resources }
   end
 
-
   def create
    #  log = Log.new_message "#{current_user.email} create a story of '#{params[:story][:title]}'"
      #用调用方法的形式不可用
