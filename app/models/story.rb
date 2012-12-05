@@ -50,6 +50,10 @@ class Story
     Group.get_default_group.stories
   end
 
+  def self.get_default_story
+    Group.get_default_group.stories.first
+  end
+
   def self.get_story_by_story_id id
     find(id)
   end
