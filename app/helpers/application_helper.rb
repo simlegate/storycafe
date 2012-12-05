@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def get_channel_path
-    "/channels/#{current_project.id}"
+    "#{Rails.configuration.channel_prefix}/#{current_project.id}"
   end
 
 end

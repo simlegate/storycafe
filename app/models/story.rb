@@ -2,51 +2,67 @@
 class Story
   include Mongoid::Document
   include Mongoid::Timestamps::Created
-  field :user
-  field :title
-  field :description
+  field :user, type: String
+  field :title, type: String
+  field :description, type: String
   belongs_to :group
   belongs_to :user
-  auto_increment :list_id,:seed => 0, :collection => "story_list_ids" 
-  field :current_status, type: String , default: "new" 
-  field :next_status, type: String , default: "started" 
+  auto_increment :list_id,:seed => 0, :collection => "story_list_ids"
+  field :current_status, type: String , default: "new"
+  field :next_status, type: String , default: "started"
 
   def self.add_story params_story
-    create(params_story)
+    create!(params_story)
   end
 
   def self.get_stories_by_group_id id
-    result = {
-               :new       => where(group_id: id,current_status: "new"),
-               :started   => where(group_id: id,current_status: "started"),
-               :review    => where(group_id: id,current_status: "review"),
-               :finished  => where(group_id: id,current_status: "finished")
-              }
+   # result = {
+   #           :new       => where(group_id: id,current_status: "new"),
+   #           :started   => where(group_id: id,current_status: "started"),
+   #           :review    => where(group_id: id,current_status: "review"),
+   #           :finished  => where(group_id: id,current_status: "finished")
+   #          }
+  # result = {}
+    # array to hash
+    #Hash[Rails.configuration.status.collect{|s| [s,s]}].map do |k,v|
+    # result[v.to_sym] << get_stories_by_groupid_and_currentstatus(id,v)
+   #end
+
+  # Rails.configuration.status.map do |s| 
+  #   result[s.to_sym] = get_stories_by_groupid_and_currentstatus(id,s)
+  # end
+   
+    # get all kind of stories and merge to result and return
+    # result = {:new => Object,:started => Object,:review => Object,:finished => Object}
+    Rails.configuration.status.inject({}) do |result,s| 
+      result.merge(Hash[s.to_sym,get_stories_by_groupid_and_currentstatus(id,s)])
     end
-
-  def self.get_stories_by_story_id id
-
-    where(group_id: Story.where(_id: id).first.nil? ? "" : Story.where(_id: id).first.group_id )
   end
 
-  def self.get_stories_public
-    result =  Group.find_by(title: "public")
-    result.nil?  ?  nil : result.stories
+  def self.get_stories_by_story_id id
+#   where(group_id: Story.where(_id: id).first.nil? ? "" : Story.where(_id: id).first.group_id )
+    t = get_story_by_story_id(id).first
+    where(group_id: t.nil? ? "" : t.group_id)
+  end
+
+  # get default stories of public group
+  def self.get_default_stories
+    Group.get_default_group.stories
   end
 
   def self.get_story_by_story_id id
     find(id)
   end
 
-  def self.get_story_default
-    result = Group.find_by(title: "public")
-    result.nil?  ?  nil :  result.stories.first
-  end
-  
   # id : story_id
   # status : current_status
   def self.set_story_status id,current_status,next_status
-    find(id).update_attributes(current_status:current_status,next_status:next_status)
+    get_story_by_story_id(id).update_attributes!(current_status:current_status,
+                                                 next_status:next_status)
+  end
+
+  def self.get_stories_by_groupid_and_currentstatus id,status
+    where(group_id: id,current_status: status)
   end
 
 end

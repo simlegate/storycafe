@@ -8,6 +8,7 @@ class User
 
   has_many :stories
   has_many :projects
+  has_many :logs
   ## Database authenticatable
   field :email,              :type => String, :default => ""
   field :encrypted_password, :type => String, :default => ""
