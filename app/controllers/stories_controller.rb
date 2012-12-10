@@ -13,7 +13,9 @@ class StoriesController < ApplicationController
      #用调用方法的形式不可用
      #publish_message("messages/new",log)
   #   PrivatePub.publish_to("/channels/#{session[:current_project].id}", message: log)
-      result = Story.add_story(params[:story])
+
+  #    result = Story.add_story(params[:story])
+      result = Story.get_story_default
       respond_to do |format|
          format.html { render  :_every_story_in_table , locals: {  story:  result } ,:layout => false }
       end
