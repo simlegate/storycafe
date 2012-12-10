@@ -12,10 +12,6 @@ class ApplicationController < ActionController::Base
 
 
 
-
-
-
-
   # get next status by current status
   def get_next_status current_status
     status = %w[new started review finished]
@@ -31,7 +27,7 @@ class ApplicationController < ActionController::Base
   end
 
   def get_channel_path
-    "/channels/#{current_project.id}"
+    "#{Rails.configuration.channel_prefix}/#{current_project.id}"
   end
 
 end

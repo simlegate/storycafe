@@ -55,12 +55,18 @@ jQuery(function(){
                                                                                 }}
                                                           ]
                                                        ]
+<<<<<<< HEAD
                               ],
+=======
+                              ]
+    /*        ,
+>>>>>>> 254de7264da06aee23186020dc0c48b47ccf9ebb
                               [ "#description-areatext",[  [ "blur"           , {callback:function(){
                                                                                    $("#description_content").submit();
                                                                                 }}
                                                            ]
                                                         ]
+<<<<<<< HEAD
                               ],
                               [ ".change_status"      , [  [ "ajax:beforeSend" , {callback:function(){
                                                                                   }}
@@ -80,6 +86,9 @@ jQuery(function(){
 
 
 
+=======
+                              ]*/
+>>>>>>> 254de7264da06aee23186020dc0c48b47ccf9ebb
                             ]  ;
       this.init_event= function(){
             for( var i =0 ;i<this.situations.length ;i++){
@@ -90,6 +99,7 @@ jQuery(function(){
             }
         }
 
+<<<<<<< HEAD
       this.init_layout= function(){
 
 
@@ -111,6 +121,8 @@ jQuery(function(){
 
 
 
+=======
+>>>>>>> 254de7264da06aee23186020dc0c48b47ccf9ebb
 
 
     /*     this.init_event= function(){

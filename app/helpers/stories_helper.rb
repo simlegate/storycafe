@@ -1,5 +1,7 @@
 module StoriesHelper
   def current_story
+    p "==============================="
+    p session[:current_story]
     session[:current_story]
   end
 

@@ -6,7 +6,7 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-  gem "therubyracer"
+  gem "therubyracer" ,'~> 0.10.0'
   gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
   gem "twitter-bootstrap-rails"
   gem 'uglifier', '>= 1.0.3'
@@ -19,8 +19,12 @@ gem 'devise'
 
 
 group :development,:test do
+  gem "rails_best_practices"
+  gem 'simplecov',:require => false
+  gem 'factory_girl_rails'
   gem "rspec"
-  gem "rspec-rails", "2.9.0"
+  gem "rspec-rails"
+  gem "mongoid-rspec"
 end
 
 
@@ -44,3 +48,4 @@ gem 'jquery-rails'
 gem "private_pub"
 
 gem "thin"
+
