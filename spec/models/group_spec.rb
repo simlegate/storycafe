@@ -1,73 +1,48 @@
 require 'spec_helper'
-
 describe Group do
-
-
-  let :attrs do
-     {
-      :user => 'byronlee',
-      :title     => 'public',
-      :description    => 'this is a public group',
-     }
+  before :all do 
+    Group.destroy_all
+    @groups = create_list(:group,2)  
   end
 
-  describe "field" do
-    it "should include Mongoid::Timestamps::Created not Updated" do
-      should be_timestamped_document.with(:created)
-      should_not be_timestamped_document.with(:updated)
+  # clear factory and sequence etc
+  after :all do 
+    reload
   end
-    it "have fields and type is String" do
-      tmp = { :_id => Moped::BSON::ObjectId,
-              :user => String,
-              :title => String,
-               :description => String 
-             }
-      tmp.each do |k,v|
-        should have_fields(k).of_type(v)
-      end
-    end
-    
-    it "the type of created_at is Time but Date" do
-      should_not have_fields(:created_at).of_type(Date)
-      should have_fields(:created_at).of_type(Time)
-    end
-     
+
+  describe "fields" do
+    fields = [  
+                [ :_id,Moped::BSON::ObjectId,nil],
+                [ :user,String,nil],
+                [ :title,String,nil],
+                [ :description,String,nil],
+                [ :created_at,Time,nil]
+             ]
+    validate_field_type_default fields
+    validate_created_at
+    validate_id
     it "have relation of 1-n between Group and stories" do 
       should have_many(:stories).with_foreign_key(:group_id)
     end
-
   end
 
-    describe "create a group" do
-      it "create a group" do
-        expect(Group.add_group(attrs).user).to eq("byronlee")
+  describe "has a number of class methods including" do 
+    it "creating a new group" do
+      expect(Group.add_group(attributes_for(:group)).title).to eq("public#{@groups.length+1}")
+    end
+        
+    context "getting default group" do 
+      it "when the public group is not nil" do
+        @groups[0].should_not be_nil 
+      end
+
+      it "when the title of default group is public" do 
+        expect(Group.get_default_group).to eq(@groups[0])
       end
     end
-     
-    describe "get default group" do 
-    
-      before(:each) do
-        Group.destroy_all
-        Group.create!(attrs)
-        @group = Group.find_by(title: "public")
-      end
 
-      it "the public group is not nil" do
-        @group.should_not be_nil 
-      end
-
-      it "the title of default group is public" do 
-        expect(Group.get_default_group).to eq(@group)
-      end
-     end
-
-     describe "get group" do
-       before(:all) do
-         @group = Group.create!(description: "get_group_by_group_id")
-       end
-
-       it "by group id" do
-         expect(Group.get_group_by_group_id(@group.id).description).to eq("get_group_by_group_id")
-       end
-     end
-end
+    it "getting group by group id" do
+       expect(Group.get_group_by_group_id(@groups[1].id).description).to eq(@groups[1].description)
+    end
+  end
+end  

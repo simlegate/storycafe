@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 class StoriesController < ApplicationController
 
-  #before_filter :authenticate_user!
+  before_filter :authenticate_user!
 
   def index
-
     result = "hello"
     render "index" , :locals => { :resources => init_resources }
-
   end
 
   def create
@@ -20,8 +18,6 @@ class StoriesController < ApplicationController
          format.html { render  :_every_story_in_table , locals: {  story:  result } ,:layout => false }
       end
   end
-
-
 
   def edit
     session[:current_story] = Story.get_story_by_story_id(params[:id]) if params[:id] != session[:current_story].id
@@ -44,11 +40,7 @@ class StoriesController < ApplicationController
      log = Log.new_message "#{story.title} be to #{params[:status]} by #{current_user.email}"
      PrivatePub.publish_to(get_channel_path, message: log)
      result = Story.set_story_status params[:story_id],params[:status],next_status
-     result ? (render :json => "success".to_json) : (render :json => "false".to_json)
+     result ? (render :json => "success") : (render :json => "false".to_json)
    end
 
-   def check
-     PrivatePub.publish_to("/messages/new", message: "success")
-     render :json => "22".to_json
-   end
 end

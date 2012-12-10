@@ -46,7 +46,4 @@ class User
 
   field :name,type: String
   field :sex, type: String
-
-
-
 end

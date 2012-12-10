@@ -4,6 +4,8 @@ SimpleCov.start 'rails'
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
+require File.expand_path("../models/common", __FILE__)
+require File.expand_path("../controllers/common", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 
@@ -24,12 +26,13 @@ RSpec.configure do |config|
   config.include Mongoid::Matchers
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  #config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  # config.fixture_path = "#{::Rails.root}/spec/fixtures"
+
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
- #  config.use_transactional_fixtures = true
+  # config.use_transactional_fixtures = true
 
   # If true, the base class of anonymous controllers will be inferred
   # automatically. This will be the default behavior in future versions of
@@ -41,4 +44,11 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  # for devise test
+  config.include Devise::TestHelpers, :type => :controller
+
+  # the core set of syntax methods (build, build_stubbed, create, 
+  # attributes_for, and their *_list counterparts
+  config.include FactoryGirl::Syntax::Methods
 end
