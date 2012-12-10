@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require bootstrap
-//= require home
 //= require stories
 //= require private_pub
 //= require push

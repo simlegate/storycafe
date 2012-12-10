@@ -5,8 +5,8 @@ $(document).ready(function() {
     var next_status;
     var html;
     var html_float_content;
-
     var document_height = $(document).height()-40;
+
    $(".change_status_icon").bind('ajax:beforeSend', function(event,data,status, xhr){
                                                        alert("change"); })
                            .bind('ajax:success',    function(event,data,status,xhr){

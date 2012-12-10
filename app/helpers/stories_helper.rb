@@ -3,6 +3,11 @@ module StoriesHelper
     session[:current_story]
   end
 
+
+  def current_storys
+     session[:current_storys]
+  end
+
   def get_story_status number
     %w[new started review finished][number-1]
   end

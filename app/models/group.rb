@@ -11,7 +11,10 @@ class Group
   end
 
   def self.get_group_default
-     Group.find_by(title: "public")
+    find_by(title: "public")
   end
 
+  def self.get_groups_default
+    all
+  end
 end
