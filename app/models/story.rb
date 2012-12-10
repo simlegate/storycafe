@@ -15,35 +15,12 @@ class Story
     create!(params_story)
   end
 
-  def self.get_stories_by_group_id id
-   # result = {
-   #           :new       => where(group_id: id,current_status: "new"),
-   #           :started   => where(group_id: id,current_status: "started"),
-   #           :review    => where(group_id: id,current_status: "review"),
-   #           :finished  => where(group_id: id,current_status: "finished")
-   #          }
-  # result = {}
-    # array to hash
-    #Hash[Rails.configuration.status.collect{|s| [s,s]}].map do |k,v|
-    # result[v.to_sym] << get_stories_by_groupid_and_currentstatus(id,v)
-   #end
-
-  # Rails.configuration.status.map do |s| 
-  #   result[s.to_sym] = get_stories_by_groupid_and_currentstatus(id,s)
-  # end
-   
-    # get all kind of stories and merge to result and return
-    # result = {:new => Object,:started => Object,:review => Object,:finished => Object}
+  def self.get_stories_by_group_id id 
     Rails.configuration.status.inject({}) do |result,s| 
       result.merge(Hash[s.to_sym,get_stories_by_groupid_and_currentstatus(id,s)])
     end
   end
 
-  def self.get_stories_by_story_id id
-#   where(group_id: Story.where(_id: id).first.nil? ? "" : Story.where(_id: id).first.group_id )
-    t = get_story_by_story_id(id).first
-    where(group_id: t.nil? ? "" : t.group_id)
-  end
 
   # get default stories of public group
   def self.get_default_stories
