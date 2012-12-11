@@ -15,7 +15,7 @@ class Group
   end
 
   def self.get_default_groups
-    all.each{|x| p x}
+    all
   end
 
   def self.add_group param
