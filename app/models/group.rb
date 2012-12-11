@@ -10,12 +10,12 @@ class Group
     where(_id: id).first
   end
 
-  def self.get_group_default
+  def self.get_default_group
     find_by(title: "public")
   end
 
-  def self.get_groups_default
-    all
+  def self.get_default_groups
+    all.each{|x| p x}
   end
 
   def self.add_group param

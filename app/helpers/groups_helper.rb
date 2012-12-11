@@ -4,7 +4,7 @@ module GroupsHelper
   end
 
  def current_groups
-    session[:current_groups]
+   Group.get_default_groups
  end
 
 end
