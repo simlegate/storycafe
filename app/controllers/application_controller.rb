@@ -4,25 +4,18 @@ class ApplicationController < ActionController::Base
   before_filter :init
 
   def init
-     session[:current_group] = Group.get_default_group   if session[:current_group].nil?
-     session[:current_groups] = Group.get_default_groups   if session[:current_groups].nil?
-     session[:current_story] = Story.get_default_story   if session[:current_story].nil?
-     session[:current_storys] = Story.get_stories_by_group_id session[:current_group].id  if session[:current_storys].nil?
+     session[:current_group] || session[:current_group] = Group.get_default_group 
+     session[:current_story] || session[:current_story] = Story.get_default_story 
   end
-
-
 
   # get next status by current status
   def get_next_status current_status
-    tmp = nil
-    Rails.configuration.status.each_with_index do |s,i|
-      tmp = i+1  if s == current_status
-    end
-    Rails.configuration.status[tmp] ? Rails.configuration.status[tmp] : "new"
+   status = Rails.configuration.status  
+   status[status.index(current_status)+1] || "finished"
   end
 
   def current_project
-    session[:current_project] ? session[:current_project] : session[:current_project] = Project.get_default_project
+    session[:current_project] || session[:current_project] = Project.get_default_project
   end
 
   def get_channel_path

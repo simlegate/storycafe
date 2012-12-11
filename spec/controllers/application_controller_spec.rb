@@ -26,8 +26,20 @@ describe ApplicationController do
       Rails.configuration.status.should == ['new','started','review','finished']
     end
 
-    it "by current status" do 
+    it "by current status whose value is new" do 
+      @controller.get_next_status("new").should == "started"
+    end
+
+    it "by current status whose value is started" do 
+      @controller.get_next_status("started").should == "review"
+    end
+
+    it "by current status whose value is review" do 
       @controller.get_next_status("review").should == "finished"
+    end
+
+    it "by current status whose value is finished" do 
+      @controller.get_next_status("finished").should == "finished"
     end
   end
 
