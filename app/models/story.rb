@@ -16,9 +16,9 @@ class Story
   end
 
   def self.get_stories_by_group_id id
-    Rails.configuration.status.inject({}) do |result,s|
-      result.merge(Hash[s.to_sym,get_stories_by_groupid_and_currentstatus(id,s)])
-    end
+   Rails.configuration.status.inject({}) do |result,s|
+     result.merge(Hash[s.to_sym,get_stories_by_groupid_and_currentstatus(id,s)])
+   end
   end
 
 
