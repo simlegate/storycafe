@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   # get next status by current status
   def get_next_status current_status
-    Hash[Rails.configuration.status.each_cons(2).to_a][current_status.to_sym] || current_status
+    Hash[Rails.configuration.status.each_cons(2).to_a][current_status] || current_status
   end
 
   def current_project
