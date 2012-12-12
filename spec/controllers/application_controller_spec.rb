@@ -13,7 +13,7 @@ describe ApplicationController do
     @projects = create_list(:project,2)
   end
   after :all do 
-    reload
+    FactoryGirl.reload
   end
   it "invoke init" do 
     get :index

@@ -6,7 +6,7 @@ describe GroupsController do
   end
    
   after :all do 
-    reload
+    FactoryGirl.reload
   end
 
   it "index" do
