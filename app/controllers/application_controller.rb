@@ -20,4 +20,8 @@ class ApplicationController < ActionController::Base
   def get_channel_path
     "#{Rails.configuration.channel_prefix}/#{current_project.id}"
   end
+
+  def render_json value
+    render :json => value
+  end
 end
