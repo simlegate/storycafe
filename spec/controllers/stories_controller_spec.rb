@@ -21,7 +21,6 @@ describe StoriesController do
     response_rspec(:_every_story_in_table,"","200","text/html")
   end
 
-
   it "edit when params[:id] == current_story.id" do 
     get :edit,{id: @stories[0].id},{:current_story => @stories[0]}
     response_rspec(:index,"","200","text/html")
