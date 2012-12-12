@@ -4,7 +4,6 @@ class StoriesController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    result = "hello"
     render "index" , :locals => { :resources => init_resources }
   end
 
