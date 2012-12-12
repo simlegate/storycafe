@@ -21,7 +21,6 @@ class Story
    end
   end
 
-
   # get default stories of public group
   def self.get_default_stories
     Group.get_default_group.stories

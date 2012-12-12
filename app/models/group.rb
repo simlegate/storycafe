@@ -21,5 +21,4 @@ class Group
   def self.add_group param
      create!(param)
   end
-
 end

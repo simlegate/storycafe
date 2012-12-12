@@ -3,7 +3,6 @@ class Log
   include Mongoid::Timestamps::Created
   field :content , type: String
   field :isread ,type: Boolean , default: false
-  
   belongs_to :user
 
   def self.set_message_isread id,isread=true
@@ -17,5 +16,4 @@ class Log
   def self.new_message msg
     create(content: msg)
   end
-
 end
