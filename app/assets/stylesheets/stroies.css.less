@@ -104,15 +104,20 @@ div[class~=slide-left] {
 
 // all this is slide-right bar right  css
 // ===============================
+.row-fluid .span10{ 
+    width: 100%-14.52991452991453% ;
+}
+
 
 div[class~=slide-right]{
-  width: 100%-14.52991452991453% !important;
   .margin-left();
 
   div[class^=block]{
 
-     div[class~=content]{
-
+     div[class=content]{
+         float:left;
+         overflow-y:auto;
+         overflow-x:hidden;
          div[class~=nav]{
 
              background: @block-nav-background-color;
