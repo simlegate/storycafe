@@ -6,7 +6,7 @@ describe LogsController do
   end
 
   after :all do 
-    reload
+    FactoryGirl.reload
   end
 
   it "mark the log read" do 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 class GroupsController < ApplicationController
   def index
-     render :json =>  Group.add_group(params[:group])
+     render_json Group.add_group(params[:group])
   end
 
   def edit
@@ -10,12 +10,12 @@ class GroupsController < ApplicationController
   end
 
   def create
-     render :json =>  Group.create!(params[:group])
+     render_json Group.create!(params[:group])
   end
 
   # put update/:id
   def update
     result = Group.find(params[:id]).update_attributes!(params[:group])
-    result ? (render :json => "success".to_json) : (render :json => "failure".to_json)
+    render_json "#{result}".to_json
   end
 end

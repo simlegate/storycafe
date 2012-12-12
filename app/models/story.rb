@@ -21,7 +21,6 @@ class Story
    end
   end
 
-
   # get default stories of public group
   def self.get_default_stories
     Group.get_default_group.stories
@@ -38,9 +37,9 @@ class Story
   # id : story_id
   # status : current_status
   def self.set_story_status id,current_status,next_status
-    get_story_by_story_id(id).update_attributes!(current_status:current_status,
-                                                 next_status:next_status)
-    get_story_by_story_id(id)
+    where(_id: id).find_and_modify({"$set" => { current_status: current_status,
+                                                 next_status: next_status
+                                              }},new: true)
   end
 
   def self.get_stories_by_groupid_and_currentstatus id,status

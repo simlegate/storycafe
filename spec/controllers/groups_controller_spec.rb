@@ -6,7 +6,7 @@ describe GroupsController do
   end
    
   after :all do 
-    reload
+    FactoryGirl.reload
   end
 
   it "index" do
@@ -29,6 +29,6 @@ describe GroupsController do
 
   it "update" do
     xhr(:get,:update,{:group => {title: "simlegate",description: "this is a group"}, :id => @groups[0].id })
-    response_rspec(nil,"success".to_json,"200")
+    response_rspec(nil,"true".to_json,"200")
   end
 end

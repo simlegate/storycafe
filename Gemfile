@@ -1,9 +1,7 @@
 source 'http://ruby.taobao.org'
 
-
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
   gem "therubyracer" ,'~> 0.10.0'
@@ -12,27 +10,33 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-
 gem 'rails', '3.2.8'
 gem 'devise'
 
-
+group :development do 
+  gem 'pry-rails'
+end
 
 group :development,:test do
   gem "rails_best_practices"
-  gem 'simplecov',:require => false
+  gem 'guard-rspec'
+  gem 'spork'
+  gem 'guard-spork'
+  gem 'rb-inotify'
+  gem 'libnotify'
+end
+
+group :test do 
+  gem 'rb-inotify', :require => false
+  gem 'rb-fsevent', :require => false
+  gem 'rb-fchange', :require => false
+  gem 'ruby_gntp'
   gem 'factory_girl_rails'
   gem "rspec"
   gem "rspec-rails"
   gem "mongoid-rspec"
+  gem 'simplecov',:require => false
 end
-
-
-#group :test do
-#  gem 'cucumber-rails'
-#  gem 'database_cleaner'
-#  gem 'capybara'
-#end
 
 gem 'mongoid'
 gem 'bson_ext'
@@ -47,5 +51,6 @@ gem 'jquery-rails'
 # message push
 gem "private_pub"
 
+# server
 gem "thin"
 

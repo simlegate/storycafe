@@ -4,7 +4,6 @@ class StoriesController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    result = "hello"
     render "index"
   end
 
@@ -21,14 +20,11 @@ class StoriesController < ApplicationController
               format.html { render  :_every_story_in_table , locals: {  story:  Story.add_story(params[:story]) } ,:layout => false };
        end
 
-
-
-
   end
 
   def edit
     session[:current_story] = Story.get_story_by_story_id(params[:id]) if params[:id] != session[:current_story].id
-    render "index" , :locals => {  :resources => init_resources(params[:id]) }
+    render "index" 
   end
 
   # put/:id def update

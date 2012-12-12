@@ -9,7 +9,7 @@ describe ProjectsController do
   end
 
   after :all do 
-    reload
+    FactoryGirl.reload
     sign_out @user
   end
 
