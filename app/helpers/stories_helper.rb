@@ -7,7 +7,7 @@ module StoriesHelper
 
 
   def current_storys
-     session[:current_storys]
+     Story.get_stories_by_group_id session[:current_group].id
   end
 
   def get_story_status number
@@ -15,9 +15,9 @@ module StoriesHelper
   end
 
   def get_story_status_title type
-   type=="stories_new" ? "new stories" :
-   type=="stories_started" ? "stories is beginning" :
-   type=="stories_review" ? "completed wait participant to review" : "finished and closed"
+   type=="new" ? "new stories" :
+   type=="started" ? "stories is beginning" :
+   type=="review" ? "completed wait participant to review" : "finished and closed"
 
   end
 

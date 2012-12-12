@@ -6,7 +6,9 @@ jQuery(function(){
                                                                                }}
                                                         ],
                                                         ["ajax:success", {callback:function(event,data,status, xhr){
-                                                                                 $(".block-stories-new table").append(data);
+                                                                                var $o = $(".block-stories-new table");
+                                                                                   $o.length>0 ? $o : $o = $(".block-stories-new");
+                                                                                   $o.append(data);
                                                                               }}
                                                         ],
                                                         ["ajax:error"       , { callback:function(){
@@ -55,40 +57,29 @@ jQuery(function(){
                                                                                 }}
                                                           ]
                                                        ]
-<<<<<<< HEAD
                               ],
-=======
-                              ]
-    /*        ,
->>>>>>> 254de7264da06aee23186020dc0c48b47ccf9ebb
                               [ "#description-areatext",[  [ "blur"           , {callback:function(){
                                                                                    $("#description_content").submit();
                                                                                 }}
                                                            ]
                                                         ]
-<<<<<<< HEAD
                               ],
-                              [ ".change_status"      , [  [ "ajax:beforeSend" , {callback:function(){
+                              [ ".change_status_icon" , [  [ "ajax:beforeSend" , {callback:function(){
                                                                                   }}
                                                           ],
                                                            ["ajax:success"     , { callback:function(event,data,status, xhr){
-                                                                                   $('#myModal').modal('hide');
-                                                                                   $("#group_list").append(data);
-                                                                                  }}
+                                                                                   $(this).parents("tr").remove();
+                                                                               var    $o=  $(".block-stories-"+$(this).attr("attr_next_status")+" table");
+                                                                                   $o.length>0 ? $o : $o= $(".block-stories-"+$(this).attr("attr_next_status"));
+                                                                                   $o.append(data);
+                                                                                }}
                                                           ],
                                                           ["ajax:error"       , { callback:function(){
                                                                                   alert("网络错误，稍后再试！")
                                                                                 }}
                                                           ]
                                                        ]
-                              ],
-
-
-
-
-=======
-                              ]*/
->>>>>>> 254de7264da06aee23186020dc0c48b47ccf9ebb
+                              ]
                             ]  ;
       this.init_event= function(){
             for( var i =0 ;i<this.situations.length ;i++){
@@ -98,8 +89,6 @@ jQuery(function(){
 
             }
         }
-
-<<<<<<< HEAD
       this.init_layout= function(){
 
 
@@ -118,11 +107,6 @@ jQuery(function(){
 
 
 
-
-
-
-=======
->>>>>>> 254de7264da06aee23186020dc0c48b47ccf9ebb
 
 
     /*     this.init_event= function(){

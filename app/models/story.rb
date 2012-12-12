@@ -40,6 +40,7 @@ class Story
   def self.set_story_status id,current_status,next_status
     get_story_by_story_id(id).update_attributes!(current_status:current_status,
                                                  next_status:next_status)
+    get_story_by_story_id(id)
   end
 
   def self.get_stories_by_groupid_and_currentstatus id,status

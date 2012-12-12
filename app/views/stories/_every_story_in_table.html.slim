@@ -5,7 +5,7 @@
     td.span2 = get_user_name_by_user_id(story.user_id)
     td.span8 = link_to story.title ,edit_story_path(story) , :method => :get
     td.span1
-      = link_to_if((story.current_status != "finished") , button_tag("", :type => 'button',  :class =>"icon-fast-forward change_status"),"/stories/change_status?story_id=#{story.id}&status=#{story.next_status}",:class =>"change_status_icon",:title =>"标记进入#{story.next_status}状态", :remote => true , :attr_next_status => story.next_status )
+      = link_to_if((story.current_status != "finished") , button_tag("", :type => 'button',  :class =>"icon-fast-forward change_status"),"/stories/change_status?story_id=#{story.id}&next_status=#{story.next_status}",:class =>"change_status_icon",:title =>"标记进入#{story.next_status}状态", :remote => true , :attr_next_status => story.next_status )
 
 - else
   tr
@@ -14,4 +14,4 @@
     td.span2 = get_user_name_by_user_id(story.user_id)
     td.span8 = link_to story.title ,edit_story_path(story) , :method => :get
     td.span1
-      = link_to_if((story.current_status != "finished") , button_tag("", :type => 'button',  :class =>"icon-fast-forward change_status"),"/stories/change_status?story_id=#{story.id}&status=#{story.next_status}",:class =>"change_status_icon",:title =>"标记进入#{story.next_status}状态", :remote => true , :attr_next_status => story.next_status )
+      = link_to_if((story.current_status != "finished") , button_tag("", :type => 'button',  :class =>"icon-fast-forward change_status"),"/stories/change_status?story_id=#{story.id}&next_status=#{story.next_status}",:class =>"change_status_icon",:title =>"标记进入#{story.next_status}状态", :remote => true , :attr_next_status => story.next_status )
