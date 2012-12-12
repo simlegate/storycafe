@@ -27,7 +27,8 @@ describe Story do
   describe "function" do 
 
     before (:all) do
-      Story.destroy_all
+       Story.destroy_all
+       Group.create(title: "public")
        @story = create(:story)
     end
 
@@ -65,16 +66,14 @@ describe Story do
       expect(Story.get_story_by_story_id(@story.id)).to eq(@story)
     end
 
-    it "set story status" do
-      Story.set_story_status(@story.id,"review","new").should be_true 
+    it "set story status and return modified story" do
+      Story.set_story_status(@story.id,"review","new").should == @story 
     end
 
     it "get stories by groupid and current status " do
      # expect(Story.get_stories_by_groupid_and_current_status(@story.group_id,"new")).to eq(@story)
      Story.get_stories_by_groupid_and_currentstatus(@story.group_id,"new").should include(@story)
     end
-
   end
-
 end
 

@@ -7,7 +7,7 @@ describe Group do
 
   # clear factory and sequence etc
   after :all do 
-    reload
+    FactoryGirl.reload
   end
 
   describe "fields" do
