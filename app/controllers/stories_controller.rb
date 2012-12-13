@@ -24,7 +24,12 @@ class StoriesController < ApplicationController
 
   def edit
     session[:current_story] = Story.get_story_by_story_id(params[:id]) if params[:id] != session[:current_story].id
-    render "index" 
+  # render "index" 
+    p "++++++++++++++++++"
+    respond_to do |format|
+      format.html {render :_description, locals: {:meta => { :type => "story"}},
+:layout => false}
+    end
   end
 
   # put/:id def update

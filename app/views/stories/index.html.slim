@@ -13,6 +13,6 @@
   .block-stories-finished
     = render "stories/stories_in_status", :resource => current_storys[:finished],:type=> "finished" if current_storys[:finished] && !current_storys[:finished].empty?
   .block-story-description
-    = render "stories/description" ,  :meta => { :type => "group"}
+    = render "stories/description" ,  :meta => { :type => "story"}
   .block-story-todo
     = render "stories/todo"

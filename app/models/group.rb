@@ -4,6 +4,7 @@ class Group
   field :user, :type => String
   field :title, :type => String
   field :description, :type => String
+  field :todo, :type => String
   has_many :stories
 
   def self.get_group_by_group_id id

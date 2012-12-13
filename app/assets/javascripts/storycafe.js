@@ -32,8 +32,8 @@ jQuery(function(){
                                                         ]
                                                      ]
                               ],
-                              [ "#description_content",[  [ "ajax:beforeSend" , {callback:function(){
-                                                                                    if(!$("#description-areatext").val()) return;
+                              [ "#description_todo",[  [ "ajax:beforeSend" , {callback:function(){
+                                                  if(!$(this).children("textarea").val()) return; 
                                                                                 }}
                                                            ],
                                                            ["ajax:success"    , { callback:function(){
@@ -59,8 +59,8 @@ jQuery(function(){
                                                           ]
                                                        ]
                               ],
-                              [ "#description-areatext",[  [ "blur"           , {callback:function(){
-                                                                                   $("#description_content").submit();
+                              [ "#todo-description-areatext",[  [ "blur"           , {callback:function(){
+                                                         $(this).parent().submit();
                                                                                 }}
                                                            ]
                                                         ]
@@ -81,20 +81,21 @@ jQuery(function(){
                                                                                 }}
                                                           ]
                                                        ]
-                              ]
-        /*    ,
-                              [ "span[class~=icon-arrow-up]" , [  [ "click"    , {callback:function(){
-                                                                                    $this.init_animats("close_nav");
-                                                                                  }}
-                                                          ]
-                                                       ]
                               ],
-                              [ "span[class~=icon-arrow-left]" , [  [ "click"    , {callback:function(){
-                                                                                    $this.init_animats("close_side_left");
+                              [ ".every-story" , [  [ "ajax:beforeSend" , {callback:function(){
+                                                               
                                                                                   }}
+                                                          ],
+                                                           ["ajax:success"     , { callback:function(event,data,status, xhr){
+                                                                                 $("div[class=block-story-description]").html(data) 
+                                                                                }}
+                                                          ],
+                                                          ["ajax:error"       , { callback:function(){
+                                                                                  alert("story网络错误，稍后再试！")
+                                                                                }}
                                                           ]
                                                        ]
-                              ]*/
+                              ]
                             ]  ;
       $this.init_event= function(){
             for( var i =0 ;i<$this.situations.length ;i++){
