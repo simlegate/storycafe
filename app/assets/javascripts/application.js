@@ -16,4 +16,4 @@
 //= require bootstrap
 //= require private_pub
 //= require push
-//= require_tree .
+//= require storycafe

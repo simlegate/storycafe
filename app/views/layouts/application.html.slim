@@ -8,8 +8,8 @@ html
       var channel_path = "#{get_channel_path}"
     link rel="author" href="#{root_url.html_safe}readme.txt"
     meta name="author" content="Byronlee and simlegate"
-    = stylesheet_link_tag  :application , :recursive => true
-    = javascript_include_tag :application , :recursive => true
+    = stylesheet_link_tag  :application, :recursive => true 
+    = javascript_include_tag :application,:recursive => true 
     = csrf_meta_tags
     = subscribe_to get_channel_path
   body
