@@ -81,7 +81,8 @@ jQuery(function(){
                                                                                 }}
                                                           ]
                                                        ]
-                              ],
+                              ]
+        /*    ,
                               [ "span[class~=icon-arrow-up]" , [  [ "click"    , {callback:function(){
                                                                                     $this.init_animats("close_nav");
                                                                                   }}
@@ -93,7 +94,7 @@ jQuery(function(){
                                                                                   }}
                                                           ]
                                                        ]
-                              ]
+                              ]*/
                             ]  ;
       $this.init_event= function(){
             for( var i =0 ;i<$this.situations.length ;i++){
@@ -109,76 +110,60 @@ jQuery(function(){
              $("div[class~=slide-left]").children("div[class|=side]").css("height", document_height/2);
             $("div[class^=block] .content").css("width", block_content_width/3).css("height", document_height/2);
       }
-
-
-
-
-        $this.init_animats=function(type){
-
-
-
-            if(type =="close_nav"){
-               //  $("div[class~=navbar-inverse").toggle(500);
-                 $(".navbar").slideToggle(500);
-                $("div[class|=block] .content .nav").css("background-color","#666");
-            }else{
-
-
-
-              var   sc_animat = function(){
-                    this.animateL =function(width){
-                         $(".slide-left").animate({ width: width}, {duration: 1000});
-                    }
-
-                    this.animateR = function(num){
-                          $(".slide-right")
+      $this.init_animats=function(){
+         // var o=  eval("("+$this.animats+")")
+       //   $this.animats.nav_animat();
+           $(".navbar").toggle(500);
+         //  o..nav_animat()
+         $("span[class~=icon-arrow-left]").toggle(
+               function(){
+                   $this.animats.layout_animat.animateL(0).animateR( $(window).width() ).animate_nav_color("#666").layout_nav();
+               },
+               function(){
+                   $this.animats.layout_animat.animateL(186).animateR(1625).animate_nav_color("#333").layout_nav();
+               });
+      }
+      $this.animats={
+          nav_animat:{
+              hide: function(){
+                  $(".navbar").slideToggle(500);
+                   return $this.animats.nav_animat ;
+              },
+              show:function(){
+                   return $this.animats.nav_animat ;
+              }
+          },
+          layout_animat:{
+              animateL :function(width){
+                 $(".slide-left").animate({ "width": width }, {duration: 1000});
+                 return $this.animats.layout_animat ;
+             },
+             animateR : function(num){
+                         $(".slide-right")
                          .queue("fader", function(next) {
-                          //   var num = ;
-                             $("div[class~=span10]").animate({ width :num},{duration: 1000, queue: false});
-                             next();
+                            $("div[class~=span10]").animate({ width :num},{duration: 1000, queue: false});
+                            next();
                           })
-                         .dequeue("fader")
-                    }
-                    this.animate_nav_color = function(color){
-                          $(".nav")
-                         .queue("color", function(next) {
-                            $("div[class^=block] .nav").animate({"background":color},{duration: 1000, queue: false});
+                     .dequeue("fader");
+                  return $this.animats.layout_animat ;
+             },
+             animate_nav_color: function(color){
+                       $(".nav")
+                       .queue("color", function(next) {
+                          $("div[class^=block] .nav").animate({"background":color},{duration: 1000, queue: false});
                           next();
-                          })
-                         .dequeue("color")
-                        }
-                }
-            var     animate = new sc_animat();
-
-                $(".slide-left").toggle(
-                    function(){
-                     animate.animateL(0);
-                     animate.animateR( $(window).width() );
-                     animate.animate_nav_color("#666");
-                    },
-                    function(){
-                     animate.animateL(186);
-                     animate.animateR(1625);
-                    animate.animate_nav_color("#333");
-
-                    });
+                        })
+                     .dequeue("color");
+                  return $this.animats.layout_animat ;
+             },
+             layout_nav :function(){
+              $(".slide-left").width() ==0&&$(".navbar").css("display")=="none" ? alert("234234") : ""
+               return $this.animats.layout_animat ;
+             }
 
 
-
-
-
-         /*       $('.slide-left').toggle(function(){
-                   $("div[class|=block] .content .nav").css("background-color","#666");
-                   $('.slide-right').removeClass("span10").addClass("span12")
-
-                } , function(){
-                     $("div[class|=block] .content .nav").css("background-color","#ccc");
-                     $('.slide-right').removeClass("span12").addClass("span10")
-
-                });*/
-
-            }
-        }
+          }
+      }
 
     }
 
@@ -186,5 +171,6 @@ jQuery(function(){
     var storycafe = new StoryCafe();
     storycafe.init_event();
     storycafe.init_layout();
+    storycafe.init_animats();
     setInterval(eval("storycafe.init_layout"),1);
 });
