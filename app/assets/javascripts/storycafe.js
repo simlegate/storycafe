@@ -111,10 +111,14 @@ jQuery(function(){
             $("div[class^=block] .content").css("width", block_content_width/3).css("height", document_height/2);
       }
       $this.init_animats=function(){
-         // var o=  eval("("+$this.animats+")")
-       //   $this.animats.nav_animat();
-           $(".navbar").toggle(500);
-         //  o..nav_animat()
+
+          $("span[class~=icon-arrow-up]").toggle(function(){
+              $this.animats.nav_animat.hide();
+
+          }, function(){
+              $this.animats.nav_animat.show();
+          });
+
          $("span[class~=icon-arrow-left]").toggle(
                function(){
                    $this.animats.layout_animat.animateL(0).animateR( $(window).width() ).animate_nav_color("#666").layout_nav();
@@ -126,12 +130,25 @@ jQuery(function(){
       $this.animats={
           nav_animat:{
               hide: function(){
-                  $(".navbar").slideToggle(500);
+                   $this.animats.nav_animat.layout_nav();
+                  $(".navbar").animate({opacity: "hide"}, {duration: 1000});
+
                    return $this.animats.nav_animat ;
               },
               show:function(){
+
+                  $(".navbar").animate({opacity: "show"}, {duration: 1000});
+                    $this.animats.nav_animat.layout_nav();
                    return $this.animats.nav_animat ;
-              }
+              },
+             layout_nav :function(){
+                 if( $(".navbar").css("display")=="block"){
+                     $("body").prepend("<div class='animat-nav'>"+$('div[class=btn-group-vertical]').html()+"</div>");
+                       storycafe.init_animats();
+                 }else{
+                     $("div[class=animat-nav]").remove()
+                 }
+             }
           },
           layout_animat:{
               animateL :function(width){
@@ -155,10 +172,6 @@ jQuery(function(){
                         })
                      .dequeue("color");
                   return $this.animats.layout_animat ;
-             },
-             layout_nav :function(){
-              $(".slide-left").width() ==0&&$(".navbar").css("display")=="none" ? alert("234234") : ""
-               return $this.animats.layout_animat ;
              }
 
 
