@@ -24,11 +24,11 @@
        .span12
          .row-fluid
            .span12
-           = form_for current_story , :method =>"put", :remote => true ,:html => {:id => "description_todo",:'data-type' => "json"} do |f|
-               textarea( placeholder="#{t('story.description')}" id="todo-description-areatext" name="description" )
-                 =  current_story.description
-           .span6
-             ticketLabel.icon.assignee
-               = get_user_name_by_user_id(current_story.user_id)
-           .span6
-             .ticketLabel.icon.calendar = current_story.created_at
+             = form_for current_story , :method =>"put", :remote => true ,:html => {:id => "description_todo",:'data-type' => "json"} do |f|
+                 textarea( placeholder="#{t('story.description')}" id="todo-description-areatext" name="description" )
+                   =  current_story.description
+             .span6
+               ticketLabel.icon.assignee
+                 = get_user_name_by_user_id(current_story.user_id)
+             .span6
+               .ticketLabel.icon.calendar = current_story.created_at

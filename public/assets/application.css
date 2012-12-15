@@ -9355,6 +9355,9 @@ div[class=container-fluid] {
 div[class=preimage] img {
   width: 100%;
 }
+body {
+  overflow: hidden;
+}
 div[class=login] {
   margin: 0 auto;
   margin-top: 50px;
@@ -9390,6 +9393,9 @@ div[class=container-fluid] {
 }
 div[class=preimage] img {
   width: 100%;
+}
+body {
+  overflow: hidden;
 }
 div[class=login] {
   margin: 0 auto;
@@ -9463,6 +9469,7 @@ div[class~=navbar] div[class=navbar-inner] form {
   float: left;
   margin-left: 15px !important;
   margin-bottom: 0px;
+  display: none;
 }
 div[class~=navbar] div[class=navbar-inner] form input[type=text] {
   background-color: #bbb !important;
@@ -9513,7 +9520,7 @@ div[class~=slide-left] div[class|=side] div[class|=all] ul li:hover a {
 div[class~=slide-right] {
   margin-left: 0px !important;
 }
-div[class~=slide-right] div[class^=block] div[class=content] {
+div[class~=slide-right] div[class^=block] {
   float: left;
   overflow-y: auto;
   overflow-x: hidden;
@@ -9558,7 +9565,7 @@ div[class~=slide-right] div[class^=block] div[class=content] div[class=span12] f
   -moz-border-radius: 0px;
   border-radius: 0px;
   height: 160px;
-  width: 97.3%;
+  width: 97%;
   resize: none;
   color: yellowgreen;
 }

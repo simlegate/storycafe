@@ -78,6 +78,7 @@ div[class~=navbar] {
            .float-left;
            .margin-left(15px);
            .margin-bottom();
+           display:none;
 
            input[type=text]{
               background-color: #bbb !important;
@@ -162,11 +163,10 @@ div[class~=slide-right]{
   .margin-left();
 
   div[class^=block]{
-
+     float:left;
+     overflow-y:auto;
+     overflow-x:hidden;
      div[class=content]{
-         float:left;
-         overflow-y:auto;
-         overflow-x:hidden;
          div[class~=nav]{
 
              background: @block-nav-background-color;
@@ -209,7 +209,7 @@ div[class~=slide-right]{
                   textarea{
                   .border-radius();
                    height:160px;
-                   width:97.3%;
+                   width:97%;
                    resize: none;
                    color: yellowgreen;
                    }
