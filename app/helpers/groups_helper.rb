@@ -1,6 +1,6 @@
 module GroupsHelper
   def current_group
-    session[:current_group]
+    session[:current_group] || session[:current_group] = Group.get_default_group 
   end
 
  def current_groups
@@ -8,3 +8,4 @@ module GroupsHelper
  end
 
 end
+
