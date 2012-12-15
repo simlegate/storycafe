@@ -6,7 +6,7 @@ jQuery(function(){
             slide_left: $("div[class~=slide-left]"),
             slide_right: $("div[class~=span10]"),
             slide_left_width: $("div[class~=slide-left]").width(),
-            slide_right_width:$("div[class~=span10]").width(),
+            slide_right_width:$("div[class~=slide-right]").width(),
             window_height :$(window).height(),
             window_width :$(window).width(),
             block_num:1,
@@ -22,7 +22,7 @@ jQuery(function(){
                                                                                    $o.length>0 ? $o : $o = $(".block-stories-new");
                                                                                    $o.append(data);
                                                                                    config.slide_right.find("div:parent").css("display","block");
-                                                                                   $this.init_layout.layout();
+                                                                                    $this.layout();
                                                                               }}
                                                         ],
                                                         ["ajax:error"       , { callback:function(){
@@ -89,7 +89,7 @@ jQuery(function(){
                                                                                    $o.length>0 ? $o : $o= $(".block-stories-"+$(this).attr("attr_next_status"));
                                                                                    $o.append(data);
                                                                                    config.slide_right.find("div[class|=block]:parent").css("display","block");
-                                                                                    $this.init_layout.layout();
+                                                                                   $this.layout();
                                                                                 }}
                                                           ],
                                                           ["ajax:error"       , { callback:function(){
@@ -132,21 +132,24 @@ jQuery(function(){
 
             }
         }
-      $this.init_layout= function(){
+
+
+
+        $this.layout=function(){
+            block_num = config.slide_right.find("div[class|=block]:parent").length;
+            block_num==1 ? config.slide_right.find("div[class|=block]").css("width", config.slide_right_width).css("height", config.document_height) :
+            block_num==2 ? config.slide_right.find("div[class|=block]").css("width", config.slide_right_width/2).css("height", config.document_height) :
+            block_num==3 ? config.slide_right.find("div[class|=block]").css("width", config.slide_right_width/3).css("height", config.document_height) :
+                          config.slide_right.find("div[class|=block]").css("width", config.slide_right_width/3).css("height", config.document_height/2)
+
+
+        }
+       $this.init_layout= function(){
 
           config.slide_right.find("div:empty").css("display","none");
           config.slide_left.children("div[class|=side]").css("height", config.document_height/2);
 
-
-      //    layout=function(){
-      //      block_num = config.slide_right.find("div[class|=block]:parent").length;
-    //        block_num==1 ? config.slide_right.find("div[class|=block]").css("width", config.slide_right_width).css("height", config.document_height) :
-    //        block_num==2 ? config.slide_right.find("div[class|=block]").css("width", config.slide_right_width/2).css("height", config.document_height) :
-    //        block_num==3 ? config.slide_right.find("div[class|=block]").css("width", config.slide_right_width/3).css("height", config.document_height) :
-                   config.slide_right.find("div[class|=block]").css("width", config.slide_right_width/3).css("height", config.document_height/2)
-      //    }
-
-  //        layout();
+           $this.layout();
 
           // without user login
           $("div[class=preimage]").children("img").css("height" ,config.document_height-0.1);
@@ -160,10 +163,8 @@ jQuery(function(){
                   config.slide_left_width= $("div[class~=slide-left]").width();
                   config.document_height = config.window_height-$(".navbar-inverse").height();
 
-
                   config.slide_left.children("div[class|=side]").css("height", config.document_height/2);
-
-                  $this.init_layout.layout();
+                  $this.layout();
 
 
               }
