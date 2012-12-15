@@ -22,9 +22,10 @@ class StoriesController < ApplicationController
 
   def edit
     session[:current_story] = Story.get_story_by_story_id(params[:id]) if params[:id] != session[:current_story].id
-    respond_to do |format|
-      format.html {render :_description, locals: {:meta => { :type => "story"}},:layout => false}
-    end
+    respond_to_html(:description,{:meta => { :type => "story"}})
+  # respond_to do |format|
+  #   format.html {render :_description, locals: {:meta => { :type => "story"}},:layout => false}
+  # end
   end
 
   # put/:id def update
@@ -41,10 +42,13 @@ class StoriesController < ApplicationController
      stories = Story.get_stories_by_group_id session[:current_group].id
      # log = Log.new_message "#{story.title} be to #{params[:status]} by #{current_user.email}"
      # PrivatePub.publish_to(get_channel_path, message: log)
-     respond_to do |format|
-             stories[params[:next_status].to_sym].empty? ?
-              format.html { render  :_stories_in_status , locals: { resource: [ Story.set_story_status(params[:story_id],params[:next_status],next_status)] ,type: params[:next_status] } ,:layout => false } :
-              format.html { render  :_every_story_in_table , locals: {  story: Story.set_story_status(params[:story_id],params[:next_status],next_status)} ,:layout => false }
-       end
+     story = Story.set_story_status(params[:story_id],params[:next_status],next_status)
+     stories[params[:next_status].to_sym].length != 0 ? respond_to_html(:_every_story_in_table,{story: story})
+                                                      : respond_to_html(:_stories_in_status,{resource: [story],type: params[:next_status]})
+    #respond_to do |format|
+    #        stories[params[:next_status].to_sym].empty? ?
+    #         format.html { render  :_stories_in_status , locals: { resource: [ Story.set_story_status(params[:story_id],params[:next_status],next_status)] ,type: params[:next_status] } ,:layout => false } :
+    #         format.html { render  :_every_story_in_table , locals: {  story: Story.set_story_status(params[:story_id],params[:next_status],next_status)} ,:layout => false }
+    #  end
    end
 end

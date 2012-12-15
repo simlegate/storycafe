@@ -24,4 +24,10 @@ class ApplicationController < ActionController::Base
   def render_json value
     render :json => value
   end
+
+   def respond_to_html template,locals={},ly=false
+     respond_to do |format|
+       format.html { render template,locals: locals,:layout => ly}
+     end
+   end
 end
