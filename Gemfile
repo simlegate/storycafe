@@ -52,3 +52,4 @@ gem "private_pub"
 # server
 gem "thin"
 
+# post-receive
