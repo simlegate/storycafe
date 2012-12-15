@@ -8,13 +8,17 @@ html
       var channel_path = "#{get_channel_path}"
     link rel="author" href="#{root_url.html_safe}readme.txt"
     meta name="author" content="Byronlee and simlegate"
-    = stylesheet_link_tag  :application, :recursive => true 
-    = javascript_include_tag :application,:recursive => true 
+    = stylesheet_link_tag  :application, :recursive => true
+    = javascript_include_tag :application,:recursive => true
     = csrf_meta_tags
     = subscribe_to get_channel_path
   body
+    - unless current_user
+      .preimage
+        img(src="/assets/pre_imge.jpeg")
     .navbar-inverse.navbar
       .navbar-inner
+        - if current_user
           a.brand.span2(class="dropdown-toggle" data-toggle="dropdown" href="#project_list")
             = current_project.name
             b class="caret"
@@ -40,12 +44,19 @@ html
                   b.caret
                 = render "public/message_show"
               li.active
-                a.brand#margin-left = t('title')
-    .container-fluid
-      .row-fluid
-        - if current_user
-          = yield
+                a.brand = t('title')
         - else
+           a.brand(style="color:#fff") = t('title')
+           a#explorer
+             'Explorer
+             img(src="/assets/up.png")
+    - if current_user
+      .container-fluid
+        .row-fluid
+          = yield
+    - else
+      .container-fluid.no_login_content
+        .row-fluid
           .message
             - if notice
               p.notice = notice

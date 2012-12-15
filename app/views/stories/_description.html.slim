@@ -17,9 +17,9 @@
    - if current_story
      .span12.nav
        h4
-         span.span11 = current_story.title
-         span.span1 = link_to_if((current_story.current_status != "finished") , button_tag("", :type => 'button',  :class =>"icon-fast-forward"),"/stories/change_status?story_id=#{current_story.id}&status=#{current_story.next_status}",:class =>"change_status_icon",:title =>"标记进入#{current_story.next_status}状态", :remote => true , :attr_next_status => current_story.next_status )
-
+         span.icon-th.span1
+         span.span10 = current_story.title
+         span.span1.icon-cog
      .row-fluid
        .span12
          .row-fluid

@@ -1,6 +1,16 @@
 jQuery(function(){
     function  StoryCafe(){
         var $this = this;
+        var config ={
+            navbar: $("div[class~=navbar]"),
+            slide_left: $("div[class~=slide-left]"),
+            slide_right: $("div[class~=span10]"),
+            slide_left_width: $("div[class~=slide-left]").width(),
+            slide_right_width:$("div[class~=span10]").width(),
+            window_height :$(window).height(),
+            window_width :$(window).width(),
+            document_height : $(window).height()-$(".navbar-inverse").height()
+        }
         $this.situations = [
                              [ "#new_story"        ,[  [ "ajax:beforeSend"  , {callback:function(){
                                                                                //    alert("故事不能为空！")
@@ -33,7 +43,7 @@ jQuery(function(){
                                                      ]
                               ],
                               [ "#description_todo",[  [ "ajax:beforeSend" , {callback:function(){
-                                                  if(!$(this).children("textarea").val()) return; 
+                                                  if(!$(this).children("textarea").val()) return;
                                                                                 }}
                                                            ],
                                                            ["ajax:success"    , { callback:function(){
@@ -82,17 +92,39 @@ jQuery(function(){
                                                           ]
                                                        ]
                               ],
-                              [ ".every-story" , [  [ "ajax:beforeSend" , {callback:function(){
-                                                               
+                              [ "span[class~=icon-arrow-up]" , [  [ "click"    , {callback:function(){
+                                                                                    $this.animats.nav_animat();
                                                                                   }}
-                                                          ],
-                                                           ["ajax:success"     , { callback:function(event,data,status, xhr){
-                                                                                 $("div[class=block-story-description]").html(data) 
-                                                                                }}
-                                                          ],
-                                                          ["ajax:error"       , { callback:function(){
+                                                          ]
+                                                       ]
+                              ],
+                              [ "span[class~=icon-arrow-left]" , [  [ "click"    , {callback:function(){
+                                                                                      $this.animats.layout_animat.animate();
+                                                                                   }}
+                                                           ]
+                                                        ]
+                              ],
+                              [ ".every-story"         , [  [ "ajax:beforeSend" , {callback:function(){
+                                                                                  }}
+                                                            ],
+                                                            ["ajax:success"     , { callback:function(event,data,status, xhr){
+                                                                                    $("div[class=block-story-description]").html(data)
+                                                                                  }}
+                                                            ],
+                                                            ["ajax:error"       , { callback:function(){
                                                                                   alert("story网络错误，稍后再试！")
                                                                                 }}
+                                                            ]
+                                                         ]
+                              ],
+                              [ "#explorer"           , [  [ "click"    , {callback:function(){
+                                                                                      $("div[class=preimage]").slideToggle(1000,function(){
+                                                                                             $(this).css("display")=="none" ?
+                                                                                             $("#explorer").children("img").attr('src','/assets/down.png') :
+                                                                                             $("#explorer").children("img").attr('src','/assets/up.png')
+                                                                                      });
+                                                                                       $("div[class~=no_login_content]").slideToggle(1000);
+                                                                                  }}
                                                           ]
                                                        ]
                               ]
@@ -106,78 +138,75 @@ jQuery(function(){
             }
         }
       $this.init_layout= function(){
-             var document_height = $(window).height()-$(".navbar-inverse").height();
-             var block_content_width = $("div[class~=slide-right]").width();
-             $("div[class~=slide-left]").children("div[class|=side]").css("height", document_height/2);
-            $("div[class^=block] .content").css("width", block_content_width/3).css("height", document_height/2);
-      }
-      $this.init_animats=function(){
+          config.slide_left.children("div[class|=side]").css("height", config.document_height/2);
+          config.slide_right.find("div[class=content]").css("width", config.slide_right_width/3).css("height", config.document_height/2);
 
-          $("span[class~=icon-arrow-up]").toggle(function(){
-              $this.animats.nav_animat.hide();
 
-          }, function(){
-              $this.animats.nav_animat.show();
-          });
+          // without user login
+          $("div[class=preimage]").children("img").css("height" ,config.document_height-0.1);
+          $("div[class~=no_login_content]").css("display","none");
 
-         $("span[class~=icon-arrow-left]").toggle(
-               function(){
-                   $this.animats.layout_animat.animateL(0).animateR( $(window).width() ).animate_nav_color("#666").layout_nav();
-               },
-               function(){
-                   $this.animats.layout_animat.animateL(186).animateR(1625).animate_nav_color("#333").layout_nav();
-               });
+          setInterval(function(){
+              if(config.window_width!=$(window).width()||config.window_height!=$(window).height()){
+                  config.window_width=$(window).width();
+                  config.window_height=$(window).height()
+                  config.slide_right_width =$("div[class~=slide-right]").width();
+                  config.slide_left_width= $("div[class~=slide-left]").width();
+                  config.document_height = config.window_height-$(".navbar-inverse").height();
+
+
+                  config.slide_left.children("div[class|=side]").css("height", config.document_height/2);
+                  config.slide_right.find("div[class=content]").css("width", config.slide_right_width/3).css("height", config.document_height/2);
+              }
+          },true);
       }
       $this.animats={
-          nav_animat:{
-              hide: function(){
-                   $this.animats.nav_animat.layout_nav();
-                  $(".navbar").animate({opacity: "hide"}, {duration: 1000});
-
-                   return $this.animats.nav_animat ;
-              },
-              show:function(){
-
-                  $(".navbar").animate({opacity: "show"}, {duration: 1000});
-                    $this.animats.nav_animat.layout_nav();
-                   return $this.animats.nav_animat ;
-              },
-             layout_nav :function(){
-                 if( $(".navbar").css("display")=="block"){
+          nav_animat:function(){
+                 if( config.navbar.css("display")=="block"){
+                     config.navbar.animate({opacity: "hide" ,height: 0}, {duration: 800});
                      $("body").prepend("<div class='animat-nav'>"+$('div[class=btn-group-vertical]').html()+"</div>");
-                       storycafe.init_animats();
                  }else{
+                     config.navbar.animate({opacity: "show" ,height :43}, {duration: 800});
                      $("div[class=animat-nav]").remove()
                  }
-             }
           },
           layout_animat:{
-              animateL :function(width){
-                 $(".slide-left").animate({ "width": width }, {duration: 1000});
+
+             animateL :function(){
+                 config.slide_left.animate({ "width":arguments[0]}, {duration: 800});
                  return $this.animats.layout_animat ;
              },
-             animateR : function(num){
-                         $(".slide-right")
-                         .queue("fader", function(next) {
-                            $("div[class~=span10]").animate({ width :num},{duration: 1000, queue: false});
+              animateR : function(right_width){
+                         config.slide_right.queue("fader", function(next) {
+                            config.slide_right.find("div[class=content]").animate({ width :right_width/3},{duration: 800, queue: false});
                             next();
                           })
-                     .dequeue("fader");
+                          .dequeue("fader").animate({ width : right_width},{duration: 800});
                   return $this.animats.layout_animat ;
              },
              animate_nav_color: function(color){
-                       $(".nav")
-                       .queue("color", function(next) {
-                          $("div[class^=block] .nav").animate({"background":color},{duration: 1000, queue: false});
-                          next();
+                       $(".nav").queue("color", function(next) {
+                           $("div[class^=block] .nav").animate({"background":color},{duration: 800, queue: false});
+                           next();
                         })
                      .dequeue("color");
                   return $this.animats.layout_animat ;
-             }
-
-
+             },
+             animate_function:function(){
+                 $this.animats.layout_animat.animateL(arguments[0]).animateR(arguments[1]).animate_nav_color(arguments[2]);
+             },
+             animate :function(){
+                  if( config.slide_left.width()){
+                      $this.animats.layout_animat.animate_function.call(this, 0, $(window).width() ,"#666");
+                  }else{
+                      $this.animats.layout_animat.animate_function.call(this, config.slide_left_width, config.slide_right_width ,"#333");
+                 }
+              }
           }
       }
+
+
+
 
     }
 
@@ -185,6 +214,4 @@ jQuery(function(){
     var storycafe = new StoryCafe();
     storycafe.init_event();
     storycafe.init_layout();
-    storycafe.init_animats();
-    setInterval(eval("storycafe.init_layout"),1);
 });

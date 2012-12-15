@@ -6,14 +6,14 @@ div.span2.slide-left
       = render "groups/new_group_modal"
     .all-iterations
       - if resource
-        table.span12
+        ul.span12
           -  resource.each do |s|
             - if current_group && current_group.id ==="#{s.id}"
-              tr.active
-                td = link_to s.title ,edit_group_path(s) , :method => :get
+              li.active
+                = link_to s.title ,edit_group_path(s) , :method => :get
             -else
-              tr
-                td = link_to s.title ,edit_group_path(s) , :method => :get
+              li
+                = link_to s.title ,edit_group_path(s) , :method => :get
   .side-participants
     .nav-participants
       span Participants
