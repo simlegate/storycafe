@@ -11,7 +11,7 @@
   .block-stories-review
     = render "stories/stories_in_status", :resource => current_storys[:review],:type=> "review" if current_storys[:review] && !current_storys[:review].empty?
   .block-story-description
-    = render "stories/description" ,  :meta => { :type => "group"}
+    = render "stories/description" ,  :meta => { :type => "story"}
   .block-story-todo
     = render "stories/todo"
 

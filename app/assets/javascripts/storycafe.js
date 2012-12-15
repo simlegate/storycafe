@@ -42,8 +42,8 @@ jQuery(function(){
                                                         ]
                                                      ]
                               ],
-                              [ "#description_content",[  [ "ajax:beforeSend" , {callback:function(){
-                                                                                    if(!$("#description-areatext").val()) return;
+                              [ "#description_todo",[  [ "ajax:beforeSend" , {callback:function(){
+                                                  if(!$(this).children("textarea").val()) return;
                                                                                 }}
                                                            ],
                                                            ["ajax:success"    , { callback:function(){
@@ -69,8 +69,8 @@ jQuery(function(){
                                                           ]
                                                        ]
                               ],
-                              [ "#description-areatext",[  [ "blur"           , {callback:function(){
-                                                                                   $("#description_content").submit();
+                              [ "#todo-description-areatext",[  [ "blur"           , {callback:function(){
+                                                         $(this).parent().submit();
                                                                                 }}
                                                            ]
                                                         ]
@@ -99,12 +99,25 @@ jQuery(function(){
                                                        ]
                               ],
                               [ "span[class~=icon-arrow-left]" , [  [ "click"    , {callback:function(){
-                                                                                    $this.animats.layout_animat.animate();
-                                                                                  }}
-                                                          ]
-                                                       ]
+                                                                                      $this.animats.layout_animat.animate();
+                                                                                   }}
+                                                           ]
+                                                        ]
                               ],
-                              [ "#explorer"                    , [  [ "click"    , {callback:function(){
+                              [ ".every-story"         , [  [ "ajax:beforeSend" , {callback:function(){
+                                                                                  }}
+                                                            ],
+                                                            ["ajax:success"     , { callback:function(event,data,status, xhr){
+                                                                                    $("div[class=block-story-description]").html(data)
+                                                                                  }}
+                                                            ],
+                                                            ["ajax:error"       , { callback:function(){
+                                                                                  alert("story网络错误，稍后再试！")
+                                                                                }}
+                                                            ]
+                                                         ]
+                              ],
+                              [ "#explorer"           , [  [ "click"    , {callback:function(){
                                                                                       $("div[class=preimage]").slideToggle(1000,function(){
                                                                                              $(this).css("display")=="none" ?
                                                                                              $("#explorer").children("img").attr('src','/assets/down.png') :

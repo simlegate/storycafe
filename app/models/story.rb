@@ -46,4 +46,7 @@ class Story
     where(group_id: id,current_status: status)
   end
 
+  def self.set_description id,des
+    Story.where(_id: id).find_and_modify({"$set"=> {description: des}},new: true)  
+  end
 end
