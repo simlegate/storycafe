@@ -52,4 +52,4 @@ gem "private_pub"
 # server
 gem "thin"
 
-# auto deploy tes + 
+# auto deploy tes 
