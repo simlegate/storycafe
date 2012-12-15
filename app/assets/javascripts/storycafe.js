@@ -9,6 +9,7 @@ jQuery(function(){
             slide_right_width:$("div[class~=span10]").width(),
             window_height :$(window).height(),
             window_width :$(window).width(),
+            block_num:1,
             document_height : $(window).height()-$(".navbar-inverse").height()
         }
         $this.situations = [
@@ -17,9 +18,11 @@ jQuery(function(){
                                                                                }}
                                                         ],
                                                         ["ajax:success", {callback:function(event,data,status, xhr){
-                                                                                var $o = $(".block-stories-new .content");
+                                                                                var $o = $(".block-stories-new table");
                                                                                    $o.length>0 ? $o : $o = $(".block-stories-new");
                                                                                    $o.append(data);
+                                                                                   config.slide_right.find("div:parent").css("display","block");
+                                                                                   $this.init_layout.layout();
                                                                               }}
                                                         ],
                                                         ["ajax:error"       , { callback:function(){
@@ -42,8 +45,8 @@ jQuery(function(){
                                                         ]
                                                      ]
                               ],
-                              [ "#description_todo",[  [ "ajax:beforeSend" , {callback:function(){
-                                                  if(!$(this).children("textarea").val()) return;
+                              [ "#description_content",[  [ "ajax:beforeSend" , {callback:function(){
+                                                                                    if(!$("#description-areatext").val()) return;
                                                                                 }}
                                                            ],
                                                            ["ajax:success"    , { callback:function(){
@@ -69,8 +72,8 @@ jQuery(function(){
                                                           ]
                                                        ]
                               ],
-                              [ "#todo-description-areatext",[  [ "blur"           , {callback:function(){
-                                                         $(this).parent().submit();
+                              [ "#description-areatext",[  [ "blur"           , {callback:function(){
+                                                                                   $("#description_content").submit();
                                                                                 }}
                                                            ]
                                                         ]
@@ -81,9 +84,12 @@ jQuery(function(){
                                                           ],
                                                            ["ajax:success"     , { callback:function(event,data,status, xhr){
                                                                                    $(this).parents("tr").remove();
+                                                                                   config.slide_right.find("tbody:empty").parents("div[class|=block]").css("display","none").html("");
                                                                                    var    $o=  $(".block-stories-"+$(this).attr("attr_next_status")+" table");
                                                                                    $o.length>0 ? $o : $o= $(".block-stories-"+$(this).attr("attr_next_status"));
                                                                                    $o.append(data);
+                                                                                   config.slide_right.find("div[class|=block]:parent").css("display","block");
+                                                                                    $this.init_layout.layout();
                                                                                 }}
                                                           ],
                                                           ["ajax:error"       , { callback:function(){
@@ -98,31 +104,20 @@ jQuery(function(){
                                                           ]
                                                        ]
                               ],
+                              [ ".open" ,              [  [ "click"    , {callback:function(){
+                                                                                    $('.new_story').slideToggle(500);
+                                                                                  }}
+                                                          ]
+                                                       ]
+                              ],
                               [ "span[class~=icon-arrow-left]" , [  [ "click"    , {callback:function(){
-                                                                                      $this.animats.layout_animat.animate();
-                                                                                   }}
-                                                           ]
-                                                        ]
-                              ],
-                              [ ".every-story"         , [  [ "ajax:beforeSend" , {callback:function(){
+                                                                                    $this.animats.layout_animat.animate();
                                                                                   }}
-                                                            ],
-                                                            ["ajax:success"     , { callback:function(event,data,status, xhr){
-                                                                                    $("div[class=block-story-description]").html(data)
-                                                                                  }}
-                                                            ],
-                                                            ["ajax:error"       , { callback:function(){
-                                                                                  alert("story网络错误，稍后再试！")
-                                                                                }}
-                                                            ]
-                                                         ]
+                                                          ]
+                                                       ]
                               ],
-                              [ "#explorer"           , [  [ "click"    , {callback:function(){
-                                                                                      $("div[class=preimage]").slideToggle(1000,function(){
-                                                                                             $(this).css("display")=="none" ?
-                                                                                             $("#explorer").children("img").attr('src','/assets/down.png') :
-                                                                                             $("#explorer").children("img").attr('src','/assets/up.png')
-                                                                                      });
+                              [ "#explorer"                    , [  [ "click"    , {callback:function(){
+                                                                                       $("div[class=preimage]").slideToggle(1000);
                                                                                        $("div[class~=no_login_content]").slideToggle(1000);
                                                                                   }}
                                                           ]
@@ -138,9 +133,20 @@ jQuery(function(){
             }
         }
       $this.init_layout= function(){
-          config.slide_left.children("div[class|=side]").css("height", config.document_height/2);
-          config.slide_right.find("div[class=content]").css("width", config.slide_right_width/3).css("height", config.document_height/2);
 
+          config.slide_right.find("div:empty").css("display","none");
+          config.slide_left.children("div[class|=side]").css("height", config.document_height/2);
+
+
+      //    layout=function(){
+      //      block_num = config.slide_right.find("div[class|=block]:parent").length;
+    //        block_num==1 ? config.slide_right.find("div[class|=block]").css("width", config.slide_right_width).css("height", config.document_height) :
+    //        block_num==2 ? config.slide_right.find("div[class|=block]").css("width", config.slide_right_width/2).css("height", config.document_height) :
+    //        block_num==3 ? config.slide_right.find("div[class|=block]").css("width", config.slide_right_width/3).css("height", config.document_height) :
+                   config.slide_right.find("div[class|=block]").css("width", config.slide_right_width/3).css("height", config.document_height/2)
+      //    }
+
+  //        layout();
 
           // without user login
           $("div[class=preimage]").children("img").css("height" ,config.document_height-0.1);
@@ -156,7 +162,10 @@ jQuery(function(){
 
 
                   config.slide_left.children("div[class|=side]").css("height", config.document_height/2);
-                  config.slide_right.find("div[class=content]").css("width", config.slide_right_width/3).css("height", config.document_height/2);
+
+                  $this.init_layout.layout();
+
+
               }
           },true);
       }
