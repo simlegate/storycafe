@@ -23,15 +23,12 @@ group :development,:test do
   gem 'guard-rspec'
   gem 'spork'
   gem 'guard-spork'
-  gem 'rb-inotify'
-  gem 'libnotify'
 end
 
 group :test do 
-  gem 'rb-inotify', :require => false
-  gem 'rb-fsevent', :require => false
-  gem 'rb-fchange', :require => false
   gem 'ruby_gntp'
+  gem 'rb-inotify'
+  gem 'libnotify'
   gem 'factory_girl_rails'
   gem "rspec"
   gem "rspec-rails"
