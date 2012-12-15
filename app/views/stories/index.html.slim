@@ -14,6 +14,5 @@
     = render "stories/description" ,  :meta => { :type => "story"}
   .block-story-todo
     = render "stories/todo"
-
   .block-stories-finished
     = render "stories/stories_in_status", :resource => current_storys[:finished],:type=> "finished" if current_storys[:finished] && !current_storys[:finished].empty?
