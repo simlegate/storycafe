@@ -28,7 +28,9 @@ end
 group :test do 
   gem 'ruby_gntp'
   gem 'rb-inotify'
+  gem 'rb-fsevent'
   gem 'libnotify'
+  gem 'growl'
   gem 'factory_girl_rails'
   gem "rspec"
   gem "rspec-rails"
