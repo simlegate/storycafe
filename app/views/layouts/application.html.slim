@@ -19,17 +19,19 @@ html
     .navbar-inverse.navbar
       .navbar-inner
         - if current_user
-          a.brand.span2(class="dropdown-toggle" data-toggle="dropdown" href="#project_list")
-            = current_project.name
-            b class="caret"
-          = render "projects/form_new_project"
+          ul.nav.pull-left
+            li
+              a.brand.span2(class="dropdown-toggle" data-toggle="dropdown" href="#project_list")
+                = current_project.name
+                b(class="caret" style="float:right")
+              = render "projects/form_new_project"
           div.nav-collapse
             ul.nav
               li
                 = render "public/close_nav"
               li.divider-vertical
               li
-                 img.open src="/assets/open.png"
+                 img.show_form src="/assets/open.png"
                  = render "stories/form_new_story"
             ul.nav.pull-right
               li.divider-vertical
@@ -58,9 +60,9 @@ html
       .container-fluid.no_login_content
         .row-fluid
           .message
-            - if notice
-              p.notice = notice
-            - if alert
-              p.alert = alert
             .login
+              - if notice
+                p.notice = notice
+              - if alert
+                p.alert = alert
               = yield

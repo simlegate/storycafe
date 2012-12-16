@@ -1,9 +1,5 @@
 = render "stories/group"   , :resource => current_groups
 .span10.slide-right
-  - if notice
-    p.notice = notice
-  - if alert
-    p.alert = alert
   .block-stories-new
     = render "stories/stories_in_status", :resource => current_storys[:new] , :type=> "new" if current_storys[:new] && !current_storys[:new].empty?
   .block-stories-started

@@ -22,7 +22,7 @@ jQuery(function(){
                                                                                    $o.length>0 ? $o : $o = $(".block-stories-new");
                                                                                    $o.append(data);
                                                                                    config.slide_right.find("div:parent").css("display","block");
-                                                                                    $this.layout();
+                                                                                    $this.layout.call(this);
                                                                               }}
                                                         ],
                                                         ["ajax:error"       , { callback:function(){
@@ -89,7 +89,7 @@ jQuery(function(){
                                                                                    $o.length>0 ? $o : $o= $(".block-stories-"+$(this).attr("attr_next_status"));
                                                                                    $o.append(data);
                                                                                    config.slide_right.find("div[class|=block]:parent").css("display","block");
-                                                                                   $this.layout();
+                                                                                   $this.layout.call(this);
                                                                                 }}
                                                           ],
                                                           ["ajax:error"       , { callback:function(){
@@ -99,25 +99,30 @@ jQuery(function(){
                                                        ]
                               ],
                               [ "span[class~=icon-arrow-up]" , [  [ "click"    , {callback:function(){
-                                                                                    $this.animats.nav_animat();
+                                                                                    $this.animats.nav_animat.call(this);
                                                                                   }}
                                                           ]
                                                        ]
                               ],
-                              [ ".open" ,              [  [ "click"    , {callback:function(){
+                              [ ".show_form" ,              [  [ "click"    , {callback:function(){
                                                                                     $('.new_story').slideToggle(500);
                                                                                   }}
                                                           ]
                                                        ]
                               ],
                               [ "span[class~=icon-arrow-left]" , [  [ "click"    , {callback:function(){
-                                                                                    $this.animats.layout_animat.animate();
+                                                                                    $this.animats.layout_animat.animate.call(this);
                                                                                   }}
                                                           ]
                                                        ]
                               ],
                               [ "#explorer"                    , [  [ "click"    , {callback:function(){
-                                                                                       $("div[class=preimage]").slideToggle(1000);
+
+                                                                                      $("div[class=preimage]").slideToggle(1000,function(){
+                                                                                         $(this).css("display")=="none" ? $("#explorer").children("img").attr("src", "/assets/down.png") :
+                                                                                                                          $("#explorer").children("img").attr("src","/assets/up.png")
+                                                                                      })
+
                                                                                        $("div[class~=no_login_content]").slideToggle(1000);
                                                                                   }}
                                                           ]
@@ -149,14 +154,14 @@ jQuery(function(){
           config.slide_right.find("div:empty").css("display","none");
           config.slide_left.children("div[class|=side]").css("height", config.document_height/2);
 
-           $this.layout();
+          $this.layout.call(this);
 
           // without user login
           $("div[class=preimage]").children("img").css("height" ,config.document_height-0.1);
           $("div[class~=no_login_content]").css("display","none");
 
           setInterval(function(){
-              if(config.window_width!=$(window).width()||config.window_height!=$(window).height()){
+              if(config.window_width!=$(window).width()||config.window_height!=$(window).height()||config.document_height!= ($(window).height()-$(".navbar-inverse").height())){
                   config.window_width=$(window).width();
                   config.window_height=$(window).height()
                   config.slide_right_width =$("div[class~=slide-right]").width();
@@ -187,11 +192,11 @@ jQuery(function(){
                  return $this.animats.layout_animat ;
              },
               animateR : function(right_width){
-                         config.slide_right.queue("fader", function(next) {
-                            config.slide_right.find("div[class=content]").animate({ width :right_width/3},{duration: 800, queue: false});
+                          config.slide_right.animate({ width : right_width},{duration: 800}).queue("fader", function(next) {
+                            config.slide_right.find("div[class|=block]").animate({ width: right_width/3},{duration: 800, queue: false});
                             next();
                           })
-                          .dequeue("fader").animate({ width : right_width},{duration: 800});
+                          .dequeue("fader");
                   return $this.animats.layout_animat ;
              },
              animate_nav_color: function(color){

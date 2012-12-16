@@ -9459,7 +9459,7 @@ div[class~=navbar] div[class=navbar-inner] div[class=btn-group-vertical] span {
 div[class~=navbar] div[class=navbar-inner] div[class=btn-group-vertical] span[class~=icon-arrow-left] {
   margin: 18px -10px 0px 0px;
 }
-div[class~=navbar] div[class=navbar-inner] img[class=open] {
+div[class~=navbar] div[class=navbar-inner] img[class=show_form] {
   max-width: 29px;
   margin-top: 6px;
   cursor: pointer;
