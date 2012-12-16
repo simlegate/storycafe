@@ -13,19 +13,19 @@ class StoriesController < ApplicationController
   #   PrivatePub.publish_to("/channels/#{session[:current_project].id}", message: log)
 
      stories = Story.get_stories_by_group_id session[:current_group].id
-     respond_to do |format|
-             stories[:new].empty? ?
-              format.html { render  :_stories_in_status , locals: { resource: [Story.add_story(params[:story])] ,type: "new" } ,:layout => false } :
-              format.html { render  :_every_story_in_table , locals: {  story:  Story.add_story(params[:story]) } ,:layout => false };
-       end
+     story   = Story.add_story(params[:story]
+     stories[:new].length == 0 ? respond_to_html(:_stories_in_status, {resource: [story],type: "new"} )
+                               : respond_to_html(:_every_story_in_table, {story: story})
+    #respond_to do |format|
+    #        stories[:new].empty? ?
+    #         format.html { render  :_stories_in_status , locals: { resource: [Story.add_story(params[:story])] ,type: "new" } ,:layout => false } :
+    #         format.html { render  :_every_story_in_table , locals: {  story:  Story.add_story(params[:story]) } ,:layout => false };
+    #  end
   end
 
   def edit
     session[:current_story] = Story.get_story_by_story_id(params[:id]) if params[:id] != session[:current_story].id
     respond_to_html(:_description,{:meta => { :type => "story"}})
-  # respond_to do |format|
-  #   format.html {render :_description, locals: {:meta => { :type => "story"}},:layout => false}
-  # end
   end
 
   # put/:id def update
