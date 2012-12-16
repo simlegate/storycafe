@@ -10,7 +10,7 @@
         = form_for current_group ,:method =>"put",:remote => true,:html => {:id => "description_todo","data-type" => "json"} do |f|
           textarea( placeholder="#{t('story.description')}" id="todo-description-areatext" name="group[description]")
             = current_group.description
-        .span12
+      //  .span12
           span.span7 Created： "#{current_group.created_at}"
           span.span5 User： Byronlee
   - else
@@ -27,7 +27,7 @@
              = form_for current_story , :method =>"put", :remote => true ,:html => {:id => "description_todo",:'data-type' => "json"} do |f|
                  textarea( placeholder="#{t('story.description')}" id="todo-description-areatext" name="description" )
                    =  current_story.description
-             .span6
+       //      .span6
                ticketLabel.icon.assignee
                  = get_user_name_by_user_id(current_story.user_id)
              .span6
