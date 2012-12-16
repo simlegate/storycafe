@@ -1,4 +1,3 @@
-
 = render "stories/group"   , :resource => current_groups
 .span10.slide-right
   - if notice
@@ -6,13 +5,13 @@
   - if alert
     p.alert = alert
   .block-stories-new
-    = render "stories/stories_in_status", :resource => current_storys[:new] , :type=> "stories_new" if current_storys[:new] && !current_storys[:new].empty?
+    = render "stories/stories_in_status", :resource => current_storys[:new] , :type=> "new" if current_storys[:new] && !current_storys[:new].empty?
   .block-stories-started
-    = render "stories/stories_in_status", :resource => current_storys[:started],:type=> "stories_started" if current_storys[:started] && !current_storys[:started].empty?
+    = render "stories/stories_in_status", :resource => current_storys[:started],:type=> "started" if current_storys[:started] && !current_storys[:started].empty?
   .block-stories-review
-    = render "stories/stories_in_status", :resource => current_storys[:review],:type=> "stories_review" if current_storys[:review] && !current_storys[:review].empty?
+    = render "stories/stories_in_status", :resource => current_storys[:review],:type=> "review" if current_storys[:review] && !current_storys[:review].empty?
   .block-stories-finished
-    = render "stories/stories_in_status", :resource => current_storys[:finished],:type=> "stories_finished" if current_storys[:finished] && !current_storys[:finished].empty?
+    = render "stories/stories_in_status", :resource => current_storys[:finished],:type=> "finished" if current_storys[:finished] && !current_storys[:finished].empty?
   .block-story-description
     = render "stories/description" ,  :meta => { :type => "group"}
   .block-story-todo

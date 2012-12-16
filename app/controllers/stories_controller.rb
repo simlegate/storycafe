@@ -12,15 +12,10 @@ class StoriesController < ApplicationController
      #publish_message("messages/new",log)
   #   PrivatePub.publish_to("/channels/#{session[:current_project].id}", message: log)
 
-     stories = Story.get_stories_by_group_id session[:current_group].id
-     story   = Story.add_story(params[:story]
-     stories[:new].length == 0 ? respond_to_html(:_stories_in_status, {resource: [story],type: "new"} )
+     new_length = Story.get_stories_by_group_id(session[:current_group].id)[:new].length
+     story   = session[:current_story] =  Story.add_story(params[:story])
+     new_length == 0 ? respond_to_html(:_stories_in_status, {resource: [story],type: "new"})
                                : respond_to_html(:_every_story_in_table, {story: story})
-    #respond_to do |format|
-    #        stories[:new].empty? ?
-    #         format.html { render  :_stories_in_status , locals: { resource: [Story.add_story(params[:story])] ,type: "new" } ,:layout => false } :
-    #         format.html { render  :_every_story_in_table , locals: {  story:  Story.add_story(params[:story]) } ,:layout => false };
-    #  end
   end
 
   def edit
@@ -39,11 +34,11 @@ class StoriesController < ApplicationController
    # params[:status] stand for next status
    def change_status
      next_status = get_next_status(params[:next_status])
-     stories = Story.get_stories_by_group_id session[:current_group].id
+     next_length = Story.get_stories_by_group_id(session[:current_group].id)[params[:next_status].to_sym].length
      # log = Log.new_message "#{story.title} be to #{params[:status]} by #{current_user.email}"
      # PrivatePub.publish_to(get_channel_path, message: log)
      story = Story.set_story_status(params[:story_id],params[:next_status],next_status)
-     stories[params[:next_status].to_sym].length != 0 ? respond_to_html(:_every_story_in_table,{story: story})
+     next_length != 0 ? respond_to_html(:_every_story_in_table,{story: story})
                                                       : respond_to_html(:_stories_in_status,{resource: [story],type: params[:next_status]})
     #respond_to do |format|
     #        stories[params[:next_status].to_sym].empty? ?
