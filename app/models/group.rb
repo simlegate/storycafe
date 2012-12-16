@@ -22,4 +22,8 @@ class Group
   def self.add_group param
      create!(param)
   end
+  
+  def self.update_group id,pam
+    Group.where(_id: id).find_and_modify({"$set"=> pam},new: true)  
+  end
 end

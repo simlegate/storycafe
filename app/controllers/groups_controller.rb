@@ -15,7 +15,7 @@ class GroupsController < ApplicationController
 
   # put update/:id
   def update
-    result = Group.find(params[:id]).update_attributes!(params[:group])
-    render_json "#{result}".to_json
+    session[:current_group] =  Group.update_group(params[:id],params[:group])
+    render_json "success".to_json
   end
 end
