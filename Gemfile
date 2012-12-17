@@ -31,7 +31,7 @@ group :test do
   gem 'rb-inotify'
   gem 'rb-fsevent'
   gem 'libnotify'
-  gem 'growl'
+# gem 'growl'
   gem 'factory_girl_rails'
   gem "rspec"
   gem "rspec-rails"
