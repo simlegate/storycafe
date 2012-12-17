@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   before_filter :init
 
   def init
-     session[:current_group] || session[:current_group] = Group.get_default_group 
-     session[:current_story] || session[:current_story] = Story.get_default_story 
+     session[:current_group] ||= Group.get_default_group 
+     session[:current_story] ||= Story.get_default_story 
   end
 
   # get next status by current status
@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_project
-    session[:current_project] || session[:current_project] = Project.get_default_project
+    session[:current_project] ||= Project.get_default_project
   end
 
   def get_channel_path

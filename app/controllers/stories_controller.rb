@@ -40,10 +40,5 @@ class StoriesController < ApplicationController
      story = Story.set_story_status(params[:story_id],params[:next_status],next_status)
      next_length != 0 ? respond_to_html(:_every_story_in_table,{story: story})
                                                       : respond_to_html(:_stories_in_status,{resource: [story],type: params[:next_status]})
-    #respond_to do |format|
-    #        stories[params[:next_status].to_sym].empty? ?
-    #         format.html { render  :_stories_in_status , locals: { resource: [ Story.set_story_status(params[:story_id],params[:next_status],next_status)] ,type: params[:next_status] } ,:layout => false } :
-    #         format.html { render  :_every_story_in_table , locals: {  story: Story.set_story_status(params[:story_id],params[:next_status],next_status)} ,:layout => false }
-    #  end
    end
 end
