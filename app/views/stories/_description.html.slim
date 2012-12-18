@@ -10,16 +10,16 @@
         = form_for current_group ,:method =>"put",:remote => true,:html => {:id => "description_todo","data-type" => "json"} do |f|
           textarea( placeholder="#{t('story.description')}" id="todo-description-areatext" name="group[description]")
             = current_group.description
-      //  .span12
+        .span12
           span.span7 Created： "#{current_group.created_at}"
           span.span5 User： Byronlee
   - else
    - if current_story
      .span12.nav
-       h4
-         span.icon-th.span1
-         span.span10 = current_story.title
-         span.span1.icon-cog
+        h4
+          span.icon-th.span1
+          span.span10 = current_story.title
+          span.span1.icon-cog
      .row-fluid
        .span12
          .row-fluid
@@ -27,8 +27,14 @@
              = form_for current_story , :method =>"put", :remote => true ,:html => {:id => "description_todo",:'data-type' => "json"} do |f|
                  textarea( placeholder="#{t('story.description')}" id="todo-description-areatext" name="description" )
                    =  current_story.description
-       //      .span6
-               ticketLabel.icon.assignee
-                 = get_user_name_by_user_id(current_story.user_id)
-             .span6
-               .ticketLabel.icon.calendar = current_story.created_at
+   - else
+      .span12.nav
+        h4
+          span.icon-th.span1
+          span.span10 Please select one story or Iteration
+          span.span1.icon-cog
+      .no_content
+        .content
+          p
+            i.icon-pencil  There is no story or Iteration selected ！
+            i.icon-edit  Please select one story or Iteration, if has nothing, please new one which of them.

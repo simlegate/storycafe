@@ -78,8 +78,6 @@ div[class~=navbar] {
            .float-left;
            .margin-left(15px);
            .margin-bottom();
-           display:none;
-
            input[type=text]{
               background-color: #bbb !important;
                border:0px ;
@@ -174,6 +172,22 @@ div[class~=slide-right]{
             .margin-bottom();
 
          }
+
+         div[class=no_content]{
+         float:left;
+
+          div[class=content]{
+             margin: 0 auto;
+             width: 87%;
+             padding-right: 10px;
+             padding-left: 10px;
+             margin-top:100px;
+             color: #999;font-size: 14px;
+             text-shadow: rgba(255, 255, 255, 0.6) 0px 1px 0px;background-color: #F8F8F8;
+             border-left: 3px solid #F6F6F6;
+             border-right: 3px solid #F6F6F6;
+            }
+         }
          table{
              .margin-left();
              background-color:@block-table-background-color;
@@ -198,6 +212,15 @@ div[class~=slide-right]{
                     background:@block-table-tr-active-color;
                   }
            }
+           td[class=span8]{
+             a{
+                 display: inline-block;
+                 overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+             }
+
+           }
          }
 
 
@@ -208,10 +231,13 @@ div[class~=slide-right]{
              form{
                   textarea{
                   .border-radius();
-                   height:160px;
                    width:97%;
                    resize: none;
-                   color: yellowgreen;
+                   line-height:27px;
+                   border-style: hidden;
+                   background: url('/assets/t_bg.png');
+                   color: green;
+                   border-left: 1px solid #F1F1F1;
                    }
              }
             span{

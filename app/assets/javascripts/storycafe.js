@@ -10,7 +10,10 @@ jQuery(function(){
             window_height :$(window).height(),
             window_width :$(window).width(),
             block_num:1,
-            document_height : $(window).height()-$(".navbar-inverse").height()
+            document_height : $(window).height()-$(".navbar-inverse").height(),
+            no_content: '<div class="no_content"><div class="content"><p><i class="icon-pencil">'+
+                        'There are no storys with status new in this Iteration  ！</i><i class="icon-edit">'+
+                        'Tipc Fill in the blanks and click the new story button in the navigation bar.</i></p></div></div>'
         }
         $this.situations = [
                              [ "#new_story"        ,[  [ "ajax:beforeSend"  , {callback:function(){
@@ -18,11 +21,13 @@ jQuery(function(){
                                                                                }}
                                                         ],
                                                         ["ajax:success", {callback:function(event,data,status, xhr){
-                                                                                var $o = $(".block-stories-new table");
-                                                                                   $o.length>0 ? $o : $o = $(".block-stories-new");
-                                                                                   $o.append(data);
-                                                                                   config.slide_right.find("div:parent").css("display","block");
-                                                                                    $this.layout.call(this);
+                                                                                var $o = $(".block-stories-new");
+                                                                                if ($o.find("table").length>0){
+                                                                                   $o.find("table").append(data)
+                                                                                  var num =$o.find(".nav").find(".span1")
+                                                                                   num.html(parseInt(num.text())+1);
+                                                                                }else{ $o.html(data)};
+                                                                                $this.layout.call(this);
                                                                               }}
                                                         ],
                                                         ["ajax:error"       , { callback:function(){
@@ -46,7 +51,7 @@ jQuery(function(){
                                                      ]
                               ],
                               [ "#description_todo",[  [ "ajax:beforeSend" , {callback:function(){
-                                                  if(!$(this).children("textarea").val()) return;
+                                                                                  if(!$(this).children("textarea").val()) return;
                                                                                 }}
                                                            ],
                                                            ["ajax:success"    , { callback:function(){
@@ -73,7 +78,7 @@ jQuery(function(){
                                                        ]
                               ],
                               [ "#todo-description-areatext",[  [ "blur"           , {callback:function(){
-                                                         $(this).parent().submit();
+                                                                                      $(this).parent().submit();
                                                                                 }}
                                                            ]
                                                         ]
@@ -83,13 +88,22 @@ jQuery(function(){
                                                                                   }}
                                                           ],
                                                            ["ajax:success"     , { callback:function(event,data,status, xhr){
-                                                                                   $(this).parents("tr").remove();
-                                                                                   config.slide_right.find("tbody:empty").parents("div[class|=block]").css("display","none").html("");
-                                                                                   var    $o=  $(".block-stories-"+$(this).attr("attr_next_status")+" table");
-                                                                                   $o.length>0 ? $o : $o= $(".block-stories-"+$(this).attr("attr_next_status"));
-                                                                                   $o.append(data);
-                                                                                   config.slide_right.find("div[class|=block]:parent").css("display","block");
-                                                                                   $this.layout.call(this);
+                                                                                  if  ( $(this).parents("tr").siblings().length>=1){
+                                                                                       var this_num = $(this).parents("div[class|=block]").find(".nav").find(".span1");
+                                                                                        this_num.html(parseInt(this_num.text())-1);
+                                                                                    }
+                                                                                    $(this).parents("tr").remove();
+                                                                                     var block =  config.slide_right.find("tbody:empty").parents("div[class|=block]")
+                                                                                         block.find(".content").append(config.no_content);
+                                                                                         block.find(".nav").find(".span1").html(0);
+                                                                                         block.find("table").remove();
+                                                                                     var    $o=  $(".block-stories-"+$(this).attr("attr_next_status"));
+                                                                                     if ($o.find("table").length>0){
+                                                                                        $o.find("table").append(data)
+                                                                                        var num =$o.find(".nav").find(".span1")
+                                                                                        num.html(parseInt(num.text())+1);
+                                                                                     }else{ $o.html(data)};
+                                                                                    $this.layout.call(this);
                                                                                 }}
                                                           ],
                                                           ["ajax:error"       , { callback:function(){
@@ -100,12 +114,6 @@ jQuery(function(){
                               ],
                               [ "span[class~=icon-arrow-up]" , [  [ "click"    , {callback:function(){
                                                                                     $this.animats.nav_animat.call(this);
-                                                                                  }}
-                                                          ]
-                                                       ]
-                              ],
-                              [ ".show_form" ,              [  [ "click"    , {callback:function(){
-                                                                                    $('.new_story').slideToggle(500);
                                                                                   }}
                                                           ]
                                                        ]
@@ -154,19 +162,12 @@ jQuery(function(){
 
 
         $this.layout=function(){
-            block_num = config.slide_right.find("div[class|=block]:parent").length;
-            block_num==1 ? config.slide_right.find("div[class|=block]").css("width", config.slide_right_width).css("height", config.document_height) :
-            block_num==2 ? config.slide_right.find("div[class|=block]").css("width", config.slide_right_width/2).css("height", config.document_height) :
-            block_num==3 ? config.slide_right.find("div[class|=block]").css("width", config.slide_right_width/3).css("height", config.document_height) :
-                          config.slide_right.find("div[class|=block]").css("width", config.slide_right_width/3).css("height", config.document_height/2)
-
-
+            config.slide_right.find("div[class|=block]").css("width", config.slide_right_width/3).css("height", config.document_height/2).find("textarea").css("height",(config.document_height/2)*0.7 )
+                .end().find("td[class=span8] a").css("max-width",(config.slide_right_width/3)*0.61)
         }
+
        $this.init_layout= function(){
-
-          config.slide_right.find("div:empty").css("display","none");
           config.slide_left.children("div[class|=side]").css("height", config.document_height/2);
-
           $this.layout.call(this);
 
           // without user login
