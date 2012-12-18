@@ -1173,9 +1173,6 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
-form {
-  margin: 0 0 20px;
-}
 fieldset {
   padding: 0;
   margin: 0;
@@ -9465,18 +9462,18 @@ div[class~=navbar] div[class=navbar-inner] img[class=show_form] {
   cursor: pointer;
   float: left;
 }
-div[class~=navbar] div[class=navbar-inner] form {
+div[class~=navbar] div[class=navbar-inner] form[id=new_story] {
   float: left;
   margin-left: 15px !important;
   margin-bottom: 0px;
 }
-div[class~=navbar] div[class=navbar-inner] form input[type=text] {
+div[class~=navbar] div[class=navbar-inner] form[id=new_story] input[type=text] {
   background-color: #bbb !important;
   border: 0px ;
   margin-bottom: 0px;
   margin-top: 8px;
 }
-div[class~=navbar] div[class=navbar-inner] form input[type=submit] {
+div[class~=navbar] div[class=navbar-inner] form[id=new_story] input[type=submit] {
   background: url('/assets/publish.png');
 }
 div[class~=navbar] div[class=navbar-inner] a[class=brand] {
