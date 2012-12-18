@@ -11,8 +11,9 @@
           textarea( placeholder="#{t('story.description')}" id="todo-description-areatext" name="group[description]")
             = current_group.description
         .span12
-          span.span7 Created： "#{current_group.created_at}"
-          span.span5 User： Byronlee
+          i.span5.icon-user  Byronlee
+        .span12
+          i.span7.icon-calendar =  current_group.created_at
   - else
    - if current_story
      .span12.nav
@@ -27,6 +28,12 @@
              = form_for current_story , :method =>"put", :remote => true ,:html => {:id => "description_todo",:'data-type' => "json"} do |f|
                  textarea( placeholder="#{t('story.description')}" id="todo-description-areatext" name="description" )
                    =  current_story.description
+             .span12
+               i.span5.icon-user  Byronlee
+             .span12
+               i.span7.icon-flag  assigned to public
+             .span12
+               i.span7.icon-calendar = current_group.created_at
    - else
       .span12.nav
         h4
