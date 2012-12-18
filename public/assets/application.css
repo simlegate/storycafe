@@ -1173,6 +1173,9 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
+form {
+  margin: 0 0 20px;
+}
 fieldset {
   padding: 0;
   margin: 0;
@@ -9462,18 +9465,18 @@ div[class~=navbar] div[class=navbar-inner] img[class=show_form] {
   cursor: pointer;
   float: left;
 }
-div[class~=navbar] div[class=navbar-inner] form[id=new_story] {
+div[class~=navbar] div[class=navbar-inner] form {
   float: left;
   margin-left: 15px !important;
   margin-bottom: 0px;
 }
-div[class~=navbar] div[class=navbar-inner] form[id=new_story] input[type=text] {
+div[class~=navbar] div[class=navbar-inner] form input[type=text] {
   background-color: #bbb !important;
   border: 0px ;
   margin-bottom: 0px;
   margin-top: 8px;
 }
-div[class~=navbar] div[class=navbar-inner] form[id=new_story] input[type=submit] {
+div[class~=navbar] div[class=navbar-inner] form input[type=submit] {
   background: url('/assets/publish.png');
 }
 div[class~=navbar] div[class=navbar-inner] a[class=brand] {
@@ -9526,6 +9529,22 @@ div[class~=slide-right] div[class^=block] div[class=content] div[class~=nav] {
   padding-left: 12px;
   margin-bottom: 0px;
 }
+div[class~=slide-right] div[class^=block] div[class=content] div[class=no_content] {
+  float: left;
+}
+div[class~=slide-right] div[class^=block] div[class=content] div[class=no_content] div[class=content] {
+  margin: 0 auto;
+  width: 87%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 100px;
+  color: #999;
+  font-size: 14px;
+  text-shadow: rgba(255, 255, 255, 0.6) 0px 1px 0px;
+  background-color: #F8F8F8;
+  border-left: 3px solid #F6F6F6;
+  border-right: 3px solid #F6F6F6;
+}
 div[class~=slide-right] div[class^=block] div[class=content] table {
   margin-left: 0px !important;
   background-color: #ffffff;
@@ -9550,6 +9569,12 @@ div[class~=slide-right] div[class^=block] div[class=content] table tr:hover butt
   color: #08C;
   background: #e6e6e6;
 }
+div[class~=slide-right] div[class^=block] div[class=content] table td[class=span8] a {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 div[class~=slide-right] div[class^=block] div[class=content] div[class=span12] {
   margin-left: 0px !important;
 }
@@ -9560,10 +9585,13 @@ div[class~=slide-right] div[class^=block] div[class=content] div[class=span12] f
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
-  height: 160px;
   width: 97%;
   resize: none;
-  color: yellowgreen;
+  line-height: 27px;
+  border-style: hidden;
+  background: url('/assets/t_bg.png');
+  color: green;
+  border-left: 1px solid #F1F1F1;
 }
 div[class~=slide-right] div[class^=block] div[class=content] div[class=span12] span {
   line-height: 30px;
