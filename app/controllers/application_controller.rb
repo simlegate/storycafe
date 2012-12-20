@@ -2,7 +2,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :init
-
   def init
      session[:current_group] ||= Group.get_default_group 
      session[:current_story] ||= Story.get_default_story 

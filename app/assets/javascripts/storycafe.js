@@ -162,8 +162,8 @@ jQuery(function(){
 
 
         $this.layout=function(){
-            config.slide_right.find("div[class|=block]").css("width", config.slide_right_width/3).css("height", config.document_height/2).find("textarea").css("height",(config.document_height/2)*0.7 )
-                .end().find("td[class=span8] a").css("max-width",(config.slide_right_width/3)*0.61)
+            config.slide_right.find("div[class|=block]").css("width", config.slide_right_width/3).css("height", config.document_height/2).find("textarea").css("height",(config.document_height/2)*0.55 )
+                .end().find("td[class=span8] a").css("max-width",(config.slide_right_width/3)*0.45)
         }
 
        $this.init_layout= function(){

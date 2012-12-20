@@ -8,3 +8,6 @@
     = form_for current_group ,:method =>"put",:remote => true,:html => {:id => "description_todo","data-type" => "json"} do |f|
       textarea( placeholder="#{t('story.description')}" id="todo-description-areatext" name="group[todo]")
         = current_group.todo
+      .span12
+        i.icon-calendar  
+        span &nbsp;Last updated:2012-12-15 22:59:50 
