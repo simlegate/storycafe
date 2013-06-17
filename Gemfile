@@ -1,6 +1,7 @@
 source 'http://ruby.taobao.org'
 
 
+ruby '1.9.3'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
